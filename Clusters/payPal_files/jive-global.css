@@ -1,0 +1,5784 @@
+/*
+jive-global.css : styles common throughout Jive SBS.
+*/
+iframe {
+    position: relative;
+    background-color: transparent;
+}
+
+.mceIframeContainer iframe {
+    position: static;
+}
+
+/*
+z-index + absolute positioning OVER select elements = fail in IE6
+use this in combination with conditional comments to fix (eg: user-bar.ftl)
+recommended parent of z-index have overflow:hidden
+*/
+iframe.ieselectfix {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: mask();
+    width: 900px;
+    height: 600px;
+}
+
+/* updated reset styles, see more here: http://meyerweb.com/eric/thoughts/2007/04/12/reset-styles/ */
+html, body, div, span,
+    applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    dd, dl, dt, li, ol, ul,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+    font-size: 75%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    color: #355491;
+}
+
+a.no-underline:link,
+    a.no-underline:visited {
+    text-decoration: none;
+}
+
+a.no-underline:hover,
+    a.no-underline:focus {
+    text-decoration: underline;
+}
+
+a:hover,
+    a:focus {
+    color: #4262a1;
+    text-decoration: underline;
+}
+
+img, a img {
+    border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0 4px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.7778em;
+}
+
+h3 {
+    font-size: 1.5556em;
+}
+
+h4 {
+    font-size: 1.4444em;
+}
+
+h5 {
+    font-size: 1.2222em;
+}
+
+h6 {
+    font-size: 1.1111em;
+}
+
+pre, code {
+    font-size: 1.2em;
+}
+
+pre pre, pre code,
+    code pre, code code {
+    font-size: 1em;
+}
+
+img#ZoomImage {
+    background-color: #fff;
+}
+
+.jive-nocontent-message {
+    font-size: 1em;
+    padding: 20px;
+    text-align: center;
+}
+
+/* clear float rules defined early so they won't accidentally overwrite other possible declarations */
+/* for modern browsers */
+.clearfix:after {
+    clear: both;
+    content: "'";
+    display: block;
+    font-size: 0; /* fix FF bug */
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* for IE7 */
+.clearfix {
+    min-height: 0;
+}
+
+/* for IE<7 \*/
+* html .clearfix {
+    height: 1%;
+}
+
+/* for IE-mac (snicker) */
+/*\*//*/ .clearfix { display: inline-table; } /**/
+
+/* paragraph styles used for user-created 'rendered' content */
+.jive-thread-post-body-container p,
+    .jive-thread-reply-body-container p,
+    .jive-wiki-body-content p,
+    .jive-blog-post-body p,
+    .jive-widget-formattedtext .jive-widget-body p {
+    padding: 0;
+}
+
+.jive-wiki-body-content .jive-rendered-content,
+    .jive-thread-post-body-container .jive-rendered-content,
+    .jive-blog-post-body .jive-rendered-content,
+    .jive-widget-formattedtext .jive-rendered-content,
+    .jive-content-comment .jive-rendered-content,
+    .jive-thread-reply-body-container .jive-rendered-content {
+    padding: 2px;
+    width: 99%;
+}
+
+.jive-wiki-body-content .jive-rendered-content li,
+    .jive-thread-post-body-container .jive-rendered-content li,
+    .jive-blog-post-body .jive-rendered-content li,
+    .jive-widgt-formattedtext .jive-rendered-content li,
+    .jive-thread-reply-body-container .jive-rendered-content li {
+    margin: .2em 0;
+}
+
+/* Reply details specific styles */
+.jive-content-controls {
+    display: block;
+    text-align: right;
+    padding: 10px 0 5px 0;
+    font-size: .8333em;
+}
+
+.jive-content-controls a {
+    margin-left: 9px;
+}
+
+.jive-content-controls-admin {
+    float: left;
+    text-align: left;
+    width: 49%;
+}
+
+.jive-content-controls-public {
+    float: right;
+    text-align: right;
+    width: 49%;
+}
+
+.jive-content-control-date {
+    font-size: .8889em;
+    display: block;
+    padding: 0;
+    margin: 0 0 12px 0;
+    color: #555;
+}
+
+/* jive-content-controls w/sprites */
+.jive-thread-post-details ul,
+    .jive-content-controls ul {
+    float: right;
+    list-style: none;
+}
+
+.jive-thread-post-details li,
+    .jive-thread-post-details ul a,
+    .jive-thread-post-details ul span,
+    .jive-content-controls li,
+    .jive-content-controls a,
+    .jive-content-controls span {
+    float: left;
+    display: inline;
+    margin-left: 0;
+}
+
+.jive-thread-post-details li,
+    .jive-content-controls li {
+    margin-left: 1em;
+}
+
+ul, ol {
+/*Bottom padding was 12px. Removed for content rendering.*/
+    padding: 0 0 0 30px;
+}
+
+ol {
+    display: block;
+    clear: both;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #dcdcdc;
+    border: none;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+select {
+    margin-right: 7px;
+}
+
+select option {
+    padding-right: 6px !important;
+}
+
+fieldset {
+    border: none;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+fieldset legend {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3333em;
+    font-weight: bold;
+}
+
+table {
+/* testing the removal of the below rule -- might break pages */
+/* float: left; */
+}
+
+/* the class 'jive-wiki-table' is applied to all tables created by the content editors */
+.jive-thread-post-body-container table th
+.jive-thread-reply-body-container table th,
+    .jive-wiki-body-content table th,
+    .jive-blog-post-body table th,
+    .jive-widget-formattedtext .jive-widget-body table th {
+    border: 1px #000 solid;
+    border-collapse: collapse;
+    padding: 3px;
+    margin: 1px;
+    background-color: #f0f0f0;
+}
+
+.jive-thread-post-body-container table td,
+    .jive-thread-reply-body-container table td,
+    .jive-wiki-body-content table td,
+    .jive-blog-post-body table td,
+    .jive-widget-formattedtext .jive-widget-body table td {
+    border: 1px #000 solid;
+    border-collapse: collapse;
+    padding: 3px;
+    margin: 1px;
+}
+
+.jive-thread-post-body-container table,
+    .jive-thread-reply-body-container table,
+    .jive-wiki-body-content table,
+    .jive-blog-post-body table,
+    .jive-widget-formattedtext .jive-widget-body table {
+    border: 1px #ccc solid;
+    border-collapse: collapse;
+    padding: 3px;
+    margin: 1px 0px;
+    width: 98%;
+    float: none;
+}
+
+.jive-thread-post-body-container table.jiveNoBorder th
+.jive-thread-reply-body-container table.jiveNoBorder th,
+    .jive-wiki-body-content table.jiveNoBorder th,
+    .jive-blog-post-body table.jiveNoBorder th,
+    .jive-widget-formattedtext .jive-widget-body table.jiveNoBorder th {
+    border: 0px;
+}
+
+.jive-thread-post-body-container table.jiveNoBorder td,
+    .jive-thread-reply-body-container table.jiveNoBorder td,
+    .jive-wiki-body-content table.jiveNoBorder td,
+    .jive-blog-post-body table.jiveNoBorder td,
+    .jive-widget-formattedtext .jive-widget-body table.jiveNoBorder td {
+    border: 0px;
+}
+
+.jive-thread-post-body-container table.jiveNoBorder,
+    .jive-thread-reply-body-container table.jiveNoBorder,
+    .jive-wiki-body-content table.jiveNoBorder,
+    .jive-blog-post-body table.jiveNoBorder,
+    .jive-widget-formattedtext .jive-widget-body table.jiveNoBorder {
+    border: 0px;
+}
+
+/* Social Actions */
+.jive-social-actions {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+.jive-social-actions a:focus {
+    outline: none;
+}
+
+.jive-reply {
+    float: left;
+    height: 27px;
+    margin-left: 10px;
+}
+
+.jive-reply a {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    padding: 5px 3px 6px 33px;
+    margin: 0 5px 0 0;
+    font-size: 1.1111em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #355491;
+    text-align: right;
+}
+* html .jive-reply a {
+    float: left;
+    display: inline;
+}
+
+.jive-reply {
+    background: url(../images/jive-social-reply-btn-right.gif) 100% 0 no-repeat;
+}
+
+.jive-reply a {
+    color: #56861d;
+    background: url(../images/jive-social-reply-btn-left.gif) 0 0 no-repeat;
+}
+
+
+.jive-favorite-notes {
+    width: 100%;
+}
+
+.jive-activity {
+    margin: 0 12px;
+    list-style: none;
+    padding: 0;
+}
+
+.jive-activity li {
+    border-bottom: 1px solid #EFEFEF;
+    padding: 12px 0 20px 0;
+}
+
+.jive-activity img.jive-avatar {
+    display: block;
+    float: left;
+    margin: -5px 8px 6px 0;
+}
+
+.jive-activity a.jive-username-link {
+    float: left;
+    margin-right: 0.4em;
+}
+
+.jive-activity .note {
+    clear: both;
+}
+
+.jive-activity a.jive-favorite-modification {
+    color: #828282;
+    display: block;
+    font-size: 0.8889em;
+    font-weight: normal;
+    margin: 0 0 10px;
+    text-decoration: none;
+}
+
+a.jive-external-link {
+    margin-right: 5px;
+}
+
+a.jive-visit-site {
+    background: url(../images/jive-visit-site-right.png) no-repeat right top;
+    font-size: .8em !important;
+    padding: 1px 13px 2px 0;
+    display: inline;
+}
+
+* html a.jive-visit-site {
+    display: inline-block;
+    line-height: normal;
+}
+
+*+html a.jive-visit-site {
+    display: inline-block;
+    line-height: normal;
+}
+
+a.jive-visit-site span {
+    background: url(../images/jive-visit-site-left.png) no-repeat left top;
+    font-size: 1em !important;
+    padding: 1px 0 2px 20px;
+    float: none;
+    clear: none;
+}
+
+a.jive-visit-site:hover {
+    text-decoration: none !important;
+}
+
+a.jive-visit-site:hover span {
+    color: #4262A1 !important;
+    text-decoration: none;
+}
+
+/* special cases */
+.jive-table td.jive-table-cell-title a.jive-visit-site {
+    display: inline;
+    font-weight: normal;
+    padding: 1px 13px 2px 0;
+}
+
+.jive-table td.jive-table-cell-title a.jive-visit-site span {
+    padding: 1px 0 2px 20px;
+    float: none;
+    clear: none;
+    display: inline;
+}
+
+/* - / Social Actions */
+
+/* Label List */
+.mini-label-list li {
+    float: left;
+    border: 1px solid black;
+    margin: 0;
+    padding: 2px 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #FAFAFA;
+    border: 1px solid #EEEEEE;
+    margin-right: 5px;
+    font-size: .9em;
+}
+
+.mini-label-list {
+    list-style: none;
+    padding-left: 0px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+
+}
+
+span.color {
+    display: block;
+    float: left;
+    height: 10px;
+    width: 10px;
+    margin-top: .2em;
+    margin-right: 1em;
+    overflow: hidden;
+}
+
+/*.mini-label-list li .color { 	display: block;
+    float: left;
+    height: 10px;
+    width: 10px; margin: 2px 4px 0 0; padding: 0; }*/
+.mini-label-list {
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.mini-label-list .attach_label {
+    display: none;
+}
+
+.mini-label-list .attach_label a {
+    float: left;
+    padding: 0 5px;
+}
+
+.mini-label-list .attach_label select {
+    float: left;
+}
+
+.mini-label-list a.delete_label {
+    font-weight: bold;
+    font-size: .8em;
+    color: #aa0000;
+    float: none;
+    font-family: verdana;
+}
+
+.mini-label-list li.green span.color {
+    background: #1ebc00;
+}
+
+.mini-label-list li.orange span.color {
+    background: #fb8201;
+}
+
+.mini-label-list li.red span.color {
+    background: #bb0101;
+}
+
+.mini-label-list li.blue span.color {
+    background: #005ebc;
+}
+
+.mini-label-list li.purple span.color {
+    background: #9f13ab;
+}
+
+.mini-label-list li.grey span.color {
+    background: #9c9c9c;
+}
+
+.mini-label-list li.pink span.color {
+    background: #f3849e;
+}
+
+.mini-label-list li.yellow span.color {
+    background: #fff102;
+}
+
+/*  - END Label List */
+
+*+html .jive-thread-post-body-container img,
+    *+html .jive-thread-reply-body-container img {
+    display: block;
+}
+
+blockquote {
+    padding: 15px 0 15px 38px;
+}
+
+code.jive-xml,
+    code.jive-sql {
+    font-family: monospace;
+}
+
+code.jive-xml .jive-xml-tag,
+    code.jive-xml .jive-xml-keyword,
+    code.jive-sql .jive-sql-object,
+    code.jive-sql .jive-sql-keyword {
+    color: navy;
+}
+
+code.jive-xml .jive-xml-tag,
+    code.jive-xml .jive-xml-keyword,
+    code.jive-sql .jive-sql-object,
+    code.jive-sql .jive-sql-keyword {
+    font-weight: bold;
+}
+
+code.jive-xml .jive-xml-comment,
+    code.jive-sql .jive-sql-comment {
+    color: darkgreen;
+}
+
+code.jive-xml .jive-xml-quote,
+    code.jive-sql .jive-sql-quote {
+    color: red;
+}
+
+/* JIVE wrapper */
+#jive-wrapper {
+    width: 100%;
+    min-width: 970px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    z-index: 2;
+}
+
+/* IE6 doesn't listen to max/min-width, so an 'expression' hack is used. */
+* html #jive-wrapper {
+    width: expression( document . body . clientWidth < 972 ? "970px": "auto" );
+}
+
+/* avatars */
+img.jive-avatar {
+    background: #fff;
+    border: 1px solid #dadada;
+    padding: 2px;
+}
+
+/* header background and logo */
+#jive-global-header {
+    background: #050505 url(../images/jive-hdr-bg.png) repeat-x top;
+    border-bottom: 1px #050505 solid;
+}
+
+#jive-global-header-texture {
+    padding: 10px 24px;
+}
+
+#jive-global-header .jive-header-logo,
+    #jive-global-header .jive-header-logo a.jive-global-header-logolink {
+    height: 50px;
+    width: 78px;
+}
+
+#jive-global-header .jive-header-logo {
+    background-image: url(../images/jive-hdr-logo.png);
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#jive-global-header .jive-header-logo a.jive-global-header-logolink {
+    display: block;
+    left: 25px;
+    position: absolute;
+    top: 10px;
+}
+
+/* breadcrumb */
+#jive-breadcrumb {
+    background-color: #f9f9f9;
+    color: #666;
+    display: block;
+    font-size: .8889em;
+    padding: 8px 22px;
+}
+
+.jive-body-formpage  #jive-breadcrumb,
+    .jive-body-content #jive-breadcrumb,
+    .jive-body-blogadmin #jive-breadcrumb,
+    .jive-body-whatsnew #jive-breadcrumb {
+    background-color: transparent;
+}
+
+#jive-breadcrumb a {
+    color: #666;
+    padding: 0 1px;
+}
+
+#jive-breadcrumb a.jive-breadcrumb-last {
+    color: #333;
+    text-decoration: none;
+}
+
+#jive-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* body elements, including content and sidebar areas */
+#jive-body,
+    #jive-body-full {
+    display: block;
+    float: left;
+    clear: both;
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+#jive-body-widecol-container {
+    float: left;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+/* IE6 doesn't listen to max/min-height, so an 'expression' hack is used. */
+* html #jive-body-widecol-container {
+    height: expression( document . body . clientHeight < 352 ? "350px": "auto" );
+}
+
+#jive-body-widecol {
+    float: left;
+    padding-left: 25px;
+    padding-right: 30px;
+}
+
+/* main body */
+#jive-body-main {
+    margin: 0;
+    padding: 0;
+    clear: both;
+    display: block;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+}
+
+#jive-body-maincol-container {
+    float: left;
+    margin: 0 -245px 0 0;
+    min-width: 100%;
+    min-height: 350px;
+    padding: 0;
+    width: 100%;
+}
+
+#jive-body-maincol {
+    margin: 0 245px 0 0;
+    padding: 0 20px;
+}
+
+/* image margins for all content types */
+
+#jive-body-maincol .jive-blog-post-body img.jive-image,
+    #jive-body-maincol .jive-thread-post-body img.jive-image,
+    #jive-body-maincol .jive-wiki-body img.jive-image {
+    margin: 12px;
+}
+
+#jive-body-sidebarcol-container {
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 245px;
+}
+
+#jive-body-sidebarcol {
+    margin: 0;
+    padding: 0 20px 0 0;
+}
+
+#jive-body-full #jive-body-maincol-container {
+    margin: 0;
+}
+
+#jive-body-full #jive-body-maincol {
+    padding: 0 20px;
+    margin: 0;
+}
+
+#jive-body-full #jive-body-sidebarcol-container,
+    #jive-body-full #jive-body-sidebarcol {
+    display: none;
+    visibility: hidden;
+}
+
+#jive-widget-content {
+    padding: 0 20px;
+}
+
+/* column widths for customized layouts */
+.jive-body-layout-s, .jive-body-layout-s1, .jive-body-layout-s2 {
+    width: 225px;
+}
+
+.jive-body-layout-l {
+    width: 100%;
+}
+
+/* large left column */
+#jive-body-layout-ls .jive-body-layout-l {
+    float: left;
+    margin: 0 -245px 0 0;
+    padding: 0;
+}
+
+#jive-body-layout-ls .jive-body-layout-l .jive-widget-container-large {
+    margin-right: 245px;
+}
+
+#jive-body-layout-ls .jive-body-layout-s {
+    float: right;
+    padding-left: 20px;
+}
+
+/* large right column */
+#jive-body-layout-sl .jive-body-layout-l {
+    float: right;
+    margin: 0 0 0 -245px;
+    padding: 0;
+}
+
+#jive-body-layout-sl .jive-body-layout-l .jive-widget-container-large {
+/* float: right; */
+    margin-left: 245px;
+}
+
+#jive-body-layout-sl .jive-body-layout-s {
+    float: left;
+    padding-right: 20px;
+    position: relative;
+}
+
+/* 2 split large columns */
+#jive-body-layout-ll .jive-body-layout-l1,
+    #jive-body-layout-ll .jive-body-layout-l2 {
+    width: 49%;
+    overflow: hidden;
+}
+
+#jive-body-layout-ll .jive-body-layout-l1 {
+    float: left;
+}
+
+#jive-body-layout-ll .jive-body-layout-l2 {
+    float: right;
+}
+
+/* large left, two small right columns */
+#jive-body-layout-lss .jive-body-layout-l {
+    float: left;
+    margin: 0 -490px 0 0;
+}
+
+#jive-body-layout-lss .jive-body-layout-l .jive-widget-container-large {
+    margin-right: 490px;
+}
+
+#jive-body-layout-lss .jive-body-layout-s1,
+    #jive-body-layout-lss .jive-body-layout-s2 {
+    float: left;
+    padding-left: 20px;
+}
+
+/* three split small columns */
+#jive-body-layout-sss .jive-body-layout-s1,
+    #jive-body-layout-sss .jive-body-layout-s2,
+    #jive-body-layout-sss .jive-body-layout-s3 {
+    width: 31.5%;
+    float: left;
+}
+
+#jive-body-layout-sss .jive-body-layout-s2 {
+    padding-left: 20px;
+}
+
+#jive-body-layout-sss .jive-body-layout-s3 {
+    padding-left: 20px;
+}
+
+/* three columns, large middle */
+#jive-body-layout-sls .jive-body-layout-l {
+    float: left;
+    margin: 0 -245px;
+    padding: 0;
+}
+
+#jive-body-layout-sls .jive-body-layout-l .jive-widget-container-large {
+    margin: 0 245px;
+}
+
+#jive-body-layout-sls .jive-body-layout-s1 {
+    float: left;
+    padding-right: 20px;
+    position: relative;
+}
+
+#jive-body-layout-sls .jive-body-layout-s2 {
+    float: right;
+    padding-left: 20px;
+}
+
+/* large introductory content block */
+#jive-body-intro {
+    background: #f9f9f9 url(../images/jive-intro-hdr-bg.png) repeat-x bottom;
+    border-bottom: 1px solid #d3d3d3;
+    display: block;
+    font-size: 1em;
+    line-height: 1.3em;
+    margin: 0 0 25px 0;
+    padding: 20px 22px 0;
+}
+
+#jive-body-intro #jive-body-intro-content {
+    padding-bottom: 22px;
+}
+
+.jive-body-formpage  #jive-body-intro,
+    .jive-body-content #jive-body-intro,
+    .jive-body-blogadmin #jive-body-intro {
+    background: none;
+    border-bottom: none;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.jive-body-content #jive-body-intro #jive-body-intro-content {
+    padding-bottom: 5px;
+}
+
+.jive-body-content #jive-body-intro #jive-body-intro-content {
+    padding-bottom: 5px;
+}
+
+#jive-body-intro h1,
+#jive-body-intro h2 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+	}
+#jive-body-intro h1 {
+    line-height: 1em;
+	}
+.jive-body-home #jive-body-intro h1 {
+    font-size: 1.7em;
+    line-height: 1.0556em;
+	}
+#jive-body-intro h1 a {
+    color: #333;
+    text-decoration: none;
+	}
+#jive-body-intro h1 .jive-link-more {
+	font-size: .5em;
+	padding-left: 10px;
+	}
+#jive-body-intro h2 {
+    font-size: 1.7778em;
+    line-height: 18pt;
+	}
+#jive-body-intro-main-hdr h1 {
+    display: inline;
+    clear: none;
+    padding-top: 0;
+	}
+#jive-body-intro-main-hdr p {
+    display: block;
+    padding: 10px 12px 0 !important;
+	}
+
+#jive-body-intro-main-hdr-stats {
+    color: #555;
+    font-size: .9em;
+    padding-top: 9px;
+    padding-left: 10px;
+}
+
+#jive-body-intro-main-hdr-stats span {
+    padding-right: 10px;
+}
+
+#jive-body-intro h2 span {
+    color: #777;
+}
+
+#jive-body-intro p {
+    margin: 0;
+    padding: 3px 0 0;
+    line-height: 1.2222;
+    clear: both;
+}
+
+.jive-body-home #jive-body-intro p {
+    line-height: 1.444;
+    font-size: 1em;
+}
+
+#jive-body-intro a.jive-icon-link-back {
+    font-size: .8889em;
+}
+
+.jive-body-intro-community h1 {
+    display: inline;
+}
+
+#jive-body-intro .jive-body-intro-community p {
+    padding: 4px 0 0 32px;
+}
+
+/* content block elements */
+.jive-content-block-container {
+    background: #fff url(../images/jive-contentblock-bg.png) repeat-x top;
+    border: 1px solid #e5e5e5;
+    display: block;
+    margin-bottom: 24px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.jive-content-sort {
+    background: #f9fcfe;
+    padding: 5px;
+}
+
+.jive-content-sort .jive-sort-element {
+    border-right: 1px solid #dadada;
+    float: left;
+    margin-left: 10px;
+    padding-right: 15px;
+}
+
+.jive-content-sort .jive-soft-element.jive-last {
+    border-right: none;
+}
+
+.jive-content-block-container-noheader {
+    background-image: none;
+}
+
+.jive-content-block-container-hidden {
+    height: 34px;
+}
+
+.jive-content-block-container .jive-content-block-show,
+    .jive-content-block-container .jive-content-block-hide {
+    float: right;
+    font-size: .8889em;
+    padding: 8px 10px 0 0;
+}
+
+.jive-content-block-container .jive-content-block-show a,
+    .jive-content-block-container .jive-content-block-hide a {
+    color: #999;
+}
+
+.jive-content-block-container .jive-content-block-header {
+    font-size: 1.2222em;
+    font-weight: normal;
+    color: #3f3f3f;
+    margin: 0;
+    padding: 5px 0 6px 8px;
+    float: left;
+}
+
+.jive-content-block-container h3.jive-content-block-header span,
+    .jive-content-block-container h3.jive-content-block-header span a {
+    font-size: 1em;
+    font-weight: normal;
+    color: #666;
+    text-decoration: none;
+}
+
+.jive-content-block-container h3.jive-content-block-header span a:hover {
+    text-decoration: underline;
+}
+
+.jive-content-block-container h3.jive-content-block-header a.jive-icon-minus,
+    .jive-content-block-container h3.jive-content-block-header a.jive-icon-plus {
+    background-position: 0 4px;
+    padding-left: 16px;
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+.jive-content-block-container h3.jive-content-block-header a.jive-icon-plus {
+    background-image: url(../images/jive-icon-plus.gif);
+}
+
+.jive-content-block-container h3.jive-content-block-header a.jive-icon-minus {
+    background-image: url(../images/jive-icon-minus.gif);
+}
+
+.jive-content-block-container span.jive-content-hdr-link {
+    font-size: .8889em;
+    line-height: 1;
+    float: right;
+    padding: 10px 10px 0 0;
+}
+
+.jive-content-block {
+    display: block;
+    clear: both;
+    padding: 9px;
+}
+
+.jive-content-block-details {
+    background: #F6F7F8 url(../images/jive-div-dotted.gif) repeat-x center bottom;
+    font-size: .8889em;
+    margin: -9px -9px 9px;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.jive-content-block-details input,
+    .jive-content-block-details select {
+    font-size: 1em;
+}
+
+.jive-content-block-details .jive-pagination {
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+}
+
+.jive-content-block-special {
+    padding: 0;
+}
+
+.jive-content-block2-container {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin-bottom: 24px;
+}
+
+.jive-content-block2 {
+    clear: both;
+    padding: 10px;
+}
+
+.jive-content-list-options {
+    background-color: #fafafa;
+    border-bottom: 1px dotted #dadada;
+    clear: both;
+    color: #666;
+    font-size: .8889em;
+    margin-bottom: 12px;
+    padding: 5px 10px 8px;
+    position: relative;
+}
+
+.jive-content-list-options .content-list-label {
+    display: block;
+}
+
+* html .jive-content-list-options .content-list-label {
+    display: inline;
+}
+
+.jive-content-list-options select {
+    font-size: .9em;
+}
+
+.jive-content-list-options a {
+    text-decoration: none;
+    outline: none;
+}
+
+.jive-content-list-options a:hover {
+    background-color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.jive-content-list-options ul {
+    padding-left: 0;
+}
+
+.jive-content-list-options .jive-content-list-sort-sortby,
+    .jive-content-list-options .jive-content-list-sort-timespan,
+    .jive-content-list-options .jive-content-list-sort-contenttype,
+    .jive-content-list-options .jive-content-list-sort {
+    float: left;
+    display: inline-block;
+}
+
+.jive-content-list-options .jive-content-list-sort,
+    .jive-content-list-options .jive-content-list-items-per-page {
+    border-right: 1px solid #dadada;
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 2px;
+}
+
+.jive-content-list-options .jive-content-list-sort-sortby select,
+    .jive-content-list-options .jive-content-list-sort-contenttype select {
+    display: block;
+    margin-right: 0;
+}
+
+.jive-content-list-options .jive-content-list-sort ul,
+    .jive-content-list-options .jive-content-list-sort ul li {
+    display: inline;
+    float: left;
+    padding: 0;
+}
+
+.jive-content-list-options .jive-content-list-sort ul li {
+    padding-right: 2px;
+    line-height: 1em;
+}
+
+.jive-content-list-options .jive-content-list-sort ul li.seperator {
+    padding: 3px 1px 0 3px;
+}
+
+.jive-content-list-options .jive-content-list-sort ul {
+    padding-top: 2px;
+    display: block;
+}
+
+.jive-content-list-options .jive-content-list-sort .jive-icon-sml {
+    display: inline-block;
+    margin: 0;
+}
+
+.jive-content-list-options .jive-pagination {
+    position: absolute;
+    right: 10px;
+}
+
+.jive-content-list-sort-timespan a,
+    .jive-content-list-sort-contenttype a,
+    .jive-content-list-sort-view a {
+    display: block;
+    float: left;
+    padding: 3px 2px;
+}
+
+.jive-content-list-sort-timespan a {
+    padding: 3px 2px;
+}
+
+.jive-content-list-options .selected {
+    background-color: #fff;
+    border: 1px solid #bfbfbf;
+    font-weight: bold;
+    padding: 2px;
+}
+
+/* Discussion, Document, and Blog Post content containers (for tables) */
+#jive-recent-content,
+    #jive-history-content,
+    #jive-tags-content {
+    clear: both;
+    overflow: hidden;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#jive-history-content .jive-table tr.jive-table-row-odd,
+    #jive-recent-content .jive-table tr.jive-table-row-odd,
+    #jive-tags-content .jive-table tr.jive-table-row-odd {
+    background-color: #fff;
+}
+
+#jive-history-content .jive-table tr.jive-table-row-even,
+    #jive-recent-content .jive-table tr.jive-table-row-even,
+    #jive-tags-content .jive-table tr.jive-table-row-even {
+    background-color: #f9f9f9;
+}
+
+.jive-table tr.jive-table-row-detail {
+    font-size: .8889em;
+}
+
+#jive-recent-content .jive-table td.jive-table-cell-type,
+    #jive-tags-content .jive-table td.jive-table-cell-type {
+    padding-right: 0;
+}
+
+#jive-recent-content .jive-table td.jive-table-cell-avatar,
+    #jive-tags-content .jive-table td.jive-table-cell-avatar {
+    padding-left: 0;
+}
+
+/* home page 'alerts' including announcements alert */
+#jive-alert {
+    background-color: #fdfdef;
+    border: 1px solid #eae9e1;
+    margin-bottom: 20px;
+    position: relative;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.jive-body-home-customized #jive-announcements-messaging {
+    margin: 0 20px 20px 20px;
+
+}
+
+.jive-alert-header,
+    .jive-alert-content,
+    .jive-alert-details {
+    clear: both;
+    float: left;
+}
+
+.jive-alert-header .jive-alert-title {
+    float: left;
+    padding: 0;
+}
+
+.jive-alert-header .jive-alert-title a {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+.jive-alert-header .jive-alert-title .jive-alert-label {
+    padding: 1px 3px 1px 22px;
+    font-size: 1em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.jive-alert-header ul {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.jive-alert-header ul li {
+    float: left;
+    list-style-type: none;
+    padding: 2px 0 0 5px;
+}
+
+.jive-alert-header ul li a {
+    color: #999;
+    font-size: .8889em;
+    text-decoration: none;
+}
+
+.jive-alert-header ul li a:hover {
+    color: #666;
+    text-decoration: underline;
+}
+
+.jive-alert-content {
+    padding: 8px 0 0 22px;
+    width: 100%;
+}
+
+.jive-alert-details {
+    color: #666;
+    font-size: .8889em;
+    padding-top: 8px;
+    white-space: nowrap;
+}
+
+.jive-alert-details .jive-username-link {
+    color: #666;
+    text-decoration: none;
+}
+
+.jive-alert-details span a {
+    padding-left: 5px;
+}
+
+.jive-alert-type {
+    float: left;
+    padding: 10px;
+    position: relative;
+    width: 95%;
+}
+
+#jive-alert-counter {
+    background-color: #fdfdef;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+
+.jive-alert-count,
+    .jive-alert-count-active {
+    border: 1px solid #ccc;
+    display: block;
+    float: left;
+    margin: 0 5px 5px 0;
+    text-align: center;
+    width: 20px;
+}
+
+.jive-alert-count a,
+    .jive-alert-count-active a {
+    background-color: #efefcc;
+    display: block;
+    padding: 0 4px;
+    text-decoration: none;
+}
+
+.jive-alert-count a:hover,
+    .jive-alert-count-active a:hover {
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+.jive-alert-count-active {
+    border-color: #ddd;
+}
+
+.jive-alert-count-active a {
+    background-color: #fff;
+    font-weight: bold;
+}
+
+/* announcements block */
+#jive-body-announcements {
+    clear: both;
+    margin: 0 0 15px;
+    padding: 0 0 10px;
+    background-color: #fdfdef;
+    border: 1px solid #eae9e1;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+#jive-body-announcements-hdr {
+    display: block;
+    clear: both;
+    padding: 10px 0 4px 10px;
+    margin: 0 0 2px;
+}
+
+#jive-body-announcements-hdr span {
+    font-size: .8889em;
+}
+
+#jive-body-announcements-hdr span.jive-body-announcements-label {
+    padding: 1px 6px;
+    color: #988f42;
+    text-transform: uppercase;
+    float: left;
+}
+
+.jive-alert-content .jive-body-announcements-confirm {
+    clear: both;
+    display: block;
+    float: left;
+    padding: 5px 0;
+    width: 100%;
+}
+
+.jive-alert-content .jive-body-announcements-confirm p {
+    color: #993333;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+    padding: 6px 0;
+}
+
+.jive-alert-content .jive-body-announcements-confirm input {
+    font-size: .8889em;
+    margin: 0 5px 0 0;
+}
+
+#jive-body-announcements h3 {
+    font-size: 1.1111em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 2px 0 0 10px;
+    clear: both;
+}
+
+#jive-body-announcements h3 em {
+    font-size: .8889em;
+    color: #666;
+    margin: 0;
+    padding: 0 0 0 10px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#jive-body-announcements p {
+    margin: 0;
+    padding: 3px 0 5px 10px;
+    font-size: .8889em;
+}
+
+* html #jive-body-announcements h3,
+    * html #jive-body-announcements p {
+    position: relative;
+}
+
+/* jive search filter block */
+#jive-search-filter {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+#jive-search-filter dl {
+    float: left;
+    border: 0;
+}
+
+#jive-search-filter dl dd {
+    float: left;
+    padding-right: 12px;
+    margin: 0;
+}
+
+#jive-search-filter dl dd span {
+    display: block;
+    padding: 3px 5px 3px 3px;
+    background-color: #f5f5f5;
+    border: 1px solid #dfdfdf;
+}
+
+#jive-search-filter dl dd span input {
+    float: left;
+    margin: 9px 3px 0;
+}
+
+/* body area search bar (communities, blogs, discussions, documents) */
+#jive-body-search {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #e9e9e9 url(../images/jive-browseby-bar.png) repeat-x top;
+    border: 1px solid #dcdcdc;
+}
+
+#jive-body-search form {
+    margin: 8px;
+}
+
+#jive-body-search input {
+    font-size: 1em;
+}
+
+#jive-body-search input.jive-body-search-field {
+    width: 170px;
+    margin-right: 3px;
+}
+
+#jive-body-search .jive-body-search-select {
+    font-size: 1em;
+    width: 150px;
+    overflow: hidden;
+}
+
+#jive-body-search input.jive-body-search-button {
+    background: #f3f3f3 url(../images/jive-content-types-btn.png) repeat-x top;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 12px;
+    color: #333;
+    cursor: pointer;
+    border: 1px solid #bfbfbf;
+}
+
+/* stats seen on content type listings (discussions, documents, blogs) */
+.jive-contenttype-stats {
+    display: none;
+    float: left;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.jive-contenttype-stats span {
+    margin: 0 4px 0 8px;
+    padding: 0;
+    font-size: .8889em;
+    color: #666;
+}
+
+.jive-contenttype-stats span strong em {
+    font-size: 1.2222em;
+}
+
+.jive-contenttype-stats span b {
+    font-size: 1.1111em;
+    color: #000;
+}
+
+.jive-content-statdetails {
+    display: block;
+    clear: both;
+    width: 100%;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* items per page (discussions, documents, blogs) */
+.jive-items-per-page {
+    float: left;
+    padding: 0 10px 3px 2px;
+    margin: 0;
+    color: #666;
+}
+
+.jive-items-per-page select {
+    float: left;
+    margin: 0 3px 4px 0;
+    font-size: 1em;
+    width: 45px;
+}
+
+.jive-items-per-page span {
+    float: left;
+    margin: 4px 3px 4px 0;
+}
+
+/* table filter selects (discussions, documents, etc)  */
+.jive-table-filter {
+    float: left;
+    padding: 0 0 3px 15px;
+    margin: 0;
+    font-size: .8889em;
+    color: #666;
+}
+
+.jive-table-filter-tasklist {
+    padding-left: 5px;
+}
+
+.jive-table-filter select {
+    float: left;
+    margin: 0 3px 4px 0;
+    font-size: 1em;
+}
+
+.jive-table-filter span {
+    float: left;
+    margin: 4px 3px 4px 0;
+}
+
+.jive-table-rss-link,
+    .jive-table-markallread {
+    float: left;
+    padding-top: 2px;
+    font-size: .8889em;
+}
+
+.jive-table-markallread {
+    padding-top: 7px;
+    margin-left: 15px;
+}
+
+.jive-table-rss-link a,
+    .jive-table-markallread a {
+    text-decoration: none;
+    color: #777;
+}
+
+.jive-table-markallread a {
+    padding-left: 20px;
+}
+
+.jive-table-rss-link a:hover,
+    .jive-table-markallread a:hover {
+    text-decoration: underline;
+}
+
+.jive-table-footer {
+    background: transparent url(../images/jive-div-dotted.gif) repeat-x top;
+    float: left;
+    padding-top: 4px;
+    width: 100%;
+}
+
+/* jive pagination */
+.jive-pagination {
+    float: right;
+    padding: 3px 0 3px;
+    color: #666;
+}
+
+.jive-table .jive-pagination {
+    padding: 8px 2px 8px 0;
+}
+
+jive-pagination-numbers {
+    color: #999;
+}
+
+.jive-pagination-numbers span a {
+    color: #999;
+}
+
+.jive-pagination-numbers span a:hover {
+    color: #355491;
+}
+
+.jive-pagination-numbers a:link,
+    .jive-pagination-numbers a:visited {
+    padding: 0 1px;
+    margin: 0;
+    text-decoration: none;
+    border: 1px solid #fff;
+}
+
+.jive-pagination-numbers a:hover,
+    .jive-pagination-numbers a:active {
+    border: 1px solid #ebebeb;
+}
+
+.jive-pagination-numbers a:link.jive-pagination-current,
+    .jive-pagination-numbers a:visited.jive-pagination-current,
+    .jive-pagination-numbers a:hover.jive-pagination-current,
+    .jive-pagination-numbers a:active.jive-pagination-current {
+    font-weight: bold;
+    background-color: #f4f4f4;
+    border: 1px solid #ebebeb
+}
+
+.jive-pagination-prevnext {
+    background-color: #f9f9f9;
+    border: 1px solid #ebebeb;
+    display: inline-block; /*safari bug*/
+    margin: 0 0 0 4px;
+    min-width: 0; /*ie7bug*/
+    padding: 0 3px;
+}
+
+* html .jive-pagination-prevnext {
+    height: 1%; /*ie6bug*/
+}
+
+.jive-pagination a:link.jive-pagination-prev,
+    .jive-pagination a:visited.jive-pagination-prev,
+    .jive-pagination .jive-pagination-prev-none {
+    background: transparent url(../images/jive-icon-arrow-left-small.gif) no-repeat left center;
+    border: 0 none;
+    border-right: 1px solid #ececec;
+    display: inline-block; /*safari bug*/
+    margin: 0;
+    padding: 0 4px 0 8px;
+    text-decoration: none;
+}
+
+.jive-pagination a:link.jive-pagination-next,
+    .jive-pagination a:visited.jive-pagination-next,
+    .jive-pagination .jive-pagination-next-none {
+    background: transparent url(../images/jive-icon-arrow-right-small.gif) no-repeat 100%;
+    border: 0 none;
+    display: inline-block; /*safari bug*/
+    margin: 0;
+    padding: 0 8px 0 1px;
+    text-decoration: none;
+}
+
+.jive-pagination a:hover.jive-pagination-prev,
+    .jive-pagination a:hover.jive-pagination-next,
+    .jive-pagination a:active.jive-pagination-prev,
+    .jive-pagination a:active.jive-pagination-next {
+    text-decoration: underline;
+}
+
+.jive-pagination .jive-pagination-prev-none {
+    background: transparent url(../images/jive-icon-arrow-left-none.gif) no-repeat left;
+    color: #999;
+    display: inline-block; /*safari bug*/
+}
+
+.jive-pagination .jive-pagination-next-none {
+    background: transparent url(../images/jive-icon-arrow-right-none.gif) no-repeat right;
+    border: 0 none;
+    color: #999;
+    display: inline-block; /*safari bug*/
+}
+
+/* common table styles used across  */
+.jive-table {
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jive-table p {
+    padding: 20px 10px;
+}
+
+.jive-table table {
+    width: 100%;
+}
+
+.jive-table th,
+    .jive-table td {
+    padding: 7px;
+}
+
+/* table head styles */
+.jive-table table thead th {
+    background: #f5f5f5;
+    border-bottom: 1px solid #fff;
+    font-size: .8889em;
+    color: #666;
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+.jive-table th.jive-table-head-icon,
+    .jive-table td.jive-table-cell-icon {
+    padding-right: 0;
+}
+
+.jive-table th.jive-table-head-participants,
+    .jive-table th.jive-table-head-messages,
+    .jive-table th.jive-table-head-view,
+    .jive-table th.jive-table-head-views,
+    .jive-table th.jive-table-head-comments,
+    .jive-table th.jive-table-head-files {
+    text-align: center;
+}
+
+.jive-table th.jive-table-head-date {
+    text-align: right;
+}
+
+/* table row styles */
+.jive-table tr.jive-table-row-odd {
+    background-color: #fff;
+}
+
+.jive-table tr.jive-table-row-even {
+    background-color: #f9f9f9;
+}
+
+/* table cell styles */
+.jive-table td.jive-table-cell-icon,
+    .jive-table td.jive-table-cell-author,
+    .jive-table td.jive-table-cell-views,
+    .jive-table td.jive-table-cell-replies {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* table cell - object type */
+.jive-table td.jive-table-cell-type {
+    padding-right: 5px;
+    width: 18px;
+}
+
+.jive-table td.jive-table-cell-type span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* table cell - icon */
+.jive-table td.jive-table-cell-icon {
+    width: 20px;
+    white-space: nowrap;
+}
+
+/* table cell - subject  */
+.jive-table td.jive-table-cell-subject {
+/* empty */
+}
+
+.jive-table td.jive-table-cell-subject a {
+    font-size: 1.1111em;
+    text-decoration: none;
+}
+
+.jive-table td.jive-table-cell-subject a:hover {
+    text-decoration: underline;
+}
+
+.jive-table td.jive-table-cell-subject span {
+    font-size: .8889em;
+    color: #999;
+    white-space: nowrap;
+}
+
+.jive-table td.jive-table-cell-subject span * {
+    font-size: 1em;
+}
+
+.jive-table td.jive-table-cell-subject span a {
+    font-weight: normal;
+    color: #999;
+    text-decoration: underline;
+}
+
+.jive-table td.jive-table-cell-subject span.jive-subject-updated {
+    font-size: .8889em;
+}
+
+.jive-table td.jive-table-cell-subject span.jive-subject-updated-discussions {
+    color: #95aff1;
+}
+
+.jive-table td.jive-table-cell-subject span.jive-subject-updated-documents {
+    color: #f6b64d;
+}
+
+.jive-table td.jive-table-cell-subject span.jive-subject-updated-blogposts {
+    color: #98cb58;
+}
+
+.jive-table td.jive-table-cell-title {
+    text-align: left;
+    padding-top: 7px;
+}
+
+.jive-table td.jive-table-cell-title a {
+    font-weight: bold;
+    font-size: 1em;
+    text-decoration: none;
+    float: left;
+}
+
+.jive-table td.jive-table-cell-title a:hover {
+    text-decoration: underline;
+}
+
+.jive-table td.jive-table-cell-title span {
+    font-size: .7778em;
+    color: #999;
+    display: block;
+    clear: both;
+    padding-top: 1px;
+}
+
+.jive-table td.jive-table-cell-title span span {
+    font-size: 1em;
+}
+
+.jive-table td.jive-table-cell-title span a {
+    font-weight: normal;
+    font-size: 1.1429em;
+    color: #999;
+    text-decoration: underline;
+    float: none;
+}
+
+.jive-table td.jive-table-cell-title span strong {
+    font-size: 1.129em;
+    color: #777;
+}
+
+.jive-table td.jive-table-cell-title span span {
+    clear: none;
+    display: inline;
+}
+
+.jive-table td.jive-table-cell-author,
+    .jive-table td.jive-table-cell-views,
+    .jive-table td.jive-table-cell-replies,
+    .jive-table td.jive-table-cell-modified {
+    font-size: .8889em;
+    color: #666;
+}
+
+.jive-table td.jive-table-cell-participants,
+    .jive-table td.jive-table-cell-messages {
+    font-size: .8889em;
+    color: #666;
+    text-align: center;
+}
+
+.jive-table td.jive-table-cell-author {
+    text-align: left;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+
+.jive-table td.jive-table-cell-author a {
+    color: #777;
+}
+
+.jive-table td.jive-table-cell-avatar {
+    padding-right: 0;
+}
+
+.jive-table td.jive-table-cell-avatar img {
+    float: left;
+}
+
+/* table cell - modified/last post */
+.jive-table td.jive-table-cell-modified {
+    font-size: .8889em;
+}
+
+.jive-table td.jive-table-cell-modified span {
+    float: left;
+    clear: both;
+    white-space: nowrap;
+}
+
+.jive-table td.jive-table-cell-modified a {
+    color: #777;
+}
+
+/* table cell - date (including author name) */
+.jive-table td.jive-table-cell-date {
+    font-size: .7778em;
+    padding: 0 7px;
+    text-align: right;
+    color: #999;
+}
+
+.jive-table td.jive-table-cell-widget-favorites {
+    color: #999999;
+    font-size: 0.7778em;
+    padding: 0 7px;
+    text-align: right;
+}
+
+.jive-table td.jive-table-cell-taskscomplete {
+    font-size: .8889em;
+    color: #666;
+}
+
+.jive-table td.jive-table-cell-taskscomplete em,
+    .jive-table td.jive-table-cell-taskscomplete b {
+    font-weight: bold;
+    color: #555;
+    font-style: normal;
+}
+
+.jive-table td.jive-table-cell-date span {
+    white-space: nowrap;
+    display: block;
+    float: right;
+}
+
+.jive-table tr.jive-table-row-footer {
+    background-color: #f1f1f1;
+}
+
+.jive-table tr.jive-table-row-footer td {
+    border-top: 1px solid #dadada;
+    text-align: right;
+}
+
+.jive-table tr.jive-table-row-footer td input {
+    font-size: .8889em;
+}
+
+.jive-table tr td.jive-table-cell-activity {
+    color: #666;
+    font-size: .8889em;
+    padding-left: 0;
+}
+
+.jive-table tr td.jive-table-cell-activity strong {
+    color: #333;
+    font-size: 1.125em;
+}
+
+.jive-table tr td.jive-table-cell-activity strong a {
+    text-decoration: none;
+}
+
+.jive-table tr td.jive-table-cell-activity strong a:hover {
+    text-decoration: underline;
+}
+
+.jive-table tr td.jive-table-cell-activity .jive-username-link {
+    color: #666;
+}
+
+/* latest activity tables */
+.jive-table-activity td {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.jive-table-activity tr td.jive-table-cell-type {
+    padding-right: 0;
+    width: 22px;
+}
+
+/* recent activity table, private messages widget table */
+.jive-table-recentactivity tbody tr td.jive-table-cell-author,
+    .jive-table-watchtag tbody tr td.jive-table-cell-author,
+    .jive-table-privatemessages tbody tr td.jive-table-cell-author {
+    text-align: left;
+}
+
+/* project & task related table cells */
+.jive-table .jive-table-cell-project {
+    font-size: .8889em;
+    white-space: nowrap;
+}
+
+.jive-table .jive-table-cell-project a {
+    color: #666;
+}
+
+/* Recent Content-related styles (content left, name & avatar right) */
+.jive-table-recentcontent, .jive-table-taggables {
+}
+
+.jive-table-recentcontent table thead th.jive-table-head-author,
+    .jive-table-taggables table thead th.jive-table-head-author {
+    text-align: right;
+}
+
+.jive-table-recentcontent table tbody td.jive-table-cell-type,
+    .jive-table-taggables table tbody td.jive-table-cell-type {
+    padding-right: 0;
+}
+
+.jive-table-recentcontent table tbody td.jive-table-cell-author,
+    .jive-table-taggables table tbody td.jive-table-cell-author {
+    padding: 0 8px 0 0;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.jive-table-recentcontent table tbody td.jive-table-cell-avatar,
+    .jive-table-taggables table tbody td.jive-table-cell-avatar {
+    padding: 0 5px 0 0;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.jive-table-recentcontent table tbody td.jive-table-cell-title span.jive-currently-editing,
+    .jive-table-taggables table tbody td.jive-table-cell-title span.jive-currently-editing {
+    font-size: .9em;
+    color: #666;
+}
+
+.jive-table-activity table td.jive-table-cell-date {
+    white-space: nowrap;
+}
+
+#jive-whats-new-more {
+    display: block;
+    clear: both;
+    border-top: 1px solid #e9e9e9;
+    padding: 5px;
+    text-align: right;
+    font-size: .8889em;
+}
+
+* html #jive-whats-new-more {
+    height: 1%;
+}
+
+/* attachment styles (for all content types) */
+.jive-attachments {
+    margin-top: 25px;
+    padding: 10px 5px;
+    border-top: 1px solid #ccc;
+    clear: both;
+}
+
+.jive-attachments strong {
+    color: #555;
+}
+
+.jive-attachments ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.jive-attachments ul li a {
+    font-size: 1em;
+    margin-right: 3px;
+}
+
+.jive-attachments ul li {
+    font-size: .8889em;
+    padding: 3px 0;
+    color: #666;
+}
+
+/* tab styles */
+.jive-body-tabbar {
+    clear: both;
+    display: block;
+    height: 25px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    white-space: nowrap;
+}
+
+#jive-body-intro .jive-body-tabbar {
+    bottom: -1px;
+}
+
+.jive-body-tabbar #jive-set-default-tab {
+    color: #777;
+    float: left;
+    font-size: .8em;
+    padding: 6px 0 0 6px;
+    text-decoration: none;
+}
+
+.jive-body-tabbar #jive-set-default-tab:hover {
+    text-decoration: underline;
+}
+
+/* tab */
+.jive-body-tab {
+    background: transparent url('../images/jive-tab-bg-left.gif') no-repeat left bottom;
+    float: left;
+    margin: 0 5px 0 0;
+    padding-left: 3px;
+}
+
+.jive-body-tab a {
+    background: transparent url('../images/jive-tab-bg-right.gif') no-repeat right bottom;
+    color: #333;
+    display: block;
+    font-size: .8889em;
+    font-weight: bold;
+    line-height: 1em;
+    outline: none;
+    padding: 8px 11px 7px 6px;
+    text-decoration: none;
+}
+
+.jive-body-tab a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.jive-body-tab .jive-icon-sml {
+    cursor: pointer; /* fix for IE */
+}
+
+/* currently selected tab */
+.jive-body-tabcurrent {
+    background: transparent url(../images/jive-tab-bg-on-left.gif) no-repeat left bottom;
+}
+
+.jive-body-tabcurrent a {
+    background: transparent url(../images/jive-tab-bg-on-right.gif) no-repeat right bottom;
+    font-size: 1.05em;
+    padding-top: 7px;
+    padding-bottom: 6px;
+}
+
+.jive-body-tabcurrent .jive-icon-sml {
+    margin-top: 0;
+}
+
+/* tab counts (for totals under a specific tab) */
+.jive-body-tab span.jive-link-count {
+    color: #666;
+    font-weight: normal;
+}
+
+.jive-body-tabcurrent span.jive-link-count {
+    font-size: .9em;
+}
+
+/* customizable tab link styles */
+.jive-body-tab-customizable {
+    background: transparent url('../images/jive-tab-bg-right.gif') no-repeat right bottom;
+    display: block;
+    float: left;
+    padding: 0 11px 0 0;
+}
+
+.jive-body-tabcurrent .jive-body-tab-customizable {
+    background-image: url('../images/jive-tab-bg-on-right.gif');
+}
+
+.jive-body-tab-customizable a {
+    background-image: none;
+    float: left;
+    padding-right: 0;
+}
+
+.jive-body-tab-customizable em {
+    float: left;
+    font-size: .8889em;
+    font-style: normal;
+    padding: 5px 0 0 5px;
+}
+
+.jive-body-tabcurrent .jive-body-tab-customizable em {
+    padding-top: 6px;
+}
+
+.jive-body-tab-customizable em a,
+    .jive-body-tab-customizable em a:hover {
+    color: #355491;
+    display: inline;
+    float: none !important;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-body-tab-customizable em a:hover {
+    text-decoration: underline;
+}
+
+/* Tab exceptions */
+span#jive-social-tab-container-tab.jive-body-tabcurrent,
+    span#jive-comments-tab.jive-body-tabcurrent {
+    background-image: url(../images/jive-tab-bg-popup-on-left.gif);
+}
+
+span#jive-social-tab-container-tab.jive-body-tabcurrent a,
+    span#jive-comments-tab.jive-body-tabcurrent a {
+    background-image: url(../images/jive-tab-bg-popup-on-right.gif);
+}
+
+#jive-social-tab-container,
+    #jive-authordiscussion,
+    #jive-comments {
+    border: 1px solid #d6d6d6;
+    margin-bottom: 25px;
+    margin-top: -1px;
+    -moz-border-radius: 3px;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+}
+
+.jive-content-commentbar {
+    background-color: #f9f9f9;
+    padding: 7px 4px 7px 12px;
+    font-size: .8889em;
+}
+
+.jive-content-commentbar .jive-icon-sml.jive-icon-comment-add {
+    margin: 1px 6px 0 0;
+}
+
+.jive-content-commentbar a {
+    padding: 1px 5px 1px 0;
+    margin-right: 6px;
+}
+
+.jive-content-comment {
+    padding: 12px 12px 6px;
+}
+
+.jive-content-comment-alt {
+    background-color: #f7f7f7;
+}
+
+.jive-content-comment-author {
+    background-color: #f2f7fe;
+}
+
+.jive-content-comment img.jive-avatar {
+    display: block;
+    margin: -6px 8px 3px 0;
+    margin-bottom: 6px;
+    float: left;
+}
+
+.jive-content-comment a.jive-username-link {
+    float: left;
+}
+
+.jive-content-comment a.jive-comment-modification {
+    display: block;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: .8889em;
+    color: #828282;
+    margin: 0 0 10px 0;
+}
+
+.jive-content-comment div.jive-content-control-date a {
+    text-decoration: none;
+    font-weight: normal;
+    color: #828282;
+}
+
+.jive-content-comment span a,
+    .jive-content-commentbar a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+* html .jive-content-comment span {
+    position: relative;
+}
+
+.jive-content-comment span span.jive-comment-controls {
+    float: right;
+    color: #828282;
+    font-size: .8889em;
+}
+
+.jive-content-comment-inresponseto {
+    color: #828282;
+    font-size: .8889em;
+    font-style: normal;
+}
+
+/*
+.jive-content-comment span span.jive-comment-controls,
+.jive-content-comment span span.jive-comment-controls a {
+    padding: 20px 0 0;
+    color: #828282;
+    font-size: .8889em;
+}
+*/
+.jive-content-comment span span.jive-comment-controls-admin {
+    float: left;
+    text-align: left;
+    width: 49%;
+}
+
+.jive-content-comment span span.jive-comment-controls-public {
+    float: right;
+    text-align: right;
+    width: 49%;
+}
+
+.jive-content-comment p {
+    clear: both;
+}
+
+.jive-content-comment jive-comment-post {
+    height: 0;
+    overflow: visible;
+    border: solid #ff0000 1px;
+}
+
+/* Comment details specific styles */
+.jive-comment-reply-details {
+    padding: 20px 0 0 0;
+    margin: 0 0 10px 0;
+    text-align: right;
+    font-size: .8333em;
+}
+
+/* trackbacks */
+#jive-trackbacks {
+    border: 1px solid #ccc;
+    margin-bottom: 25px;
+    margin-top: -1px;
+}
+
+.jive-content-trackbackbar {
+    background: transparent url(../images/jive-comment-bar-bg.gif) repeat-x top left;
+    padding: 7px 4px 7px 12px;
+    font-size: .8889em;
+}
+
+.jive-content-trackback {
+    padding: 12px 12px 6px;
+}
+
+.jive-content-trackback-alt {
+    background-color: #f7f7f7;
+}
+
+.jive-content-trackback-moderated {
+    background-color: #fdfed8;
+}
+
+.jive-trackback-date {
+    color: #828282;
+    display: block;
+    font-size: .8889em;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+
+.jive-trackback-author .jive-avatar {
+    display: block;
+    float: left;
+    margin: -6px 8px 6px 0;
+}
+
+.jive-trackback-author .jive-username-link {
+    float: left;
+}
+
+.jive-trackback-content {
+    clear: both;
+}
+
+.jive-trackback-controls {
+    color: #777;
+    font-size: .8889em;
+    height: 12px;
+    padding: 0 0 10px 0;
+    position: relative;
+    text-align: right;
+}
+
+.jive-trackback-controls ul {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+}
+
+.jive-trackback-controls ul li {
+    display: inline;
+    float: left;
+}
+
+.jive-trackback-controls a {
+    clear: none;
+    color: #777;
+    display: block;
+    float: left;
+    padding-right: 5px;
+}
+
+.jive-trackback-edit-form {
+    border-top: 1px solid #dadada;
+}
+
+.jive-trackback-edit-form label {
+    clear: both;
+    display: block;
+}
+
+.jive-trackback-edit-form .jive-form-row input,
+    .jive-trackback-edit-form .jive-form-row textarea {
+    width: 90%;
+}
+
+/* rating styles */
+#jive-content-rating {
+    display: block;
+    clear: both;
+    color: #999;
+    font-size: .8889em;
+}
+
+#jive-content-avgrating {
+    display: block;
+    float: left;
+    padding-right: 20px;
+}
+
+#jive-content-avgrating-title {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#jive-content-avgrating-score {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#jive-content-avgrating-count {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#jive-content-userrating {
+    display: block;
+    float: left;
+    padding-left: 20px;
+    border-left: 1px #ccc dotted;
+}
+
+#jive-content-userrating-title {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#jive-content-userrating-score {
+    display: block;
+    float: left;
+    clear: both;
+}
+
+#jive-content-userrating-saved {
+    float: left;
+    display: block;
+    color: #090 !important;
+    font-weight: bold !important;
+    clear: both;
+}
+
+/* allows padding, margin to be applied to ratings on documents */
+.jive-doc-ratings {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* tagset (tag) cloud styles for pretty display */
+/* default colors here, each doctype css has their respective colors */
+.jive-tagset-popularity0 a {
+    color: #8398c4;
+    font-size: .8889em;
+}
+
+.jive-tagset-popularity1 a {
+    color: #6e87ba;
+    font-size: 1em;
+}
+
+.jive-tagset-popularity2 a {
+    color: #5e78ad;
+    font-size: 1.1111em;
+}
+
+.jive-tagset-popularity3 a {
+    color: #4d6aa3;
+    font-size: 1.2222em;
+}
+
+.jive-tagset-popularity4 a {
+    color: #3c5993;
+    font-size: 1.3333em;
+}
+
+.jive-tagset-popularity5 a {
+    color: #34518a;
+    font-size: 1.5556em;
+}
+
+.jive-tagset-popularity6 a {
+    color: #2a4882;
+    font-size: 1.6667em;
+}
+
+.jive-tagset-popularity7 a {
+    color: #23427d;
+    font-size: 1.7778em;
+}
+
+.jive-tagset-popularity8 a {
+    color: #17346c;
+    font-size: 1.8889em;
+}
+
+.jive-tagset-popularity9 a {
+    color: #152f61;
+    font-size: 2em;
+}
+
+/* ---------------------------------------------------------------------- */
+/* User autocomplete elements											 */
+/* ---------------------------------------------------------------------- */
+div.jive-autocomplete {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    margin: 0;
+    padding: 0;
+    width: 250px !important;
+    overflow: hidden;
+    z-index: 10;
+}
+
+ul.jive-contacts,
+    ul.jive-containers {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+ul.jive-contacts li.selected,
+    ul.jive-containers li.selected {
+    background-color: #ffb;
+}
+
+li.jive-contact,
+    li.jive-container {
+    list-style-type: none;
+    clear: both;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 2px 0;
+    width: 100%;
+}
+
+li.jive-contact div.image {
+    display: inline;
+}
+
+li.jive-contact div.image img.jive-avatar {
+    float: left;
+    margin: 3px 3px 3px 4px;
+}
+
+li.jive-contact div.name,
+    li.jive-container div.name {
+    color: #333;
+    display: block;
+    float: left;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 3px 3px 0 3px;
+    cursor: default;
+}
+
+li.jive-contact div span.informal em {
+    display: block;
+    font-size: .8889em;
+    font-style: normal;
+    font-weight: normal;
+    color: #888;
+}
+
+/* footer */
+#jive-footer {
+    background: #f9f9f9 url(../images/jive-footer-bg.png) repeat-x top;
+    border-top: 1px solid #d3d3d3;
+    clear: both;
+    color: #666;
+    display: block;
+    font-size: .8889em;
+    min-width: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.jive-footer-nav {
+    float: left;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0 15px;
+    margin-right: -101px;
+    overflow: hidden;
+}
+
+.jive-footer-nav a {
+    padding: 0 5px;
+}
+
+.jive-footer-copyright {
+    width: 100px;
+    float: right;
+    padding: 6px 0 10px;
+    overflow: hidden;
+}
+
+.eval-message-container {
+    text-align: center;
+}
+
+.eval-message {
+    background: #ffd url(../images/info-16x16.gif) no-repeat 5px 5px;
+    display: inline-block;
+    padding: 5px 5px 5px 25px;
+    border: solid 1px #dadada;
+    margin-bottom: 10px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.eval-message p {
+    font: normal 11px Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #666;
+    padding: 1px 5px 1px 0;
+}
+
+/*----- Errors, success, info -----*/
+.jive-error-box,
+    .jive-info-box,
+    .jive-success-box,
+    .jive-warn-box {
+    clear: both;
+    overflow: hidden;
+    padding: 0;
+    margin: 0 0 20px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.jive-error-box div,
+    .jive-info-box div,
+    .jive-success-box div,
+    .jive-warn-box div {
+    padding: 6px 6px 6px 30px;
+}
+
+.jive-warn-box div input,
+    .jive-info-box div input,
+    .jive-error-box div input,
+    .jive-success-box div input {
+    margin: 5px 8px 5px 0;
+}
+
+.jive-warn-box ul {
+    list-style-type: none;
+    padding: 6px 0 0 10px;
+}
+
+.jive-warn-box li {
+    display: block;
+    clear: both;
+    padding: 2px 0 8px;
+}
+
+.jive-warn-box img.jive-avatar {
+    margin: -3px 6px 0 0;
+    float: left;
+}
+
+.jive-error-box {
+    border: 1px solid #e4978c;
+    background-color: #f9ddd9;
+}
+
+.jive-info-box {
+    border: 1px solid #85b4db;
+    background-color: #ddeefb;
+}
+
+.jive-success-box {
+    border: 1px solid #72d572;
+    background-color: #defbde;
+}
+
+.jive-warn-box {
+    color: #b57002;
+    border: 1px solid #dbde64;
+    background-color: #fdfed8;
+}
+
+.jive-warn-box div p {
+    margin: 0;
+    padding: 0 0 6px;
+}
+
+.jive-standard-formblock-container {
+    background: #f7f7f7 url(../images/jive-formblock-bg.png) repeat-x top;
+    border: 1px solid #dadada;
+    clear: both;
+    color: #666;
+    display: block; /* float: left; */
+    margin: 0 0 40px; /* width: 100%; */
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.jive-standard-formblock {
+    padding: 15px;
+    position: relative;
+}
+
+/* form styles for the standard formblocks */
+.jive-standard-formblock .jive-form-row {
+    clear: both;
+    display: block;
+    padding-bottom: 10px;
+}
+
+.jive-form-container .jive-form-label,
+    .jive-standard-formblock .jive-form-label {
+    color: #444;
+    font-size: 1.2222em;
+    font-weight: bold;
+    padding: 4px 0;
+}
+
+.jive-standard-formblock .jive-form-label em,
+    .jive-standard-formblock .jive-form-label-desc,
+    .jive-standard-formblock .jive-form-field-desc {
+    color: #777;
+    font-size: .8889em;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 3px;
+}
+
+.jive-body-formpage .jive-standard-formblock .jive-form-label em,
+    .jive-body-formpage .jive-standard-formblock .jive-form-label-desc,
+    .jive-body-formpage .jive-standard-formblock .jive-form-field-desc {
+    font-size: .7273em;
+}
+
+.jive-standard-formblock .jive-form-label em.required {
+    color: #c33;
+}
+
+.jive-standard-formblock .required {
+    color: #c33;
+    font-size: 1.3333em;
+    padding-left: 2px;
+}
+
+.jive-standard-formblock .jive-form-element {
+    margin: 0 0 15px 0;
+    position: relative;
+    width: 600px;
+}
+
+.jive-standard-formblock .jive-form-element input.jive-form-textinput,
+    .jive-standard-formblock .jive-form-element input.jive-form-textarea {
+    width: 100%;
+}
+
+.jive-standard-formblock .jive-form-element a.jive-form-element-test {
+    font-size: .8889em;
+    font-weight: bold;
+    padding-top: 5px;
+    text-decoration: none;
+}
+
+.jive-standard-formblock .jive-form-element a.jive-form-element-test:hover {
+    text-decoration: underline;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li {
+    float: left;
+    height: 70px;
+    padding: 5px 0 0 0;
+    position: relative;
+    width: 120px;
+    z-index: 50;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li input {
+    left: 4px;
+    position: absolute;
+    top: 10px;
+    z-index: 52;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li label.jive-icon-big {
+    background: transparent none;
+    border: 1px solid #e0e0e0;
+    display: block;
+    float: left;
+    font-size: .8889em;
+    padding: 38px 0 8px 0;
+    position: absolute;
+    text-align: center;
+    width: 110px;
+    z-index: 51;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li label .jive-icon-big {
+    display: block;
+    float: none;
+    position: absolute;
+    top: 10px;
+    left: 42px;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li.selected label {
+    background-color: #fff;
+    border-color: #bbd2e3;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li.selected label.jive-icon-discussion {
+    background-color: #eef4f9;
+    border-color: #bbd2e3;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li.selected label.jive-icon-document {
+    background-color: #f8f4e6;
+    border-color: #f5cd89;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li.selected label.jive-icon-blog {
+    background-color: #f5faf0;
+    border-color: #aede79;
+}
+
+.jive-standard-formblock ul.jive-form-choose-contenttypes li.selected label.jive-icon-video {
+    background-color: #f3ffff;
+    border-color: #b3ddda;
+}
+
+.jive-standard-formblock .jive-form-element p {
+    font-size: .8889em;
+    padding: 3px 0;
+}
+
+.jive-standard-formblock .jive-form-element input[type=text] {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.jive-body-formpage-socialgroup .jive-form-element input.jive-form-textinput,
+    .jive-body-formpage-project .jive-form-element input.jive-form-textinput,
+    .jive-standard-formblock .jive-form-element textarea {
+    font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+    font-size: 1.1111em;
+    width: 100%;
+}
+
+.jive-body-formpage-space .jive-standard-formblock .jive-form-element p {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.jive-standard-formblock {
+    padding-top: 15px;
+    display: block;
+}
+
+.jive-standard-formblock .jive-form-buttons {
+    display: block;
+    clear: both;
+    padding: 10px 0 5px;
+}
+
+.jive-standard-formblock .jive-form-buttons button {
+    margin-right: 8px;
+}
+
+input.jive-form-element-text,
+    textarea.jive-form-element-textarea {
+    color: #333;
+    background-color: white;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 3px;
+}
+
+input.jive-form-element-text-disabled {
+    color: #CCC;
+    background-color: #efefef;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    border-bottom: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+    padding: 3px;
+}
+
+/* new (3.0) form container style */
+.jive-form-container {
+    background: #f7f7f7 url(../images/jive-formblock-bg.png) repeat-x top;
+    border: 1px solid #dadada;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.jive-form-container p {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.jive-form-container .jive-form-row {
+    clear: both;
+    padding: 5px 0 15px;
+}
+
+.jive-form-container .jive-form-buttons {
+    color: #666;
+    padding: 5px 0;
+}
+
+.jive-form-element-file-text {
+    font-size: 1.2em;
+    width: 400px;
+}
+
+.jive-form-element-file-button {
+    background: transparent url(../images/jive-bg-button.png) repeat-x center top;
+    border-color: #CCCCCC #999999 #666666;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 1.1em;
+    margin: 0px 5px;
+    padding: 4px 8px;
+}
+
+.jive-table-registration,
+    .jive-table-resolve {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+    background: #f7f7f7 url(../images/jive-formblock-bg.png) repeat-x top;
+    border: 1px solid #dadada;
+    color: #666;
+    padding-bottom: 25px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin: 0 0 40px;
+}
+
+.jive-table-registration table,
+    .jive-table-resolve table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jive-table-resolve table {
+    padding: 0 15px;
+    margin-top: 5px;
+}
+
+.jive-table-registration table td,
+    .jive-table-preferences table td,
+    .jive-table-resolve table td {
+    padding: 3px;
+}
+
+.jive-table .jive-table-cell-label {
+    vertical-align: top;
+    text-align: right;
+}
+
+.jive-table-registration td.jive-table-cell-label {
+    width: 150px;
+}
+
+.jive-table-preferences td.jive-table-cell-label {
+    width: 280px;
+}
+
+.jive-table-registration td.jive-table-cell-label label,
+    .jive-table-preferences td.jive-table-cell-label label {
+    display: block;
+    margin-top: 2px;
+}
+
+.jive-table-registration td.jive-edit-avatar {
+    margin: 0 10px 0 0;
+    float: left;
+    vertical-align: middle;
+}
+
+.jive-table-registration td.jive-edit-avatar a span {
+    float: left;
+    text-decoration: none;
+}
+
+.jive-table-registration td.jive-edit-avatar a em {
+    float: left;
+    font-style: normal;
+    padding-top: 18px;
+}
+
+.jive-table-registration td.jive-edit-avatar img {
+    margin: 0 8px 0 0;
+    padding: 2px;
+    background-color: #fff;
+    border: 1px solid #bababa;
+}
+
+.jive-table-registration table tr.jive-table-row-capthca td {
+    padding-top: 15px;
+}
+
+.jive-table-registration iframe {
+    width: 95%;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+.jive-form-button {
+    margin: 20px 15px 15px 0;
+}
+
+.jive-label-required span {
+    color: #900;
+    font-weight: bold;
+}
+
+.jive-error-message {
+    display: block;
+    color: #900;
+    font-weight: bold;
+}
+
+.jive-missing-token {
+    display: block;
+    color: #666;
+    font-size: .9167em;
+    width: 275px;
+}
+
+td.jive-error-message {
+    display: table-cell;
+}
+
+.jive-warning-message {
+    display: block;
+    color: #900;
+    font-weight: bold;
+}
+
+.jive-table .jive-table-cell-head {
+    padding-bottom: 6px;
+}
+
+.jive-table .jive-table-cell-head h4 {
+    color: #333;
+    font-size: 1.2222em;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 4px;
+}
+
+table.jive-profile-datetime-container,
+    table.jive-profile-datetime-container tr td {
+    margin: 0;
+    padding: 0 5px 0 0;
+    width: auto;
+}
+
+/* login & password reset page styles */
+body.jive-body-formpage-login #jive-userbar-login .jive-userbar-login-welcome,
+    body.jive-body-formpage-login #jive-userbar-right,
+    body.jive-body-formpage-password #jive-userbar-login .jive-userbar-login-welcome,
+    body.jive-body-formpage-password #jive-userbar-right,
+    body.jive-body-formpage-register #jive-userbar-login .jive-userbar-login-welcome,
+    body.jive-body-formpage-register #jive-userbar-right,
+    body.jive-body-formpage-register #jive-breadcrumb {
+    display: none;
+}
+
+body.jive-body-formpage-login #jive-userbar,
+    body.jive-body-formpage-password #jive-userbar,
+    body.jive-body-formpage-register #jive-userbar {
+    background-position: bottom;
+    height: 10px;
+}
+
+body.jive-body-formpage-login #jive-body-intro,
+    body.jive-body-formpage-password #jive-body-intro,
+    body.jive-body-formpage-login .jive-error-box,
+    body.jive-body-formpage-password .jive-error-box {
+    width: 540px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+body.jive-body-formpage-login .jive-error-box,
+    body.jive-body-formpage-password .jive-error-box,
+    body.jive-body-formpage-register .jive-error-box {
+    margin-top: 0;
+}
+
+body.jive-body-formpage-loginpopup #jive-global-header-texture {
+    width: 570px;
+}
+
+body.jive-body-formpage-loginpopup #jive-body-intro,
+    body.jive-body-formpage-loginpopup #jive-body-maincol-container {
+    min-width: 550px;
+    width: 550px;
+}
+
+.jive-login-formblock,
+    .jive-password-formblock {
+    width: 540px;
+    float: none;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.jive-login-formblock .jive-standard-formblock,
+    .jive-password-formblock .jive-standard-formblock {
+    padding-top: 25px;
+}
+
+.jive-login-formblock #jive-login-username,
+    .jive-login-formblock #jive-login-password,
+    .jive-login-formblock #jive-login-rememberme,
+    .jive-password-formblock #jive-password-username,
+    .jive-password-formblock #jive-password-passwordtoken,
+    .jive-password-formblock #jive-password-newpassword,
+    .jive-password-formblock #jive-password-confirmnewpassword {
+    float: left;
+    clear: both;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    width: 100%;
+}
+
+.jive-login-formblock #jive-login-username label,
+    .jive-login-formblock #jive-login-password label,
+    .jive-password-formblock #jive-password-username label,
+    .jive-password-formblock #jive-password-passwordtoken label,
+    .jive-password-formblock #jive-password-newpassword label,
+    .jive-password-formblock #jive-password-confirmnewpassword label {
+    display: block;
+    float: left;
+    line-height: 1.7em;
+    margin: 0 10px 0 0;
+    text-align: right;
+    width: 80px;
+}
+
+.jive-password-formblock #jive-password-username label,
+    .jive-password-formblock #jive-password-passwordtoken label,
+    .jive-password-formblock #jive-password-newpassword label,
+    .jive-password-formblock #jive-password-confirmnewpassword label,
+    .jive-register-formblock ul li label {
+    width: 115px;
+}
+
+.jive-login-formblock #jive-login-username input,
+    .jive-login-formblock #jive-login-password input,
+    .jive-password-formblock #jive-password-username input,
+    .jive-password-formblock #jive-password-passwordtoken input,
+    .jive-password-formblock #jive-password-newpassword input,
+    .jive-password-formblock #jive-password-confirmnewpassword input,
+    .jive-register-formblock ul li input {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    float: left;
+    padding: 2px;
+    width: 340px;
+}
+
+.jive-login-formblock #jive-login-username input,
+    .jive-login-formblock #jive-login-password input {
+    font-size: 1.1em;
+}
+
+.jive-login-formblock #jive-login-rememberme,
+    .jive-login-formblock .jive-form-buttons,
+    .jive-login-formblock #jive-login-forgotpwd,
+    .jive-login-formblock .jive-error-message {
+    padding-left: 88px;
+    margin-right: -88px;
+    clear: both;
+}
+
+.jive-login-formblock .jive-form-buttons,
+    .jive-login-formblock .jive-form-buttons {
+    padding-top: 2px;
+}
+
+.jive-login-formblock #jive-login-forgotpwd {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.jive-password-formblock .jive-form-buttons,
+    .jive-password-formblock .jive-error-message,
+    .jive-register-formblock .jive-form-buttons,
+    .jive-register-formblock .jive-form-buttons,
+    .jive-standard-formblock .jive-missing-token,
+    .jive-login-formblock .jive-form-buttons {
+    padding-left: 125px;
+    margin-right: -125px;
+    clear: both;
+}
+
+.jive-login-formblock .jive-form-buttons {
+    padding-left: 88px;
+    padding-top: 5px;
+    margin-right: -88px;
+}
+
+.jive-login-formblock .jive-form-buttons .jive-form-button-submit {
+    font-size: 1.1em;
+}
+
+.jive-body-formpage-password #jive-body-intro-content p.jive-intro-success {
+    margin-top: 20px;
+    font-size: 1.1111em;
+}
+
+.jive-body-formpage-password #jive-body-intro-content p.jive-intro-login {
+    font-size: 1.5556em;
+    line-height: 1.4286;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.jive-body-formpage-password #jive-body-intro-content p.jive-intro-login a {
+    border: 1px solid #dfdfdf;
+    background-color: #f0f0f0;
+    padding: 2px 8px;
+    text-decoration: none;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    outline: none;
+}
+
+.jive-body-formpage-password #jive-body-intro-content p.jive-intro-login a:hover {
+    background-color: #f9f9f9;
+}
+
+/* 'Invite friends to join' form styles, including modal popup */
+body.jive-body-formpage-invite #jive-body-intro,
+    body.jive-body-formpage-invite .jive-invite-formblock,
+    body.jive-body-formpage-invite #jive-error-box {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+}
+
+.jive-invite-formblock .jive-standard-formblock {
+    padding: 20px 25px 20px;
+}
+
+.jive-invite-formblock form #jive-invite-emails,
+    .jive-invite-formblock form #jive-invite-subject {
+    padding-bottom: 20px;
+}
+
+.jive-invite-formblock label {
+    font-size: 1.2222em;
+}
+
+.jive-invite-formblock form #jive-invite-emails input,
+    .jive-invite-formblock form #jive-invite-subject input,
+    .jive-invite-formblock form #jive-invite-message textarea, {
+    clear: both;
+}
+
+.jive-invite-formblock form ul.holder,
+    .jive-invite-formblock form #jive-invite-subject input,
+    .jive-invite-formblock form #jive-invite-message textarea {
+    border: 2px solid #777;
+    border-bottom-color: #eee;
+    border-right-color: #eee;
+    margin-top: 2px;
+    width: 650px;
+}
+
+.jive-invite-formblock form #jive-invite-emails a {
+    font-size: .8889em;
+    padding-left: 4px;
+}
+
+.jive-invite-formblock form #jive-invite-subject input {
+    padding: 3px;
+}
+
+.jive-invite-formblock form #jive-invite-message textarea {
+    height: 150px;
+    padding: 3px;
+}
+
+.jive-invite-formblock form #jive-invite-message-unmodifiable {
+    background: #f5f5f5;
+    color: #666;
+    outline: none;
+    resize: none;
+    border: none;
+}
+
+/* import CSV project tasks screens */
+.jive-task-list-container .jive-content-block {
+    padding: 0;
+}
+
+.jive-import-tasks-upload fieldset,
+    .jive-import-tasks-commit fieldset {
+    padding: 0;
+    margin: 0;
+}
+
+.jive-import-tasks-export fieldset {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.jive-import-tasks-export fieldset legend {
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+
+.jive-content-block .jive-import-tasks-export fieldset fieldset legend {
+    margin-bottom: 0;
+}
+
+.jive-import-tasks-upload .jive-import-tasks-commit,
+    .jive-import-tasks-export .jive-import-tasks-commit {
+    padding: 7px;
+    margin: 20px 0 0 0;
+    border-top: 1px solid #CDCDCD;
+    background-color: #E9F2F8;
+}
+
+.jive-import-tasks-upload .jive-import-tasks-browse {
+    padding: 20px 10px 0 10px;
+}
+
+.jive-import-tasks-options {
+    padding: 20px 10px 0 10px;
+}
+
+.jive-import-tasks-upload .jive-import-tasks-commit input,
+    .jive-import-tasks-export .jive-import-tasks-commit input {
+    padding: 0 4px 0 0;
+}
+
+.jive-import-tasks-export {
+    padding: 10px 0 0 0;
+}
+
+/* import CSV modal popup */
+#jive-import-csv {
+    padding: 20px;
+    text-align: left;
+}
+
+#jive-import-csv p {
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+#jive-import-csv h3 {
+    font-size: 1.7778em;
+    font-weight: normal;
+    padding: 5px 0;
+}
+
+#jive-import-csv iframe#upload-form-submit {
+    border: none;
+    height: 0;
+    width: 0;
+}
+
+#jive-import-csv-breadcrumb {
+    color: #777;
+    padding-bottom: 30px;
+}
+
+#jive-import-csv-breadcrumb ol,
+    #jive-import-csv-breadcrumb ol li {
+    display: inline;
+}
+
+#jive-import-csv-breadcrumb ol {
+    padding: 0 0 0 10px;
+}
+
+#jive-import-csv-breadcrumb ol li.one {
+    background: transparent url(../images/jive-icon-num-1.gif) no-repeat left;
+    padding: 1px 15px 1px 20px;
+}
+
+#jive-import-csv-breadcrumb ol li.two {
+    background: transparent url(../images/jive-icon-num-2.gif) no-repeat left;
+    padding: 1px 0 1px 20px;
+}
+
+#jive-import-csv-breadcrumb ol li.selected {
+    color: #333;
+    font-weight: bold;
+}
+
+.jive-csvimport-formblock {
+    float: none;
+    margin: 0;
+}
+
+.jive-csvimport-formblock .jive-standard-formblock {
+    padding-bottom: 30px;
+}
+
+.jive-csvimport-formblock .jive-standard-formblock label,
+    .jive-csvuploaded-formblock .jive-standard-formblock label {
+    display: block;
+    font-size: 1.1111em;
+    padding-bottom: 4px;
+}
+
+.jive-csvuploaded-formblock .jive-standard-formblock label {
+    padding-bottom: 2px;
+}
+
+#jive-import-csv-instructions {
+    padding-top: 30px;
+    font-size: .8889em;
+}
+
+#jive-import-csv-instructions h4 {
+    font-size: 1.1111em;
+    margin: 0;
+    padding: 5px 0 2px;
+}
+
+#jive-import-csv-instructions li {
+    padding: 1px 0;
+}
+
+#jive-import-csv-instructions ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#jive-import-csv-instructions ol {
+    padding: 4px 0 4px 30px;
+}
+
+.jive-uploaded-csv-file,
+    .jive-uploaded-csv-sampleinfo {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.jive-uploaded-csv-sampleinfo {
+    margin-bottom: 10px;
+}
+
+.jive-uploaded-csv-file {
+    margin-bottom: 15px;
+}
+
+.jive-uploaded-csv-fileName {
+    color: #333;
+    font-size: 1.2222em;
+    font-weight: bold;
+}
+
+.jive-uploaded-csv-sample {
+    color: #555;
+    padding: 5px 0;
+}
+
+.jive-uploaded-csv-sample {
+    padding: 2px 0 8px;
+}
+
+.jive-uploaded-csv-sample span#uploaded-csv-sample-name {
+    color: #333;
+    font-size: 1.1111em;
+    font-weight: bold;
+    padding-right: 6px;
+}
+
+.jive-uploaded-csv-sample span#uploaded-csv-sample-email {
+    color: #555;
+}
+
+#jive-uploaded-csv-fields,
+    #jive-uploaded-csv-fields label,
+    #jive-uploaded-csv-fields select {
+    font-size: .95em;
+}
+
+#jive-uploaded-csv-fields p {
+    padding: 0 0 4px;
+}
+
+#jive-uploaded-csv-fields label {
+    display: block;
+    float: left;
+    padding-top: 2px;
+    width: 125px;
+    text-align: right;
+}
+
+#jive-uploaded-csv-fields select {
+    margin-bottom: 2px;
+    width: 200px;
+    margin-left: 8px;
+
+}
+
+#jive-current-members,
+    .jive-selectemails-formblock {
+    font-size: .8889em;
+}
+
+#jive-current-members {
+    padding-bottom: 25px;
+}
+
+#jive-current-members p {
+    margin: 0;
+    padding: 0 0 3px;
+}
+
+#jive-current-members div {
+    max-height: 50px;
+    overflow-y: auto;
+}
+
+* html #jive-current-members div {
+    height: 50px;
+}
+
+#jive-current-members ul li strong,
+    #jive-select-emails-scroller ul li strong {
+    color: #333;
+}
+
+#jive-current-members ul li span,
+    #jive-select-emails-scroller ul li span {
+    color: #666;
+    font-weight: normal;
+}
+
+#jive-current-members ul li,
+    #jive-select-emails-scroller ul li {
+    padding: 1px 0;
+}
+
+#jive-select-emails-scroller {
+    background-color: #fff;
+    border: 1px solid #dadada;
+    height: 150px;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+}
+
+#jive-import-csv .jive-select-emails-scroller-tall {
+    height: 220px;
+}
+
+#jive-select-emails-scroller ul {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+}
+
+.jive-select-email-controls {
+    padding-left: 8px;
+}
+
+/* --------------------------------------------- */
+/*  Moderation Messages							 */
+/* --------------------------------------------- */
+#jive-modpage .jive-info-message {
+    padding: 3px;
+}
+
+#jive-modpage .jive-mark-buttons input, #jive-modpage .jive-mark-buttons select, #jive-modpage .jive-jump-box select {
+    font-size: .8889em;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+#jive-modpage .jive-mod-msg-row th {
+    border-bottom: 1px #ccc solid;
+}
+
+#jive-modpage .jive-mod-msg-row-app th {
+    border-bottom: 1px #999 solid;
+    background-color: #cfc;
+}
+
+#jive-modpage .jive-mod-msg-row-rej th {
+    border-bottom: 1px #999 solid;
+    background-color: #fcc;
+}
+
+#jive-mod-forum-box th, #jive-mod-forum-box th {
+    font-size: .8889em;
+    font-family: verdana;
+}
+
+#jive-mod-forum-box {
+    margin-right: 8px;
+}
+
+#jive-mod-forum-box table {
+    border: 1px #ccc solid;
+}
+
+#jive-mod-forum-box th {
+    text-align: left;
+    font-weight: bold;
+    background-color: #eee;
+    border-bottom: 1px #ccc solid;
+}
+
+#jive-mod-forum-box .jive-mod-forum-all th {
+    border-top: 1px #ccc solid;
+}
+
+#jive-mod-forum-box label, #jive-mod-forum-box input, #jive-mod-forum-box select {
+    font-size: .8889em;
+    font-family: verdana, arial, helvetica, sans-serif;
+}
+
+/* ToolTip */
+div.jive-tooltip {
+    position: absolute;
+    width: 330px;
+    padding: 6px;
+    background-color: #f9f5d5;
+    border: 1px solid #999;
+    text-align: left;
+    z-index: 20;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    opacity: .92;
+    -khtml-opacity: .92;
+}
+
+/* IE6 only */
+* html div.jive-tooltip {
+    filter: alpha(opacity = 92);
+    height: 1%;
+}
+
+/* IE7 only */
+*+html div.jive-tooltip {
+    filter: alpha(opacity = 92);
+    min-width: 0;
+}
+
+div.jive-tooltip .contents {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: .9167em;
+    color: #333;
+    margin: 0;
+    padding: 0 3px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 100);
+    opacity: 1;
+    -khtml-opacity: 1;
+}
+
+.jive-tooltip-help {
+    background-color: #ffffe7;
+    border: 1px solid #e8e8ae;
+    color: #333;
+    overflow: hidden;
+    padding: 6px;
+    text-align: left;
+    width: 330px;
+    z-index: 999;
+}
+
+.jive-tooltip-help p,
+    .jive-tooltip-help ul {
+    margin: 0 0 6px 0;
+}
+
+.jive-tooltip2 {
+    width: 266px;
+    color: #555;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.jive-tooltip2-top,
+    .jive-tooltip2-mid,
+    .jive-tooltip2-btm {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 266px;
+}
+
+.jive-tooltip2-top {
+    background: transparent url(../images/jive-tooltip-top-trans.png) no-repeat;
+    height: 12px;
+}
+
+.jive-tooltip2-mid {
+    background: transparent url(../images/jive-tooltip-mid-trans.png) no-repeat;
+    text-align: left;
+}
+
+.jive-tooltip2-mid div.jive-tooltip2-mid-padding {
+    padding: 2px 18px;
+}
+
+.jive-tooltip2-btm {
+    background: transparent url(../images/jive-tooltip-btm-trans.png) no-repeat;
+    height: 15px;
+}
+
+* html .jive-tooltip2 {
+    background-color: #ffffe8;
+    border: 1px solid #e9e9ae;
+}
+
+* html .jive-tooltip2-top,
+    * html .jive-tooltip2-mid,
+    * html .jive-tooltip2-btm {
+    background: none;
+    height: auto;
+}
+
+* html .jive-tooltip2-mid div.jive-tooltip2-mid-padding {
+
+}
+
+/* task tooltips */
+#jive-note-tasks-body {
+    font-size: .8889em;
+}
+
+#jive-note-tasks-body strong {
+    font-size: 1.1111em;
+    color: #777;
+}
+
+#jive-note-tasks-body ul {
+    padding: 10px 0 0;
+    max-height: 175px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+* html #jive-note-tasks-body ul {
+    height: expression( document . body . clientHeight > 175 ? "175px": "auto" );
+}
+
+#jive-note-tasks-body ul li {
+    clear: left;
+    list-style: none;
+    padding: 0 0 12px 0;
+}
+
+#jive-note-tasks-body ul li em {
+    color: #d74444;
+    font-style: normal;
+    font-weight: bold;
+}
+
+#jive-note-tasks-body .jive-avatar {
+    float: left;
+    margin: -2px 6px 0 0;
+}
+
+#jive-note-tasks-body .jive-username-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+#jive-note-checkpoint-body strong {
+    color: #5e87b3;
+}
+
+#jive-note-checkpoint-body p {
+    padding: 0 0 12px 22px;
+    margin: 0;
+}
+
+/* mini-profile tooltips */
+#jive-note-user-body, #jive-note-container-body {
+    color: #555;
+}
+
+#jive-note-user-body .jive-avatar,
+    #jive-note-container-body img,
+    #jive-note-bookmark-body .jive-avatar {
+    float: left;
+    margin: 0 8px 10px 0;
+}
+
+#jive-note-container-body img {
+    width: 48px;
+    border: 1px solid #dadada;
+}
+
+#jive-note-user-body h5, #jive-note-container-body h5, #jive-note-bookmark-body h5 {
+    font-size: 1.3333em;
+    padding: 3px 0;
+}
+
+#jive-note-user-body em {
+    display: block;
+    padding: 0 0 5px 0;
+}
+
+#jive-note-user-body .jive-note-user-status,
+    #jive-note-bookmark-body .jive-note-user-status {
+    font-size: .8889em;
+    color: #777;
+    display: block;
+    padding: 0 0 3px;
+}
+
+#jive-note-user-body .status, #jive-note-container-body .status, #jive-note-bookmark-body .status {
+    font-size: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-weight: normal;
+    display: block;
+}
+
+#jive-note-bookmark-body h3 {
+    font-size: 1em;
+}
+
+#jive-note-bookmark-body p {
+    margin: 4px 0;
+    background: #FFFFF7;
+    padding: 2px
+}
+
+#jive-note-bookmark-body ul.tags {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#jive-note-bookmark-body ul.tags li {
+    display: inline;
+}
+
+#jive-note-user-body ul, #jive-note-container-body ul {
+    list-style-type: none;
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: .8889em;
+}
+
+#jive-note-user-body ul li, #jive-note-container-body ul li {
+    clear: both;
+    padding: 1px 0;
+}
+
+#jive-note-container-body ul.jive-profile-tt-recent-stats {
+    margin-top: 5px;
+}
+
+#jive-note-user-body ul.jive-profile-tt-icons,
+    #jive-note-container-body ul.jive-profile-tt-icons {
+}
+
+#jive-note-user-body ul.jive-profile-tt-icons li,
+    #jive-note-container-body ul.jive-profile-tt-icons li {
+    padding: 1px 0;
+}
+
+#jive-note-user-body ul.jive-profile-tt-icons li img,
+    #jive-note-container-body ul.jive-profile-tt-icons li img {
+    margin: 0 4px 0 0;
+}
+
+#jive-note-user-body ul.jive-profile-tt-content,
+    #jive-note-container-body ul.jive-profile-tt-content {
+    overflow: hidden;
+    position: relative;
+}
+
+#jive-note-user-body ul.jive-profile-tt-content li a,
+    #jive-note-container-body ul.jive-profile-tt-content li a {
+    display: block;
+    padding-bottom: 1px;
+    padding-left: 16px;
+    position: relative;
+}
+
+* html #jive-note-user-body ul.jive-profile-tt-content,
+    * html #jive-note-container-body ul.jive-profile-tt-content,
+    * html #jive-note-user-body ul.jive-profile-tt-content li a,
+    * html #jive-note-container-body ul.jive-profile-tt-content li a {
+    zoom: 1;
+}
+
+#jive-note-user-body ul.jive-profile-tt-content li a .jive-icon-sml,
+    #jive-note-container-body ul.jive-profile-tt-content li a .jive-icon-sml {
+    left: 0;
+    position: absolute;
+    top: 2px;
+}
+
+.jive-profile-tt-actions {
+    color: #666;
+    display: block;
+    font-size: .8889em;
+    margin: 0 0 8px 0;
+    text-decoration: none;
+}
+
+.jive-profile-tt-actions-advanced p {
+    margin: 2px 0;
+}
+
+.jive-profile-tt-place-parent {
+    color: #666;
+    font-size: .9em;
+    font-weight: normal;
+    margin: 0 0 5px;
+}
+
+#jive-note-container-body em {
+    display: block;
+    font-size: .95em;
+    margin-bottom: 8px;
+}
+
+/* Invoked if you have the video module enabled, */
+/* and a version of Flash Player that is too old (or non-existent) */
+#flash-not-installed {
+    position: relative;
+    color: #333333;
+    font-size: 1em;
+    text-align: left;
+    vertical-align: top;
+    padding: 40px;
+    margin: 0;
+    z-index: 1000;
+    width: 320px;
+    height: 253px;
+    background: transparent url(../images/no-flash-player.jpg) no-repeat;
+}
+
+#flash-not-installed a {
+    text-decoration: underline;
+}
+
+#flash-not-installed h4 {
+    color: #d7941a;
+}
+
+#flash-not-installed .jive-icon-med {
+    margin: 2px 4px 0 0;
+}
+
+* html #flash-not-installed .jive-icon-med {
+    position: relative;
+    margin: 0 4px 0 0;
+}
+
+/* video tooltips */
+.jive-video-tt-featured {
+    color: #666;
+    font-size: .9em;
+    padding: 5px;
+    margin: 0 0 4px -5px;
+    background: #efefc0;
+}
+
+.jive-video-tt-featured a {
+    color: #999;
+}
+
+.jive-video-tt-notfeatured {
+    color: #666;
+    font-size: .9em;
+    padding: 5px;
+    margin: 0 0 4px -5px;
+    border: solid 1px #efefc0;
+}
+
+.jive-video-tt-notfeatured a {
+    color: #999;
+}
+
+.jive-video-tt-profile {
+    color: #666;
+    font-size: .85em;
+    padding: 0;
+    margin: 3px 0;
+}
+
+.jive-video-tt-profile a {
+    color: #999;
+}
+
+#jive-note-video-body h4 {
+    font-size: 1.3333em;
+    padding: 0;
+}
+
+.jive-video-tt-description {
+    font-size: .95em;
+    margin: 12px 0 10px 0;
+}
+
+.jive-video-tt-tags {
+    display: block;
+    font-size: 0.85em;
+    margin: 7px 0 5px 0;
+}
+
+.jive-video-tt-ratings {
+    padding: 0;
+    margin-top: 0;
+}
+
+/* Override some rating styles so user can't rate before viewing */
+.jive-video-tt-ratings #jive-content-userrating,
+    .jive-video-tt-ratings #jive-content-avgrating-title,
+    .jive-video-tt-ratings #jive-content-avgrating-count,
+    .jive-video-tt-ratings #jive-video-views {
+    display: none;
+}
+
+.jive-video-tt-views {
+    float: left;
+    font-size: 0.85em;
+    padding: 0;
+    margin: 4px 5px;
+}
+
+.jive-video-tt-favorites {
+    float: left;
+    color: #D34D4D;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0;
+    margin: 4px 5px 4px 15px;
+}
+
+.jive-video-tt-favorites img {
+    vertical-align: bottom;
+}
+
+/* BEGIN SUPERNOTE STYLES (relates to supernote.js) */
+/* Here's our default note styles. */
+.notedefault {
+    position: absolute;
+    visibility: hidden;
+    top: 0;
+}
+
+/* Some position-type-specific offset information. */
+.snp-mouseoffset {
+    margin-left: 3px;
+    margin-top: 4px;
+}
+
+/* END SUPERNOTE STYLES */
+
+/* Comments */
+.jive-comment-post {
+    overflow: hidden;
+    width: auto;
+}
+
+#jive-comments table.mceLayout {
+    width: 100%;
+}
+
+.jive-editor-panel textarea {
+    width: 100%;
+}
+
+#jive-comments textarea {
+    width: 100%;
+}
+
+* html #jive-content-post-comments {
+    width: 96%;
+}
+
+#jive-content-post-comments {
+    padding: 0;
+}
+
+* html #jive-comments textarea {
+    width: 97%;
+}
+
+.jive-comment-post form {
+    background-color: #fbfbfb;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    margin: 12px;
+}
+
+.jive-comment-post h2 {
+    clear: both;
+    margin: 0;
+    padding: 2px 0 5px;
+}
+
+.jive-comment-post-anonymous {
+    clear: both;
+}
+
+.jive-comment-post-anonymous div label {
+    font-weight: bold;
+    color: #555;
+    font-size: .8889em;
+    padding: 0 4px;
+}
+
+.jive-comment-post-anonymous div label span {
+    font-weight: normal;
+    padding-left: 2px;
+    color: #999;
+}
+
+.jive-comment-post-anonymous div input {
+    width: 250px;
+}
+
+.jive-comment-post div textarea,
+    .jive-comment-textarea {
+    width: 100%;
+    clear: both;
+    display: block;
+    font: .8889em verdana, arial, helvetica, sans-serif;
+}
+
+pre {
+    display: block;
+    width: auto;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    white-space: pre;
+}
+
+* html .jive-rendered-content pre {
+    width: 85%;
+}
+
+code {
+    padding: 0;
+    margin: 0;
+}
+
+.jive-quote,
+    .jive-pre {
+    border: 1px #eee solid;
+    border-left: 2px #ccc solid;
+    background-color: #fff;
+    background-repeat: repeat;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+* HTML .jive-quote {
+    height: 1%;
+}
+
+* html .jive-pre {
+    padding-bottom: 25px;
+}
+
+* html .jive-quote .jive-pre {
+    padding-bottom: 25px;
+}
+
+.jive-pre {
+    background-image: url(../images/jive-bg-pre.gif);
+}
+
+.jive-quote {
+    background-image: url(../images/quote-background-1.gif);
+    overflow: auto;
+}
+
+.jive-quote .jive-quote {
+    background-image: url(../images/quote-background-2.gif);
+    border-color: #eef;
+    border-left-color: #ccf;
+}
+
+.jive-quote .jive-quote .jive-quote {
+    background-image: url(../images/quote-background-3.gif);
+    border-color: #efe;
+    border-left-color: #cfc;
+}
+
+.jive-quote .jive-quote .jive-quote .jive-quote {
+    background-image: url(../images/quote-background-4.gif);
+    border-color: #fee;
+    border-left-color: #fcc;
+}
+
+.jive-quote pre {
+    background-image: url(../images/jive-bg-pre.gif);
+    border: 1px #eee solid;
+    border-left: 2px #ccc solid;
+    background-color: #fff;
+    background-repeat: repeat;
+    margin: 10px 20px;
+    padding: 10px;
+}
+
+.jive-avatar-box a, .jive-avatar-box span {
+    display: block;
+    padding: 2px;
+    margin: 0 4px 0 0;
+    border: 1px solid #dadada;
+    background-color: #fff;
+}
+
+.jive-profile-bubble {
+/* Mozilla ignores crazy MS image filters, so it will skip the following */
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled = true, sizingMethod = scale src = '../images/jive-profile-bubble-middle.png');
+    background-repeat-y: top left;
+}
+
+/* IE ignores styles with [attributes], so it will skip the following. */
+.jive-profile-bubble[class] {
+    background: url(../images/jive-profile-bubble-middle.png) repeat-y top left;
+    height: 300px;
+}
+
+.jive-profile-bubble .pad {
+    padding: 3px 0 0 30px;
+}
+
+.jive-profile-bubble .pc {
+    width: 392px;
+    font-family: verdana, arial, san-serif;
+    font-size: .9167em;
+    line-height: .7857;
+}
+
+#pcMain {
+    width: 450px;
+    position: absolute;
+    z-index: 1001;
+}
+
+#pcArrow {
+    position: absolute;
+    z-index: 1000;
+}
+
+/* new jive table styles */
+#jive-lightbox {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    line-height: 0;
+}
+
+#jive-lightbox a img {
+    border: none;
+}
+
+#jive-outerImageContainer {
+    position: relative;
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+#jive-imageContainer {
+    padding: 10px;
+}
+
+#jive-loading {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    height: 25%;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+}
+
+#jive-hoverNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+#jive-imageContainer>#jive-hoverNav {
+    left: 0;
+}
+
+#jive-hoverNav a {
+    outline: none;
+}
+
+#jive-imageDataContainer {
+    font: .8333em Verdana, Helvetica, sans-serif;
+    background-color: #fff;
+    margin: 0 auto;
+    line-height: 1.4em;
+    overflow: auto;
+    width: 100%
+}
+
+#jive-imageData {
+    padding: 0 10px;
+    color: #666;
+}
+
+#jive-imageData #jive-imageDetails {
+    width: 70%;
+    float: left;
+    text-align: left;
+}
+
+#jive-imageData #jive-caption {
+    font-weight: bold;
+}
+
+#jive-imageData #jive-numberDisplay {
+    display: block;
+    clear: left;
+    padding-bottom: 1.0;
+}
+
+#jive-imageData #jive-bottomNavClose {
+    width: 66px;
+    float: right;
+    padding-bottom: 0.7em;
+}
+
+#jive-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 500px;
+    background-color: #000;
+}
+
+/* styles for thumbnail display in content */
+.jive-image-thumbnail {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+/* default username avatar styles */
+span.jive-avatar-username-block a img {
+    display: block;
+    float: left;
+    border: 1px solid #dadada;
+    margin: 0;
+    padding: 2px;
+}
+
+span.jive-avatar-username-block a.jive-username-link {
+    margin-top: 4px;
+    padding: 1px 0 1px 6px;
+    float: left;
+}
+
+.jive-link-back {
+    background: transparent url(../images/jive-icon-arrow-left-small.gif) no-repeat left;
+    padding: 0 4px 0 8px;
+    font-size: .8889em;
+}
+
+#jive-rsspage p {
+    padding: 0 0 20px;
+}
+
+#jive-rsspage .jive-rsspage-feedslist {
+    display: block;
+    clear: both;
+}
+
+#jive-rsspage .jive-rsspage-feedslist table {
+    float: none;
+    width: 100%;
+}
+
+#jive-rsspage .jive-rsspage-feedslist table tr td {
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+    font-size: .8889em;
+}
+#jive-rsspage .jive-rsspage-feedslist table tr td td {
+	font-size: 1em; 
+	}
+	
+#jive-rsspage .jive-rsspage-feedslist table tr td.jive-table-cell-label {
+    text-align: right;
+    padding-right: 7px;
+    font-weight: bold;
+    width: 160px;
+}
+
+#jive-rsspage .jive-rsspage-pick-community {
+    display: block;
+    clear: both;
+    padding: 10px 0 40px;
+}
+
+#jive-rsspage .jive-rsspage-pick-community p {
+    padding: 0 0 10px;
+}
+
+/* overview customize info block (seen by community admins, points to the customize link) */
+.jive-customize-info,
+    .jive-customize-details {
+    color: #204158;
+    margin-top: -15px;
+    padding: 12px 20px 30px;
+    position: relative;
+}
+
+.jive-personalize-home {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.jive-customize-info .jive-customize-arrow,
+    .jive-customize-details .jive-customize-arrow {
+    background: transparent url(../images/jive-customize-info-arrow.gif) no-repeat 116px top;
+    display: block;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    width: 90%;
+}
+
+.jive-personalize-home .jive-customize-arrow {
+    background-position: 190px top;
+}
+
+.jive-customize-info div.jive-customize-content,
+    .jive-customize-details div.jive-customize-content {
+    background-color: #E4F2FD;
+    border: 1px solid #91BAD7;
+    padding: 12px 12px 13px 12px;
+    margin-top: -1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.jive-customize-details div.jive-customize-content {
+    padding: 25px;
+}
+
+.jive-customize-info p {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 52px;
+}
+
+.jive-customize-info strong {
+    color: #427fab;
+    font-size: 1.5556em;
+}
+
+.jive-customize-info span {
+    border: 1px solid #91bad7;
+    font-size: .8889em;
+    display: block;
+    position: absolute;
+    right: 38px;
+    top: 27px;
+}
+
+.jive-customize-info span a:link,
+    .jive-customize-info span a:visited {
+    background: #f1f9ff url(../images/jive-icon-close.gif) no-repeat 5px center;
+    display: block;
+    padding: 2px 4px 2px 17px;
+}
+
+.jive-customize-info span a:hover,
+    .jive-customize-info span a:active {
+    background-color: #fff;
+}
+
+/* ZEIBER REMINDER PROTO */
+.reminder-personal {
+    position: absolute;
+    width: 275px;
+}
+
+.reminder-workflow {
+    width: 275px;
+    margin: 0 0 0 300px;
+    padding: 0 0 0 0;
+}
+
+.reminder-moderation {
+    position: relative;
+    width: 275px;
+    margin: 0 0 0 600px;
+    padding: 0 0 0 0;
+}
+
+#jive-reminders {
+    display: block;
+    background-color: #efefef;
+    border: 1px solid #e2e2e2;
+    font-size: .8333em;
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px 0 10px 0;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+#jive-reminders a {
+    display: block;
+    font-size: .8333em;
+}
+
+.reminder-header {
+    min-height: 15px;
+    padding: 2px 0 2px 22px;
+    background: transparent url(../images/jive-icon-reminder-16x16.gif) no-repeat left top;
+}
+
+.reminder-header a {
+    text-decoration: underline;
+}
+
+#reminder-content {
+    display: none;
+    padding: 4px 0 0 0;
+    margin: 6px 0 0 0;
+    border-top: solid #ccc 1px;
+}
+
+#reminder-content ul {
+    margin: 5px 0 0 0;
+    padding-bottom: 5px;
+}
+
+.reminder-accent {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:hover span.reminder-accent {
+    color: #CC0000;
+}
+
+li.reminder {
+    list-style-type: none;
+    padding: 0 0 5px 0;
+    margin: 0 0 0 0;
+}
+
+li.reminder a {
+    text-decoration: none;
+}
+
+li.reminderGroup {
+    list-style-type: none;
+    padding: 0 0 5px 0;
+    margin: 0 0 0 -15px;
+    font-weight: bold;
+}
+
+/* styles for the details information screen */
+.jive-customize-details h2 {
+    color: #427fab;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 1.7778em;
+}
+
+.jive-customize-btn {
+    background: transparent url(../images/jive-customize-btn.png) repeat-x left top;
+    border: 1px solid #99c1dd;
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    margin: 0;
+    overflow: hidden;
+    padding: 8px 28px 8px 28px;
+    position: absolute;
+    text-decoration: none;
+    right: 30px;
+}
+
+.jive-customize-btn:hover {
+    background-position: left -45px;
+}
+
+.jive-customize-close-pers {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 55px;
+    width: 35px;
+
+    text-align: center;
+}
+
+.jive-customize-close-comm {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 15px;
+    top: 60px;
+    width: 65px;
+
+    text-align: center;
+}
+
+.jive-customize-cancel {
+    display: block;
+    float: right;
+    position: absolute;
+    right: 30px;
+    top: 115px;
+    width: 260px;
+
+    text-align: center;
+}
+
+.jive-customize-details p {
+    padding: 0 100px 13px 0;
+}
+
+.jive-customize-introduction {
+    margin-right: 200px;
+}
+
+.jive-customize-details p.jive-customize-details-endcopy {
+    padding-bottom: 50px;
+}
+
+.jive-customize-details a.jive-icon-text,
+    .jive-customize-details a.jive-icon-film {
+    background-position: left;
+    background-repeat: no-repeat;
+    padding: 1px 0 1px 18px;
+    font-weight: bold;
+}
+
+.jive-customize-details a.jive-icon-text {
+    background-image: url(../images/jive-icon-doctype-text-16x16.gif);
+}
+
+.jive-customize-details a.jive-icon-film {
+    background-image: url(../images/jive-icon-film-16x16.gif);
+}
+
+.jive-customize-details-item {
+    position: relative;
+    background: transparent url(../images/jive-customize-details-item-bg.png) repeat-x top;
+    height: 270px;
+}
+
+.jive-customize-details-item img {
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.jive-customize-details-item span {
+    display: block;
+    padding-left: 555px;
+    padding-right: 20px;
+}
+
+.jive-customize-details-item h3 {
+    font-size: 1.6667em;
+    font-weight: bold;
+    color: #427fab;
+    padding: 30px 0 10px 0;
+}
+
+.jive-customize-details-item ul {
+    list-style-image: url(../images/jive-customize-details-bullet.png);
+}
+
+.jive-customize-details-item ul li {
+    padding: 0 0 6px 0;
+}
+
+.jive-customize-details-item div {
+    background: transparent url(../images/jive-customize-details-item4.png) no-repeat top left;
+    display: block;
+    height: 223px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 553px;
+    padding-left: 35px;
+}
+
+.jive-customize-details-item div ul {
+    float: left;
+    padding-top: 75px;
+    padding-right: 20px;
+}
+
+.jive-personalize-home p.jive-customize-introduction {
+    margin-bottom: 50px;
+}
+
+.jive-personalize-home .jive-customize-content .jive-customize-details-item  p {
+    padding: 0 20px 13px 0;
+    margin: 10px 0;
+}
+
+.jive-personalize-home .jive-customize-details-item h3 {
+    font-size: 1.5556em;
+}
+
+/* empty content block styles */
+
+#jive-community-empty {
+    padding: 20px;
+}
+
+#jive-community-empty p {
+    color: #333;
+    font-size: 1.2222em;
+    font-weight: bold;
+    padding: 0 0 10px 0;
+}
+
+#jive-community-empty-types {
+    background: #fff url(../images/jive-community-empty-bg.gif) repeat-x top;
+    padding: 0 10px 10px;
+}
+
+#jive-community-empty-types p {
+    font-size: .8889em;
+    font-weight: normal;
+    color: #666;
+    padding: 0;
+}
+
+#jive-community-empty-types a {
+    font-size: 1.4444em;
+    font-weight: bold;
+    padding: 1px 9px 3px 3px;
+    text-decoration: none;
+    outline: none;
+}
+
+#jive-community-empty-types a:hover {
+    text-decoration: underline;
+}
+
+.jive-content-block-empty {
+    padding: 21px 0 21px 0;
+}
+
+.jive-content-block-empty-discussions a {
+    color: #30699b;
+}
+
+.jive-content-block-empty-documents a {
+    color: #e49a22;
+}
+
+.jive-content-block-empty-blogposts a {
+    color: #36830f;
+}
+
+.jive-content-block-empty-videos a {
+    color: #048fa1;
+}
+
+.jive-content-block-empty-pm p {
+    padding-left: 0;
+}
+
+.jive-content-block-empty-bookmarks {
+
+}
+
+.jive-community-empty-small {
+    margin-bottom: 40px;
+    clear: both;
+}
+
+.jive-community-empty-small p {
+    font-size: 1em !important;
+    font-weight: normal !important;
+}
+
+.jive-community-empty-small #jive-community-empty-types p {
+    font-size: 1em;
+    padding-top: 2px;
+    padding-bottom: 10px;
+}
+
+.jive-community-empty-small #jive-community-empty-types a {
+    font-size: 1.2222em;
+}
+
+.jive-community-empty-small #jive-community-empty-types div {
+    border-bottom: none;
+    background-position: left 20px;
+}
+
+/* container picker  */
+#jive-doc-create-continue {
+    position: relative;
+}
+
+#jive-choose-containers-views {
+    float: left;
+    width: 280px;
+}
+
+#jive-choose-containers-results {
+    float: left;
+    background: #fff;
+    border: 1px solid #dadada;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 20px;
+    margin: -25px 0 0 -15px;
+}
+
+#jive-choose-containers-results ul,
+    #jive-choose-containers-results p {
+    height: 300px;
+    width: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+#jive-choose-containers-results ul {
+    margin: 0 0 0 -30px;
+    padding: 0;
+}
+
+#jive-choose-containers-results ul.jive-list-nonleveled {
+    margin: 0;
+    padding: 0;
+}
+
+#jive-choose-containers-views div {
+    display: block;
+    float: left;
+    padding: 6px;
+    font-size: 1.2222em;
+    font-weight: normal;
+    background: #e5e5e5;
+    border: 1px solid #e5e5e5;
+    border-right: 0 none;
+    -moz-border-radius: 6px 0 0 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-bottom-left-radius: 6px;
+    margin: 0 0 3px 0;
+    width: 252px;
+    position: relative;
+}
+
+* html #jive-choose-containers-views div {
+/* position: static; IE6 bug */
+}
+
+#jive-choose-containers-views div.jive-choose-container-currentview {
+    background: #fff;
+    border-color: #dadada;
+    width: 253px
+}
+
+#jive-choose-containers-results a {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+}
+
+#jive-choose-containers-results a:hover {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background-color: #f1f4f7;
+
+}
+
+#jive-choose-containers-views div {
+
+    cursor: pointer;
+}
+
+#jive-choose-containers-views div span {
+    font-weight: normal;
+    color: #999;
+    text-decoration: underline;
+    margin-top: 2px;
+}
+
+#jive-choose-containers-views div span em {
+    padding: 0;
+    font-style: normal;
+}
+
+#jive-choose-containers-views div span em form {
+    display: inline;
+}
+
+#jive-choose-containers-views div.jive-choose-container-currentview span {
+    text-decoration: none;
+    cursor: default;
+    color: #666;
+}
+
+#jive-choose-containers-results h4 {
+    font-size: 1em;
+    color: #666;
+}
+
+#jive-choose-containers-results {
+    padding: 0 0 0 30px;
+}
+
+#jive-choose-containers-results ul li.jive-list-sublevel,
+    .jive-communities-list ul li.jive-list-sublevel {
+    background: transparent url(../images/arrow-chart-lvl.gif) no-repeat scroll 13px -6px;
+    display: block;
+    margin: 0 0 4px -30px;
+    padding: 5px 0 3px 30px;
+}
+
+.jive-communities-list ul li.jive-list-sublevel {
+    margin: 0;
+}
+
+/* main spaces/communities browser page */
+.jive-body-main-communities ul li.jive-list-sublevel {
+    clear: both;
+}
+
+.jive-body-main-communities ul li a.jive-list-sublevel-detail-link {
+    font-size: .8889em;
+    color: #999;
+}
+
+.jive-body-main-communities ul li.jive-list-sublevel h5 {
+    color: #ccc;
+    font-size: .8889em;
+    margin: 0;
+    padding: 4px 0 3px;
+}
+
+.jive-body-main-communities ul li.jive-list-sublevel ul li {
+    clear: both;
+}
+
+.jive-body-main-communities .jive-recent-activity {
+    font-size: .8889em;
+    list-style-type: none;
+    padding: 0 0 10px;
+}
+
+* html .jive-body-main-communities .jive-recent-activity {
+    zoom: 1;
+}
+
+.jive-body-main-communities .jive-recent-activity li {
+    padding: 1px 0 3px;
+}
+
+.jive-body-main-communities .jive-communities-list ul.jive-sgroup-rollup li {
+    display: inline;
+}
+
+#jive-choose-containers-results ul li.jive-sublevel-0 {
+    background: none;
+    font-weight: bold;
+}
+
+#jive-choose-containers-results ul li.jive-sublevel-1 {
+    background: none;
+    font-weight: bold;
+}
+
+.jive-communities-list {
+    padding-bottom: 30px;
+}
+
+.jive-communities-list ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.jive-communities-list ul li.jive-sublevel-0 {
+    background: none;
+}
+
+.jive-communities-list ul li.jive-sublevel-1 {
+    background: none;
+}
+
+.jive-communities-list .jive-list-sublevel-details {
+    padding: 3px 3px 3px 16px;
+}
+
+.jive-communities-list ul li.jive-sublevel-0 .jive-list-sublevel-details {
+    padding-left: 23px;
+}
+
+.jive-communities-list ul li.jive-sublevel-1 .jive-list-sublevel-details {
+    padding-left: 23px;
+}
+
+#jive-doc-create-continue p {
+    font-size: .9167em;
+    margin: 5px 0;
+    color: #666;
+}
+
+#jive-doc-create-continue p span {
+    color: #000;
+    font-weight: bold;
+}
+
+#jive-doc-create-continue input {
+
+}
+
+#jive-choose-content-type span {
+
+    display: block;
+    float: left;
+    padding: 6px;
+    font-size: 1.2222em;
+    font-weight: normal;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    margin: 0 0 10px 0;
+}
+
+#jive-choose-container-quick {
+    margin: 0 20px 20px 20px;
+}
+
+#jive-choose-container-quick h3 {
+    font-size: 1.375em;
+    color: #666;
+}
+
+#jive-choose-container-quick .jive-authentication-required {
+    display: block;
+    padding: 20px 10px;
+
+}
+
+.jive-choose-containers {
+    padding: 6px;
+    font-size: 1.2222em;
+    font-weight: normal;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    margin: 0 20px 20px 20px;
+
+}
+
+#jive-choose-content-type span.jive-choose-content-type-selected {
+    background: #ffe;
+    border: 1px solid #dadada;
+}
+
+#jive-choose-content-type span label {
+    font-weight: normal;
+    padding: 2px;
+    color: #999;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#jive-userbar #jive-choose-content-type span label {
+    font-size: 1.1134em;
+}
+
+#jive-choose-content-type span.jive-choose-content-type-selected label {
+    text-decoration: none;
+    cursor: default;
+    color: #666;
+}
+
+#jive-doc-create-continue {
+    clear: both;
+    float: left;
+    margin: 10px 30px 30px;
+}
+
+#jive-choose-containers-results ul li a {
+    font-size: 1em;
+    padding-right: 3px;
+    text-decoration: none;
+    color: #000;
+}
+
+#jive-choose-containers-results ul li a:hover {
+    background-color: #eaf0f7;
+    color: #355491;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+#jive-choose-containers-results ul li span {
+    color: #aaa;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+#jive-choose-containers-results ul li span a {
+    color: #777;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 0;
+}
+
+#jive-choose-container-resultlist span.jive-container-unavailable {
+    background: url('../images/jive-icon-minus-13x13.gif') no-repeat left;
+    padding: 0 0 0 18px;
+    font-style: italic;
+}
+
+#jive-choose-containers-results ul li span a:hover {
+    padding: 3px 0;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+#jive-choose-container-searchbox {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dadada;
+    width: 460px;
+}
+
+#jive-choose-container-searchbox input {
+    width: 320px;
+}
+
+#jive-choose-container-table {
+    margin: 10px 0 10px 20px;
+    padding: 0;
+}
+
+#jive-choose-container-table thead A {
+    font-size: .8889em;
+    color: #999;
+}
+
+#jive-choose-container-table thead tr th {
+    padding: 0 15px 0 15px;
+}
+
+#jive-choose-container-table tr td {
+    vertical-align: top;
+}
+
+#jive-choose-container-table tr th.choose-container-table-middle,
+    #jive-choose-container-table tr td.choose-container-table-middle {
+    border-right: 1px dotted #ccc;
+    border-left: 1px dotted #ccc;
+}
+
+#jive-choose-container-table tr td .jive-choose-containers {
+    padding: 15px;
+}
+
+#jive-choose-container-table tr td ul {
+    padding: 0;
+    margin: 0;
+}
+
+/* styles for account creation (account-success.ftl)*/
+
+.jive-account-created p,
+    .jive-invite-sent p {
+    background: #ffd;
+    padding: 8px;
+    margin: 0 0 10px;
+    border: solid 1px #dadada;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    width: 650px;
+}
+
+#jive-acct-success-whereto a:link,
+    #jive-acct-success-whereto a:active,
+    #jive-acct-success-whereto a:visited,
+    #jive-invite-success-whereto a:link,
+    #jive-invite-success-whereto a:active,
+    #jive-invite-success-whereto a:visited {
+    text-decoration: none;
+}
+
+#jive-acct-success-whereto a:hover,
+    #jive-invite-success-whereto a:hover {
+    text-decoration: underline;
+}
+
+#jive-acct-success-whereto,
+    #jive-invite-success-whereto {
+    margin: 25px 0 0;
+}
+
+#jive-acct-success-whereto h3,
+    #jive-invite-success-whereto h3 {
+    font-size: 1.5556em;
+    margin: 0;
+    padding: 0 0 0 8px;
+    color: #999;
+}
+
+#jive-acct-success-whereto h4,
+    #jive-invite-success-whereto h4 {
+    font-size: 1.2222em;
+    margin: 0;
+    padding: 3px 0 0;
+}
+
+#jive-acct-success-whereto ul li.jive-invited-account h4,
+    #jive-invite-success-whereto ul li.jive-invited-account h4 {
+    font-size: 1.3333em;
+    margin: 0;
+    padding: 3px 0 0;
+}
+
+#jive-acct-success-whereto ul li.jive-invited-account h4 span,
+    #jive-invite-success-whereto ul li.jive-invited-account h4 span {
+    font-size: .9167em;
+    font-weight: normal;
+}
+
+#jive-acct-success-whereto ul,
+    #jive-invite-success-whereto ul {
+    margin: 15px 0;
+    padding: 0 0 0 8px;
+    list-style-type: none;
+    width: 650px;
+}
+
+#jive-acct-success-whereto ul li p,
+    #jive-invite-success-whereto ul li p {
+    background: none;
+    border: none;
+    margin: 3px 0;
+    padding: 0;
+    font-size: .9167em;
+    color: #666;
+}
+
+#jive-acct-success-whereto ul li,
+    #jive-invite-success-whereto ul li {
+    margin: 0 8px 0 0;
+    padding: 0 0 0 80px;
+    height: 75px;
+
+}
+
+#jive-acct-success-whereto ul li img,
+    #jive-invite-success-whereto ul li img {
+    float: left;
+    margin-right: 8px;
+    padding: 0 8px;
+}
+
+.jive-rendered-content {
+    overflow-x: auto;
+    overflow-y: hidden;
+    clear: both;
+    position: relative;
+}
+
+/* styles for the rendered display of all user-generated content (documents, blog posts, etc) */
+.jive-rendered-content p {
+    margin: 0;
+    padding: 0;
+}
+
+.jive-progresscursor {
+    cursor: wait; /* hack for IE 6 */
+    cursor: progress;
+}
+
+/* Jive Modal */
+.jive-modal {
+    background: #222;
+    border: solid 1px #444;
+    display: none;
+    padding: 4px 8px 8px;
+    position: relative;
+    text-align: left;
+    width: 700px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+}
+
+.jive-modal-content {
+    background: white;
+    padding: 15px;
+    position: relative;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+.jive-modal h2 {
+    color: #9e9e9e;
+    font-size: 1.5em;
+    font-weight: normal;
+    padding: 4px 8px 10px 6px;
+}
+
+#lb_overlay {
+    background: black;
+}
+
+.jive-modal-close-top {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.jive-modal .jive-form-element textarea.jive-form-element-textarea,
+    .jive-modal .jive-form-element input.jive-form-element-text {
+    width: 660px;
+}
+
+/* bookmarklet & bookmark modal styles */
+
+.jive-bookmark-ribbon {
+    background: transparent url(../images/jive-bookmark-ribbon.gif) no-repeat top left;
+    height: 54px;
+    left: 13px;
+    position: absolute;
+    top: -3px;
+    width: 25px;
+    z-index: 999;
+}
+
+#jive-bookmark-modal h2 {
+    padding: 7px 8px 11px 38px;
+}
+
+/* bookmarklet-specific rules */
+.jive-body-formpage-bookmarklet {
+    background-color: #222;
+}
+
+.jive-body-formpage-bookmarklet .jive-modal {
+    border: none;
+    display: block;
+    width: auto;
+}
+
+.jive-body-formpage-bookmarklet .jive-modal h2 {
+    padding-left: 40px;
+    line-height: 1.45em;
+}
+
+.jive-body-formpage-bookmarklet .jive-modal p {
+    margin-top: 0;
+}
+
+.jive-body-formpage-bookmarklet .jive-modal-content {
+    height: 545px;
+}
+
+.jive-body-formpage-bookmarklet .jive-modal textarea.jive-form-element-textarea,
+    .jive-body-formpage-bookmarklet .jive-modal input.jive-form-element-text {
+    width: 550px;
+}
+
+/* bookmark form (bookmarklet AND modal) */
+.jive-bookmark-form {
+    padding: 0 0 20px;
+}
+
+.jive-bookmark-form .jive-form-row {
+    padding-bottom: 2px;
+}
+
+.jive-bookmark-form .jive-form-label p {
+    color: #666;
+    font-size: .78em;
+    font-weight: normal;
+    margin: 2px 0 0;
+}
+
+.jive-bookmark-form .jive-form-element {
+    width: auto;
+}
+
+.jive-bookmark-form .jive-form-element input,
+    .jive-bookmark-form .jive-form-element textarea {
+    border: 1px solid #999;
+    font-size: 1.05em;
+}
+
+.jive-bookmark-form .jive-form-element input.jive-form-element-text {
+    padding: 3px;
+}
+
+.jive-bookmark-form .jive-form-element input.jive-form-element-checkbox {
+    margin: 0;
+}
+
+.jive-bookmark-form .jive-form-element textarea {
+    height: 85px;
+}
+
+#jive-bookmark-form-url #url {
+    font-size: .92em;
+    padding-top: 0;
+}
+
+#jive-bookmark-form-url p {
+    color: #666;
+    font-size: 1.05em;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-bookmark-form .jive-form-taglist p {
+    font-size: .9em;
+    margin: 0;
+    padding: 8px 0 0;
+}
+
+.jive-bookmark-form .jive-tag-selected {
+    background-color: #eee;
+}
+
+.jive-bookmark-form .jive-form-taglist ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-bookmark-form .jive-form-taglist ul li {
+    font-size: .9em;
+    display: inline;
+    margin: 0;
+    padding: 0 4px 0 0;
+}
+
+#jive-bookmark-form-privacy em {
+    color: #777;
+    font-style: normal;
+}
+
+#jive-bookmark-form-privacy .jive-form-element {
+    margin-bottom: 0;
+}
+
+.jive-bookmark-form .jive-form-buttons {
+    padding: 0;
+    position: absolute;
+    right: 0;
+}
+
+/* bookmark success page */
+.jive-bookmark-success-details {
+    background-color: #f7f7f7;
+    border: 1px solid #e4e4e4;
+    padding: 13px 15px 0;
+    margin: 15px 15px 50px;
+}
+
+.jive-bookmark-success-details h5 {
+    border-bottom: 1px solid #ddd;
+    color: #999;
+    font-size: 1.1em;
+    margin: 0 0 10px;
+    padding: 0 0 5px;
+}
+
+.jive-bookmark-success-details h6 {
+    font-size: 1.05em;
+}
+
+.jive-bookmark-success-details h6,
+    .jive-bookmark-success-details p {
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.jive-bookmark-success-link {
+    position: relative;
+    padding: 0 0 0 35px;
+    margin: 30px 20px;
+}
+
+* html .jive-bookmark-success-link {
+    zoom: 1;
+}
+
+.jive-bookmark-success-link .jive-icon-big {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.jive-bookmark-success-link a {
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+.jive-bookmark-success-link a:link,
+    .jive-bookmark-success-link a:visited {
+    text-decoration: none;
+}
+
+.jive-bookmark-success-link a:hover,
+    .jive-bookmark-success-link a:active {
+    text-decoration: underline;
+}
+
+.jive-bookmark-success-form .jive-form-buttons {
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+/* Applied Tag Display */
+a.jive-applied-tag {
+    background: transparent url(../images/jive-icon-close_small.gif) no-repeat scroll right top;
+    border-right: 1px solid #EEEEEE;
+    border-top: 1px solid #EEEEEE;
+    color: #666666;
+    font-size: 1em;
+    margin: 0 0 0 8px;
+    padding: 3px 10px 1px 2px;
+    text-decoration: none;
+}
+
+a.jive-applied-tag:hover {
+    background-color: #FDFDEC;
+}
+
+/* Sortable Table Styles */
+.jive-table th.sortable {
+    cursor: pointer;
+    padding-right: 25px;
+}
+
+.jive-table th.hover {
+    background: #F5F5F5 url(../images/jive-icon-sortcol-hover.gif) no-repeat right;
+}
+
+.jive-table th.sortasc {
+    background: #F5F5F5 url(../images/jive-icon-sortcol-up.gif) no-repeat right;
+}
+
+.jive-table th.sortdesc {
+    background: #F5F5F5 url(../images/jive-icon-sortcol-down.gif) no-repeat right;
+}
+
+@media print {
+    div {
+        overflow: visible !important;
+        word-wrap: break-word;
+        }
+    .jive-thread-post .jive-thread-post-body-container,
+    .jive-thread-reply .jive-thread-reply-body-container {
+        margin-left: 133px;
+        }
+}
+
+/*
+END jive-global.css
+*/

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall version="4.5.1" type="mambot" group="content">
+  <name>MosModule</name>
+  <creationDate>05/02/2010</creationDate>
+  <author>Chanh Ong</author>
+  <copyright>(C) 2008 Chanh Ong</copyright>
+  <license>http:/ongetc.com/gpl.html GNU/GPL</license>
+  <authorEmail>ongetc@gmail.com</authorEmail>
+  <authorUrl>OngETC.com</authorUrl>
+  <version>2.1.8</version>
+  <description>
+<![CDATA[Note: Need to save and enable in the mosmodule mambot in config screen before the folder name store in the database.
+ <p />(see readme.txt for more detail)
+ <p />Support COAddOns in making a small donation!
+ <p />
+<a href="https://www.paypal.com/xclick/business=chanh.ong@gmail.com&item_name=Donation+for+MosModule&no_shipping=1&tax=0&currency_code=USD" target="_blank">
+<img src="https://www.paypal.com/en_US/i/btn/x-click-butcc-donate.gif" alt="Pay with PayPal - It's fast, free and save!" border="0"></a>
+]]>
+</description>
+  <files>
+    <filename mambot="mosmodule">mosmodule/mosmodule.ini</filename>
+    <filename mambot="mosmodule">mosmodule/mosmodule.inc.php</filename>
+    <filename mambot="mosmodule">mosmodule/mosmodule_func.php</filename>
+    <filename mambot="mosmodule">mosmodule/changelog.txt</filename>
+    <filename mambot="mosmodule">mosmodule/readme.txt</filename>
+    <filename mambot="mosmodule">mosmodule/readme_advance.txt</filename>
+    <filename mambot="mosmodule">mosmodule/hello.php</filename>
+    <filename mambot="mosmodule">mosmodule/mosmodule.css</filename>
+    <filename mambot="mosmodule">mosmodule/mosmodule.class.php</filename>
+    <filename mambot="mosmodule">mosmodule/mospaginate.class.php</filename>
+    <filename mambot="mosmodule">mosmodule.php</filename>
+    <filename mambot="mosmodule">mosmodule/mediaplayer.swf</filename>
+    <filename mambot="mosmodule">mosmodule/swfobject.js</filename>
+    <filename mambot="mosmodule">mosmodule/credit.txt</filename>
+  </files>
+  <params>
+    <param name="foldername" type="text" default="mosmodule" label="FolderName" description="Folder where MosModule will execute php script"></param>
+    <param name="aliasfile" type="text" default="" label="AliasFile" description="Full path to alias file or blank to use default MosModule.ini"></param>
+    </params>
+</mosinstall>

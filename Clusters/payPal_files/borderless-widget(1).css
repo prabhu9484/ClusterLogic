@@ -1,0 +1,18 @@
+/* Magical boderless widget */
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless .jive-widget-header {
+    display: none;
+}
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless .jive-widget-body {
+    background: none;
+}
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless #jive-community-empty-types {
+    background: none;
+}
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless {
+    border: 0 none;
+    padding: 0;
+}

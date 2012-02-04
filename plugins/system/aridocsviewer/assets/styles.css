@@ -1,0 +1,30 @@
+DIV.adv-loading {
+	background: transparent url(images/loading.gif) no-repeat center center;
+	position: relative;
+	min-width: 200px;
+	min-height: 250px;
+}
+
+.adv-loading-message {
+	display: none;
+}
+
+DIV.adv-loading .adv-loading-message {
+	display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: 45px;
+	text-align: center !important;
+	width: 100%;
+}
+
+DIV.adv-loading IFRAME.adv-frame {
+	position: absolute;
+	left: -9999px;
+}
+
+IFRAME.adv-frame {
+	display: block;
+	margin: 0 auto;
+	border: none;
+}

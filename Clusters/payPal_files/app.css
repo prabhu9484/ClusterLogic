@@ -1,0 +1,453 @@
+.jive-icon-app-sml {
+    background-image: url( ../images/app-12x12.gif);
+    background-position: 0 0;
+}
+
+.jive-icon-app-med {
+    background-image: url( ../images/app-16x16.gif);
+    background-position: 0 0;
+}
+
+.jive-icon-app-big {
+    background-image: url( ../images/app-24x24.gif);
+    background-position: 0 0;
+}
+
+.jive-link-app {
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding: 2px 0 2px 20px;
+    background: transparent url( ../images/app-16x16.gif ) no-repeat top left;
+    padding-top: 1px;
+}
+
+a.jive_macro_app {
+    background: transparent url(../images/app-12x12.gif ) no-repeat scroll 3px 3px;
+}
+.jive-app {
+    -moz-border-radius-bottomleft:4px;
+    -moz-border-radius-bottomright:4px;
+    -moz-border-radius-topleft:4px;
+    -moz-border-radius-topright:4px;
+    /*border:1px solid #000000;*/
+    clear:both;
+    margin:0 0 18px;
+    padding:0;
+}
+
+.jive-app-title {
+    clear:both;
+    overflow:hidden;
+    padding:15px 15px 0 0;
+}
+
+.jive-app-title-content h2 {
+    background:transparent url(../images/app-24x24.gif) no-repeat scroll 0 5px;
+    display:block;
+    font-family:Georgia,serif;
+    font-size:18pt;
+    font-weight:normal;
+    line-height:28px;
+    margin:0 15px;
+    padding:0 0 5px 30px;
+}
+
+.jive-app-body {
+	margin: 0 15px;
+}
+
+.jive-app ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.jive-app ul li {
+    padding: 5px 0;
+}
+
+html > body .jive-app-body {
+    display:block;
+}
+
+.jive-app-body {
+    clear:both;
+    display:inline-block;
+    margin:0;
+    padding:0 15px 15px;
+}
+
+.jive-app-tags {
+    clear: both;
+}
+
+#jive-community-empty-apps {
+    background: transparent url(../images/app-24x24.gif) no-repeat left center;
+    padding: 21px 0 21px 35px;
+}
+
+.jive-app-textinput{
+
+}
+
+.app-comments {
+    border: 1px solid #d6d6d6;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    -moz-border-radius: 3px;
+    -moz-border-radius-topleft: 0;
+    -webkit-border-radius: 3px;
+    -webkit-border-top-left-radius: 0;
+}
+
+#app-search input,
+    #app-search button {
+    border: 1px solid #9f9f9f;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+#app-search .app-search-field {
+    /*background: #fff url(../images/jive-userbar-search-bg.png) repeat-x top;*/
+    color: #333;
+    padding: 2px;
+    width: 143px;
+}
+
+#app-search .app-search-button {
+    /*background: transparent url(../images/jive-userbar-search-btn.png) no-repeat 0 0;*/
+    border: none;
+    color: #333;
+    cursor: pointer;
+    height: 21px;
+    margin-left: 2px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -1000em;
+    width: 23px;
+}
+
+#app-search .app-search-button:hover {
+    background-position: 0 -21px;
+}
+
+.app-sorting-block {
+    display: block;
+}
+.app-sorting {
+    float: right;
+    display: block;
+    margin: 5px;
+    margin-right: 5px;
+    margin-top: 5px;
+    /*background-color: #fff;*/
+    /*border: 1px solid #dcdcdc;*/
+}
+
+.app-checklist-block.first {
+    border: 1px solid #CCCCCC;
+}
+.app-checklist-block {
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+}
+.jive-content-block-container .app-checklist-block .jive-content-block {
+	padding-left: 15px;
+	border-top: solid 1px #CCCCCC;
+}
+
+.app-checklist-block h5 {
+background:transparent url(../images/app-checklist-bg.png) repeat-x scroll 0 0;
+margin:0 !important;
+position:relative;
+}
+
+.app-checklist-success span {
+	padding-left:20px;
+	background: transparent url(../images/app-checklist-done.png) no-repeat 0 0;
+}
+
+.app-checklist-block .step-number {
+	background: none;
+	color: #E27133;
+	padding-left: 0;
+	padding-right:4px;
+}
+
+.app-content-block {
+    padding: 0;
+    display: block;
+    clear: both;
+    padding:  9px 9px 9px 9px
+}
+
+.app-actions-listing{
+    padding-left: 22px;
+    position: relative;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.app-hover-popup {
+    float: left;
+    position:absolute;
+    left: 0;
+    margin: 5px;
+    margin-top:1px;
+    margin-left: 50px;
+    padding:0;
+    font-size: .8889em;
+    background-color:#eee;
+    border: 1px solid #d2d2d2;
+    border-top: none;
+    z-index: 800;
+    }
+      
+.app-fred-app-image {
+    background-image: url( ../images/freds_app.jpg);
+    background-position: 0 0;
+}
+    
+.jive-app-list-table {
+	border: solid 1px #cccccc;
+	margin-bottom:10px;
+    width: 650px;
+	}
+.jive-app-list-table.header-only {
+	margin-bottom: 0px;
+	}
+.jive-table table.jive-app-list-table thead th {
+	background-color:#e8f1fa;
+	font-weight:bold;
+	font-size: 1em;
+	border-bottom: solid 1px #cccccc;
+	padding-top:4px;
+	padding-bottom:4px;
+	}
+.jive-table table.jive-app-list-table.header-only  thead th {
+	border-bottom: none;
+	}
+.jive-table table.jive-app-list-table .jive-table-cell-title.app-title-detail {
+	vertical-align: top;
+	}
+.jive-table table.jive-app-list-table .jive-table-cell-title a {
+	color: #e37037;
+	font-weight: bold;
+	font-size: 1em;
+	margin: 2px 0 8px;
+	}
+.jive-table table.jive-app-list-table .api-list-title {
+	border-bottom: solid 1px #cccccc;
+	}	
+.jive-app-list-table .api-list ul {
+	padding-left: 15px;
+	color: #28426E;
+	font-size: 1.1em;
+}
+.jive-table table.jive-app-list-table .app-status {
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	display:block;
+	font-size:1em;
+	}
+.jive-table table.jive-app-list-table .app-status-approved,
+.jive-table table.jive-app-list-table .app-status-resubmitted,
+.jive-table table.jive-app-list-table .app-status-submitted {
+	background-image: url(../images/app-status-ok.png);
+	}
+.jive-table .jive-sidebar-body {
+	padding:0;
+	}
+.jive-table .jive-sidebar ul li {
+	padding-bottom: 2px;
+	}
+.jive-content-block-container h3.jive-apps-header {
+	font-weight: bold;
+	font-size:15px;
+	color:black;
+	border:none;
+	margin-bottom: 0 !important;
+	}
+
+.jive-table table.jive-app-list-table {
+    width: 650px;
+}
+
+.jive-app-testappid {
+  font-style: italic;
+  font-size: 18px;
+  color: #003366;
+  font-weight: normal;
+}
+
+/*app-view */
+.jive-app-label {
+	float: left;
+	width: 58%;
+	text-align: right;
+	padding: 0 6px 0 0;
+	line-height: 20px;
+	color: #999999;
+	font-size: 10pt;
+	margin-bottom: 10px;
+}
+.jive-app-element {
+	float: left;
+	width: 40%;
+	color: #333333;
+	text-align: left;
+	padding-left: 3px;
+}
+.form-row-dot {
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.jive-app-viewdot {
+	border-top: 1px dotted  #C8C8C8 ;
+}
+
+.appview-form-row-dot {
+	text-align: center;
+	clear: both;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.appsubmit-form-row-dot {
+	padding-bottom: 20px;
+	text-align: center;
+	clear: both;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.appview-label {
+	float: left;
+	width: 58%;
+	text-align: right;
+	line-height: 20px;
+	color: #999999;
+	font-size: 13px;
+	padding-top: 8px;
+	font-family: verdana;
+}
+
+.appview-element {
+	float: left;
+	width: 40%;
+	color: #333333;
+	text-align: left;
+	padding-left: 5px;
+	padding-top: 8px;
+	font-size: 13px;
+	font-family: verdana;
+}
+
+/*  attachment styles (for all content types) */
+.appview-form-row {
+	text-align: center;
+	clear: both;
+	margin-top: 13px;
+}
+
+.jive-attachments {
+	border-top: 1px dotted #C8C8C8;
+	clear: both;
+	margin-left: 13px;
+	margin-right: 13px;
+}
+
+.app-horizontal-dotline {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-top: 1px dotted #C8C8C8;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.appdetails-form-row {
+	text-align: center;
+	clear: both;
+	margin-top: 10px;
+}
+
+.jive-form-label-submitapp {
+	float: left;
+	width: 58%;
+	text-align: right;
+	line-height: 20px;
+	font-weight: normal;
+	font-size: 13px;
+	font-family: Verdana;
+	color: #444444;
+	margin-bottom: 22px;
+	padding-right: 5px;
+	/*padding-left: 10px;*/
+}
+
+.jive-form-element-submitapp {
+	float: left;
+	width:40%;
+	text-align: left;
+	padding-left: 5px;
+	/*padding-right: 10px;*/
+	margin-bottom: 17px;
+}
+
+.jive-app-textinput {
+	width: 100%;
+}
+
+.app-submit-platform-msg {
+	font-size: 12px;
+	font-family: verdana, sans-serif;
+	text-align: left;
+	width: 98%;
+	height: 40px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #56A5EC;
+	background-color: #e8f1fa;
+	padding-left: 5px;
+	color: #000000;
+}
+
+.app-services-head {
+	display: block;
+	font-family: Verdana;
+	color: #28426e;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.app-platform-info {
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 10px;
+	color: #005ebc;
+}
+.app-mouover-message {
+	 text-align:left;
+	 color: #444444;
+}
+.app-iPhone-attach-info{
+	font-style:italic;
+	text-align:left;
+}
+
+/* for app view page */
+.appview-titlecontent{
+	color: #003366;
+    font-style:italic; 
+    font-size:18pt;
+    font-weight:normal;
+    line-height:28px;
+    margin:0 5px;
+    padding:0 0 5px 0;
+
+	}
+
+

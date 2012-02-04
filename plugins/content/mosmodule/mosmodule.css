@@ -1,0 +1,23 @@
+#mmBODY {	
+width: 100%;
+border: 0px dotted #68878A;
+}
+.mmODDText {
+background-color: #E0E0E0;
+}
+.mmEVENText {
+background-color:#CCCCCC;
+}
+.mmHR {
+height:1px;
+color: #E0E0E0;
+}
+#mmNAV {	
+border: 1px dotted #030303;
+background-color: #EFEFEF;
+text-align:center;
+}
+.mmPAGESelected {
+text-align: center;
+font-size: larger;
+}

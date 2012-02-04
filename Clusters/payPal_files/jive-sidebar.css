@@ -1,0 +1,1234 @@
+/*
+jive-sidebar.css
+*/
+.jive-sidebar {
+    border: 1px solid #e5e5e5;
+    font-size: 1em;
+    margin: 0 0 25px;
+    overflow: hidden;
+    padding: 0;
+    position: relative; /* req for IEs */
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+* html .jive-sidebar {
+    width: 223px;
+}
+
+.jive-sidebar .jive-sidebar-header {
+    background: #efefef url(../images/jive-contentblock-bg.png) repeat-x bottom;
+    position: relative;
+}
+
+.jive-sidebar h4 {
+    color: #3f3f3f;
+    font-size: 1.222em;
+    font-weight: normal;
+    margin: 0;
+    padding: 6px 0 6px 8px;
+}
+
+.jive-sidebar .jive-sidebar-body {
+    margin: 0;
+    padding: 10px;
+    position: relative;
+}
+
+.jive-sidebar h4 {
+    clear: both;
+    color: #3f3f3f;
+    font-size: 1.222em;
+    font-weight: normal;
+    position: relative;
+}
+
+.jive-sidebar .jive-sidebar-body h4 span {
+    float: left;
+    padding-right: 5px;
+}
+
+.jive-sidebar .jive-sidebar-body h4 .jive-icon-med {
+    padding-right: 0;
+}
+
+/* actions sidebar styles */
+.jive-sidebar-actions,
+    .jive-widget-container-small .jive-widget-actions {
+    background: #fff url(../images/jive-sidebar-actions-bg.png) repeat-x top;
+    border: 1px solid #d3d3d3;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.jive-sidebar-actions h4 {
+    background-image: none;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 8px 6px 5px 0;
+}
+
+.jive-sidebar-actions .jive-sidebar-body {
+    padding-top: 0;
+}
+
+.jive-sidebar-actions .jive-sidebar-body h4,
+    .jive-sidebar-actions .jive-sidebar-body h4.jive-sidebar-body-inner-header {
+    font-weight: bold;
+    padding: 8px 6px 5px 0;
+}
+
+.jive-sidebar-actions a {
+    text-decoration: none;
+}
+
+.jive-sidebar-actions a:hover {
+    text-decoration: underline;
+}
+
+.jive-sidebar-actions .jive-sidebar-body div {
+    padding: 0;
+    margin: 0;
+}
+
+.jive-sidebar-body-subcommunities .jive-icon-sml {
+    margin-top: 1px;
+}
+
+/* sidebar content styling */
+.jive-sidebar p,
+    .jive-sidebar ul {
+    font-size: .9em;
+}
+
+.jive-sidebar ul p {
+    font-size: 1em;
+}
+
+.jive-sidebar p {
+    display: block;
+    padding: 2px 10px 8px 0;
+    margin: 0;
+    clear: both;
+}
+
+.jive-sidebar p.jive-sidebar-viewall,
+    .jive-widget p.jive-sidebar-viewall {
+    margin: 0;
+    padding: 5px 0 10px;
+}
+
+.jive-sidebar p.jive-sidebar-viewall a,
+    .jive-widget p.jive-sidebar-viewall a {
+    color: #999;
+}
+
+.jive-sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.jive-sidebar ul li {
+    clear: both;
+    padding: 2px 0 5px 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.jive-sidebar-body-label {
+    display: block;
+    clear: both;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+/* New unified styles for displaying lists with icons and links */
+.jive-icon-list {
+    padding-top: 2px;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list li.jive-yourVidList-item,
+    .jive-widget .jive-widget-body .jive-icon-list li.jive-yourVidList-item {
+    padding-left: 0;
+    position: relative;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list li,
+    .jive-widget .jive-widget-body .jive-icon-list li {
+    padding-left: 22px;
+    position: relative;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list li.no-indent,
+    .jive-widget .jive-widget-body .jive-icon-list li.no-indent {
+    padding-left: 0;
+    position: relative;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list li ul li,
+    .jive-widget .jive-widget-body .jive-icon-list li ul li {
+    padding-left: 18px;
+    position: relative;
+}
+
+* html .jive-icon-list li {
+    zoom: 1; /* IE6 hasLayout fix */
+}
+
+.jive-icon-list li span.jive-icon-med,
+    .jive-icon-list li span.jive-icon-sml {
+    left: 0;
+    position: absolute;
+    top: 1px;
+}
+
+.jive-icon-list li span.jive-icon-sml {
+    top: 2px;
+}
+
+.jive-icon-list #jive-link-im span {
+    display: block;
+    height: 16px;
+    left: 0;
+    padding: 0;
+    position: absolute;
+    top: 1px;
+    width: 16px;
+}
+
+.jive-icon-list li span {
+    color: #666;
+}
+
+.jive-icon-list li span a {
+    display: inline;
+    padding: 0;
+    color: #999;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list-spaces li,
+    .jive-widget .jive-widget-body .jive-icon-list-spaces li {
+    padding-bottom: 6px;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list-spaces li ul,
+    .jive-widget .jive-widget-body .jive-icon-list-spaces li ul {
+    padding: 4px 0 0;
+}
+
+.jive-sidebar .jive-sidebar-body .jive-icon-list-spaces li ul li,
+    .jive-widget .jive-widget-body .jive-icon-list-spaces li ul li {
+    padding-bottom: 2px;
+    font-size: .9em;
+}
+
+/* --------------------------------------- */
+/* SPECIFIC SIDEBAR STYLES				 */
+/* --------------------------------------- */
+/* 'about' sidebars (spaces, people, etc) */
+.jive-sidebar .jive-sidebar-body-about p {
+    font-size: 1em;
+}
+
+/* "stuff" profile navigation entries */
+.jive-sidebar-nav {
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+.jive-sidebar-nav h4 {
+    font-weight: bold;
+    margin-bottom: 2px;
+    padding-left: 4px;
+}
+
+.jive-sidebar-nav .jive-sidebar-body {
+    padding: 0 4px;
+}
+
+ul.jive-sidebar-profile-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.jive-sidebar-profile-nav  li {
+    border-top: dashed 1px #dadada;
+    margin: 0;
+    padding: 0;
+}
+
+* html ul.jive-sidebar-profile-nav li {
+    zoom: 1;
+}
+
+ul.jive-sidebar-profile-nav  li.jive-profile-navigation-active {
+    background: #ffd;
+}
+
+ul.jive-sidebar-profile-nav  li.jive-profile-navigation-first {
+    border-top: none;
+}
+
+ul.jive-sidebar-profile-nav  a:link,
+    ul.jive-sidebar-profile-nav  a:active,
+    ul.jive-sidebar-profile-nav  a:hover,
+    ul.jive-sidebar-profile-nav  a:visited {
+    display: block;
+    margin: 0 0 0 2px;
+    padding: 7px;
+    text-decoration: none;
+}
+
+ul.jive-sidebar-profile-nav  a:hover {
+    text-decoration: underline;
+}
+
+ul.jive-sidebar-profile-nav .jive-icon-sml {
+    margin-top: 1px;
+    margin-right: 7px;
+}
+
+ul.jive-sidebar-profile-nav .jive-profile-navigation-active a:link,
+    ul.jive-sidebar-profile-nav .jive-profile-navigation-active a:active,
+    ul.jive-sidebar-profile-nav .jive-profile-navigation-active a:hover,
+    ul.jive-sidebar-profile-nav  .jive-profile-navigation-active a:visited {
+    color: #000;
+    display: block;
+    text-decoration: none;
+}
+
+ul.jive-sidebar-profile-nav .jive-profile-navigation-active a:hover {
+    text-decoration: underline;
+}
+
+/* top members sidebar & organizational relationship entries */
+.jive-sidebar .jive-sidebar-body ul.jive-sidebar-topmembers,
+    .jive-sidebar .jive-sidebar-body ul.jive-sidebar-similarUsers,
+    .jive-sidebar .jive-sidebar-body ul.jive-sidebar-org-position {
+    padding-bottom: 0;
+}
+
+ul.jive-sidebar-topmembers li,
+    ul.jive-sidebar-similarUsers li,
+    ul.jive-sidebar-org-position li {
+    clear: both;
+    display: block;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 0 10px 0;
+    width: 100%;
+}
+
+ul.jive-sidebar-topmembers li a img,
+    ul.jive-sidebar-newestmembers li a img,
+    ul.jive-sidebar-similarUsers li a img,
+    ul.jive-sidebar-org-position li a img {
+    float: left;
+}
+
+ul.jive-sidebar-topmembers li a.jive-username-link,
+    ul.jive-sidebar-newestmembers li a.jive-username-link,
+    ul.jive-sidebar-similarUsers li a.jive-username-link,
+    ul.jive-sidebar-org-position li a.jive-username-link,
+    ul.jive-sidebar-org-position li a.jive-orgchart-link {
+    float: left;
+    margin: 4px 0 0 4px;
+    padding: 1px 0 1px 6px;
+}
+
+ul.jive-sidebar-topmembers span img,
+    ul.jive-sidebar-org-position span img {
+    float: right;
+    padding: 7px 1px 0 0;
+}
+
+ul.jive-sidebar-topmembers li a.jive-status-offline,
+    ul.jive-sidebar-topmembers li a.jive-status-available,
+    ul.jive-sidebar-topmembers li a.jive-status-chat,
+    ul.jive-sidebar-topmembers li a.jive-status-away,
+    ul.jive-sidebar-topmembers li a.jive-status-xa,
+    ul.jive-sidebar-topmembers li a.jive-status-dnd,
+    ul.jive-sidebar-topmembers li a.jive-status-forbidden,
+    ul.jive-sidebar-similarUsers li a.jive-status-offline,
+    ul.jive-sidebar-similarUsers li a.jive-status-available,
+    ul.jive-sidebar-similarUsers li a.jive-status-chat,
+    ul.jive-sidebar-similarUsers li a.jive-status-away,
+    ul.jive-sidebar-similarUsers li a.jive-status-xa,
+    ul.jive-sidebar-similarUsers li a.jive-status-dnd,
+    ul.jive-sidebar-similarUsers li a.jive-status-forbidden,
+    ul.jive-sidebar-org-position li a.jive-status-offline,
+    ul.jive-sidebar-org-position li a.jive-status-available,
+    ul.jive-sidebar-org-position li a.jive-status-chat,
+    ul.jive-sidebar-org-position li a.jive-status-away,
+    ul.jive-sidebar-org-position li a.jive-status-xa,
+    ul.jive-sidebar-org-position li a.jive-status-dnd,
+    ul.jive-sidebar-org-position li a.jive-status-forbidden {
+    margin-left: 4px;
+    padding-left: 10px;
+}
+
+ul.jive-update-relationship a {
+    cursor: pointer;
+}
+
+ul.jive-update-relationship textarea {
+    font: .9167em arial;
+    height: 50px;
+    width: 175px;
+}
+
+ul.jive-update-relationship li {
+    padding: 0 0 2px 0 !important;
+}
+
+ul.jive-update-relationship li span {
+    display: block;
+}
+
+.jive-sidebar-relationships h4 {
+    padding: 0 0 4px;
+    font-weight: bold;
+}
+
+.jive-sidebar-relationships .jive-sidebar-body ul.jive-sidebar-org-position {
+    padding-bottom: 5px;
+}
+
+.jive-sidebar-relationships .jive-sidebar-body ul.jive-sidebar-org-position .jive-username-link {
+    padding-top: 4px;
+}
+
+/* 'popular tags' sidebar */
+.jive-sidebar ul.jive-sidebar-populartags,
+    .jive-widget ul.jive-sidebar-populartags {
+    color: #333;
+    font-size: 1em;
+    padding-bottom: 2px;
+}
+
+.jive-sidebar ul.jive-sidebar-populartags li,
+    .jive-widget ul.jive-sidebar-populartags li {
+    display: inline !important;
+    float: none !important;
+    height: 22px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-sidebar ul.jive-sidebar-populartags li a,
+    .jive-widget ul.jive-sidebar-populartags li a {
+    margin-right: 3px;
+    text-decoration: none;
+}
+
+.jive-sidebar ul.jive-sidebar-populartags li a:hover,
+    .jive-widget ul.jive-sidebar-populartags li a:hover {
+    text-decoration: underline;
+}
+
+/* 'legend' sidebar */
+.jive-sidebar .jive-sidebar-body-legend ul.jive-icon-list li {
+    color: #666;
+}
+
+.jive-sidebar-body-legend li .jive-sidebar-body-legend-updated {
+    color: #95aff1;
+    float: none;
+    height: auto;
+    padding: 0;
+    text-align: left;
+    width: auto;
+}
+
+.jive-sidebar-body-legend li .jive-sidebar-body-legend-new {
+    color: #355491;
+}
+
+/* profile blog sidebar */
+.jive-sidebar-userblog {
+    background-color: #f5faf0;
+    background-image: none;
+    border-color: #aede79;
+    padding: 0;
+}
+
+.jive-sidebar-userblog .jive-sidebar-body {
+    color: #666;
+    line-height: 1.1667em;
+    padding: 0;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.jive-sidebar-userblog .jive-sidebar-body .jive-sidebar-body-userblog-bg {
+    margin: 0;
+    overflow: hidden;
+    padding: 8px 10px 8px 40px;
+    position: relative;
+}
+
+* html .jive-sidebar-userblog .jive-sidebar-body .jive-sidebar-body-userblog-bg {
+    zoom: 1;
+}
+
+.jive-sidebar-userblog .jive-sidebar-body .jive-sidebar-body-userblog-bg span.jive-icon-big {
+    left: 8px;
+    position: absolute;
+    top: 10px;
+}
+
+.jive-sidebar-userblog .jive-sidebar-body a:link,
+    .jive-sidebar-userblog .jive-sidebar-body a:visited {
+    background: transparent url(../images/jive-icon-arrow-right-gr.gif) no-repeat right;
+    color: #307515;
+    font-size: 1.125em;
+    font-weight: bold;
+    padding-right: 7px;
+    text-decoration: none;
+}
+
+.jive-sidebar .jive-sidebar-body a:link,
+    .jive-sidebar .jive-sidebar-body a:visited {
+    text-decoration: none;
+}
+
+.jive-sidebar .jive-sidebar-body a:hover,
+    .jive-sidebar .jive-sidebar-body a:focus {
+    text-decoration: underline;
+}
+
+/* blog page sidebars */
+.jive-sidebar-hdr-blog-page {
+    display: block !important;
+    padding: 0 0 5px 0 !important;
+    margin: 0 !important;
+}
+
+.jive-sidebar-hdr-blog-page .jive-author-avatar {
+    display: block;
+    width: 46px;
+    padding: 0;
+    margin: 0;
+    float: left;
+    position: relative;
+}
+
+.jive-sidebar-body-about p {
+    clear: both;
+
+}
+
+/* for the blog about sidebar, headings are slightly
+ different */
+
+.jive-sidebar-hdr-blogauthor-name {
+    display: block;
+    margin-left: 47px;
+}
+
+.jive-sidebar-hdr-blogauthor-name h3 {
+    font-size: 1.1111em;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding: 10px 0 1px;
+}
+
+.jive-sidebar-hdr-blogauthor-name a,
+    .jive-sidebar-hdr-blogauthor-name a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.jive-sidebar-hdr-blogauthor-name em {
+    display: block;
+    font-style: normal;
+    color: #666;
+}
+
+ul.jive-sidebar-archives {
+    overflow: hidden;
+    list-style-type: none;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 10px;
+}
+
+ul.jive-sidebar-archives li {
+    float: left;
+    clear: both;
+    padding: 3px 0 !important;
+}
+
+ul.jive-sidebar-archives li a {
+    position: relative;
+}
+
+/* 'contributors' in blog about sidebar */
+ul.jive-sidebar-contributors {
+}
+
+/* 'private messages' sidebar */
+ul.jive-sidebar-privatemsg {
+    padding: 0 0 5px !important;
+}
+
+ul.jive-sidebar-privatemsg li a.jive-privatemsg-new {
+    font-weight: bold;
+}
+
+#jive-privatemsg-links {
+    display: block;
+    padding: 8px 4px 0;
+    border-top: 1px solid #e7e8e9;
+}
+
+#jive-privatemsg-links a {
+    display: block;
+    margin-bottom: 3px;
+    text-decoration: none;
+}
+
+#jive-privatemsg-links a span.jive-icon-sml {
+    margin-top: 1px;
+}
+
+* html #jive-privatemsg-links a span.jive-icon-sml {
+    position: relative;
+}
+
+/* latest poll sidebar entries */
+.jive-sidebar .jive-sidebar-body-polls {
+    position: static;
+}
+
+.jive-sidebar-body-polls h4,
+    .jive-sidebar-body-polls h4 span {
+    float: left;
+}
+
+.jive-sidebar-body-polls h4 {
+    width: 100%;
+}
+
+.jive-sidebar-body-morepolls {
+    font-size: .8889em;
+    font-weight: normal;
+    float: right !important;
+    padding: 2px 8px 0 0;
+}
+
+.jive-sidebar-body-morepolls a {
+    color: #999;
+}
+
+.jive-sidebar-pollform a,
+    .jive-sidebar-pollresults a,
+    .jive-sidebar-polladmin a {
+    color: #777;
+}
+
+.jive-sidebar-pollform a,
+    .jive-sidebar-pollresults a {
+    font-weight: bold;
+}
+
+.jive-sidebar-pollform,
+    .jive-sidebar-pollresults {
+    clear: both;
+    padding: 0 12px 10px 11px;
+}
+
+.jive-sidebar-pollform strong,
+    .jive-sidebar-pollresults strong {
+    display: block;
+    margin: 0 0 8px;
+}
+
+.jive-sidebar-pollform span {
+    display: block;
+    clear: both;
+    margin: 0;
+    padding: 1px 0 5px;
+}
+
+.jive-sidebar-pollform span input {
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    margin: 2px 0 0;
+    padding: 0;
+}
+
+.jive-sidebar-pollform span label {
+    display: block;
+    margin-left: 18px;
+    padding: 0;
+}
+
+.jive-sidebar-pollform input.jive-poll-votebtn {
+    font-size: 1em;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.jive-sidebar-pollresults {
+    padding-bottom: 5px;
+    overflow: hidden;
+}
+
+.jive-sidebar-pollresults span {
+    display: block;
+    clear: both;
+    width: 100%;
+    padding: 0 0 10px;
+}
+
+.jive-sidebar-pollresults span em {
+    color: #999;
+    font-style: normal;
+}
+
+.jive-sidebar-pollresults span img {
+    display: block;
+    margin: 1px 0 0;
+    min-width: 2px;
+    max-width: 100%;
+}
+
+.jive-sidebar-polladmin {
+    clear: both;
+    width: 100%;
+    padding: 4px 0 2px;
+    margin: 4px 0 0;
+}
+
+.jive-sidebar-polladmin a {
+    margin: 0 8px 0 0;
+}
+
+ul.jive-sidebar-rssfeed li span {
+    color: #999;
+    display: block;
+    font-size: .8889em;
+    margin-top: 2px;
+}
+
+ul.jive-sidebar-rssfeed li a {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.jive-sidebar-body .jive-sidebar-body-status h5 {
+    background-color: #fafafa;
+    border-bottom: 1px solid #dadada;
+    color: #777;
+    font-size: .8889em;
+    margin: 0;
+    padding: 2px 0 2px 4px;
+}
+
+.jive-sidebar-body .jive-sidebar-body-status ul {
+    padding: 3px 0 15px;
+}
+
+.jive-sidebar-body .jive-sidebar-body-status ul li {
+    padding: 1px 0 2px 5px;
+}
+
+.jive-sidebar-body .jive-sidebar-body-status ul li span {
+    color: #999;
+    font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+    font-size: .7778em;
+    padding-left: 3px;
+}
+
+/* add friend/follow sidebar styles */
+.jive-sidebar-addfriend {
+    background: #edecdf url(../images/jive-content-block-bg-tan.gif) repeat-x top;
+    border: 1px solid #f1debc;
+    font-size: 1.125em;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.jive-sidebar-addfriend .jive-sidebar-body-addfriend a {
+    text-decoration: none;
+}
+
+.jive-sidebar-addfriend .jive-sidebar-body-addfriend a:hover {
+    text-decoration: underline;
+}
+
+.jive-sidebar-addfriend input.jive-smallish-button,
+    .jive-sidebar-addfriend textarea {
+    font: normal .9167em arial, helvetica, sans-serif;
+}
+
+.jive-sidebar-addfriend textarea {
+    height: 40px;
+    padding: 3px;
+    width: 170px;
+}
+
+.jive-sidebar a.jive-remove-relationship {
+    display: block;
+    font-size: .9167em;
+    font-weight: normal;
+    margin: 5px 0 5px 30px;
+}
+
+.jive-sidebar #jive-confirm-relationship-removal {
+    display: block;
+    font-size: .9167em;
+    font-weight: normal;
+    margin: 5px 0 5px 30px;
+}
+
+.jive-sidebar #jive-confirm-relationship-removal button,
+    .jive-sidebar #jive-confirm-relationship-removal input {
+    font-size: .9167em;
+}
+
+.jive-sidebar #jive-confirm-relationship-removal span {
+    display: block;
+    margin: 5px 0;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend p,
+    .jive-sidebar .jive-sidebar-body-addfriend ul li {
+    clear: both;
+    margin: 3px 0;
+    padding: 0;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend ul li {
+    padding: 3px;
+    margin: 2px 0;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background: #fff;
+    border: solid 1px #dadada;
+    color: #666;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend ul {
+    padding: 0 0 10px 0;
+    clear: both;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend div.jive-request-friend {
+    clear: both;
+    padding: 8px 0;
+    margin: 0;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend ul li img,
+    .jive-sidebar .jive-sidebar-body-addfriend ul li input,
+    .jive-sidebar .jive-sidebar-body-addfriend ul li label {
+    vertical-align: middle;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend ul li input,
+    .jive-sidebar .jive-sidebar-body-addfriend ul li label {
+    margin-top: 2px;
+}
+
+.jive-sidebar .jive-connections-display ul {
+    color: #666;
+}
+
+.jive-sidebar-addfriend .jive-sidebar-body p.jive-friend {
+    padding: 0;
+    color: #666;
+    font-weight: bold;
+    margin: 0;
+}
+
+.jive-sidebar .jive-friend span {
+    font-weight: normal;
+}
+
+.jive-sidebar .jive-friend .jive-icon-big {
+
+}
+
+.jive-sidebar-pollform,
+    .jive-sidebar-pollresults,
+    .jive-sidebar-usercontent {
+    background: none !important;
+    height: auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: relative;
+}
+
+.jive-sidebar-pollresults span {
+    display: block;
+    clear: both;
+    width: 100%;
+    padding: 0 0 10px;
+}
+
+#jive-add-friend-link,
+    #jive-adding-friend-link {
+    display: block;
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend span.jive-already-requested-friend {
+    color: #936617;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 7px 5px 3px;
+}
+
+.jive-sidebar .jive-sidebar-body #jive-add-friend div {
+    margin: 0;
+    padding: 0 0 3px 0;
+}
+
+.jive-sidebar .jive-sidebar-body #jive-add-friend .jive-request-friend {
+    padding: 5px 0 3px 0;
+}
+
+.jive-sidebar .jive-sidebar-body-addfriend p label {
+    color: #936617;
+    padding-top: 8px;
+    display: block;
+}
+
+/* relationship sidebar styles */
+p.jive-sidebar-org-chart a:link,
+    p.jive-sidebar-org-chart a:visited,
+    p.jive-sidebar-org-chart a:active {
+    text-decoration: underline;
+}
+
+p.jive-sidebar-org-pending span {
+    display: block;
+    margin: 0 0 5px;
+}
+
+p.jive-sidebar-org-pending span span {
+    display: inline;
+}
+
+p.jive-sidebar-org-pending span.jive-org-pending-user,
+    p.jive-sidebar-org-pending span.jive-org-pending-label {
+    background: url(../images/arrow_right_blue.png) center right no-repeat;
+    padding-right: 18px;
+}
+
+p.jive-sidebar-org-chart img {
+    border: solid 1px #dadada;
+    margin: 0 6px 0 0;
+}
+
+/* document cloud sharing styles */
+.jive-sidebar-document-share #jive-share-users li {
+    margin: 0 !important;
+    padding-left: 0 !important;
+}
+
+.jive-sidebar-document-share #jive-show-collaborations {
+    margin: 0 !important;
+    padding: 0 0 0 5px !important;
+}
+
+.jive-sidebar-document-share #jive-show-collaborations h4 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.jive-sidebar-document-share #shareContainer {
+    background-color: #f0f0f0;
+    margin: 0 0 6px 0 !important;
+    padding: 3px;
+}
+
+.jive-sidebar-document-share p {
+    margin: 0 !important;
+    padding: 3px 0 !important;
+}
+
+.jive-sidebar-document-share .jive-toggle-collaborations-show,
+    .jive-sidebar-document-share .jive-toggle-form-show {
+    background: url(../images/jive-icon-minus-blue.gif) 0 2px no-repeat;
+    margin: 3px 0 !important;
+    padding-left: 14px !important;
+}
+
+.jive-sidebar-document-share .jive-toggle-collaborations-hidden,
+    .jive-sidebar-document-share .jive-toggle-form-hidden {
+    background: url(../images/jive-icon-plus-blue.gif) 0 2px no-repeat;
+    margin: 3px 0 !important;
+    padding-left: 14px !important;
+}
+
+.jive-sidebar-document-share input {
+    font-size: .9167em;
+}
+
+.jive-sidebar-document-share a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.jive-sidebar-document-share .jive-toggle-collaborations-show a,
+    .jive-sidebar-document-share .jive-toggle-form-show a {
+    color: #666;
+    text-decoration: none;
+}
+
+.jive-sidebar-document-share input#share-email-text {
+    width: 150px;
+    margin: 2px 0 3px;
+    display: block;
+    position: relative;
+}
+
+.jive-sidebar-document-share a.jive-share-doc-link {
+    cursor: pointer;
+}
+
+/* sidebar styles for social groups (view-socialgroups.ftl) */
+.jive-sidebar-yourprojects,
+    .jive-sidebar-yourgroups,
+    .jive-sidebar-yourgroups .jive-create-group {
+    background: #fff url(../images/jive-sidebar-actions-bg.png) repeat-x top;
+    border: 1px solid #d3d3d3;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+.jive-sidebar-yourprojects h4,
+    .jive-sidebar-yourgroups h4 {
+    font-weight: bold;
+    padding: 0 0 4px;
+}
+
+.jive-sidebar-yourgroups ul.jive-sidebar-socialgroups {
+    margin-top: 8px;
+    font-size: 1em;
+}
+
+.jive-sidebar-yourgroups ul.jive-sidebar-socialgroups ul {
+    margin: 0;
+    padding: 0 0 5px;
+}
+
+.jive-sidebar-yourgroups ul.jive-sidebar-socialgroups ul li {
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-sidebar-yourgroups a.jive-your-social-group {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.jive-sidebar div.jive-create-group {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.3125em;
+    font-weight: bold;
+}
+
+.jive-sidebar div.jive-create-group a {
+    color: #666;
+    display: block;
+    padding-left: 23px;
+    position: relative;
+    text-decoration: none;
+}
+
+.jive-sidebar div.jive-create-group a {
+    zoom: 1; /* IE6 hasLayout fix */
+}
+
+.jive-sidebar div.jive-create-group a span.jive-icon-med {
+    left: 0;
+    position: absolute;
+    top: 1px;
+}
+
+/* Groups: Recently joined by your friends & recent blog comments */
+.jive-sidebar .jive-sidebar-body  ul.jive-sgroup-friend-joins img.jive-avatar,
+    #blog-nav-recent-comments .jive-sidebar-body  ul img.jive-avatar {
+    float: left;
+}
+
+.jive-sidebar .jive-sidebar-body ul.jive-sgroup-friend-joins p,
+    #blog-nav-recent-comments .jive-sidebar-body p {
+    margin-left: 34px;
+    clear: none;
+}
+
+.jive-sidebar ul.jive-sgroup-friend-joins span {
+    padding: 3px 0;
+    color: #666;
+}
+
+
+/* sidebar styles for your projects (view-projects.ftl) */
+.jive-sidebar-yourprojects ul.jive-sidebar-projects {
+    margin-top: 8px;
+}
+
+.jive-sidebar-yourprojects ul.jive-sidebar-projects ul li {
+    color: #666;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-sidebar-yourprojects ul.jive-sidebar-projects li span {
+    font-size: .9em;
+    background-image: none;
+    padding: 0 0 0 22px;
+    margin: -2px 0
+}
+
+.jive-sidebar-yourprojects ul.jive-sidebar-projects li span em {
+    color: #666;
+    font-style: normal;
+}
+
+.jive-sidebar-yourprojects ul.jive-sidebar-projects .proj-status {
+    padding-top: 0;
+    min-height: 14px;
+}
+
+* html .jive-sidebar-yourprojects ul.jive-sidebar-projects .proj-status {
+    height: 14px;
+}
+
+/* byline */
+.jive-sidebar .jive-sidebar-byline {
+    background: #F6F7F8 url(../images/jive-div-dotted.gif) repeat-x center bottom;
+    padding: 5px 10px;
+}
+
+* html .jive-sidebar .jive-sidebar-byline {
+    height: 1%;
+}
+
+/* bookmark sidebar */
+#jive-bookmark-sidebar {
+    padding: 0;
+}
+
+.pageable-container {
+    overflow: hidden;
+    position: relative;
+}
+
+* html .jive-more,
+    * html .jive-less {
+    height: 1%;
+}
+
+* html #jive-bookmark-list {
+    padding: 0px 4px;
+}
+
+*>html #jive-bookmark-list {
+    padding: 0px 4px;
+}
+
+#jive-bookmark-list {
+    padding: 0px 9px;
+    position: relative;
+}
+
+#jive-bookmark-list ul {
+    position: relative;
+}
+
+#jive-bookmark-list ul li {
+    position: relative;
+}
+
+div.jive-avatar-list li {
+    clear: none;
+    display: block;
+    float: left;
+    margin: 5px;
+    position: relative;
+}
+
+div.jive-avatar-list li .note {
+    position: absolute;
+    bottom: 4px;
+    right: -4px;
+}
+
+div.jive-avatar-list li .note .jive-icon-doctype-text {
+    margin: 0;
+}
+
+.jive-sidebar-footer a {
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: #f0f0f0;
+}
+
+.jive-avatar-list {
+    height: 58px;
+    overflow: hidden;
+}
+
+.jive-notes-list {
+    overflow: hidden;
+}
+
+div.jive-notes-list li {
+    margin: 4px 0;
+}
+
+.jive-notes-list li em {
+    color: #99AABB;
+    font-style: normal;
+}
+
+#jive-bookmark-sidebar .view-previous,
+    #jive-bookmark-sidebar .view-next {
+    display: none;
+}
+
+.jive-notes-list img.jive-avatar {
+    float: left;
+}
+
+.jive-notes-list p.jive-bookmark-note {
+    margin: 0 0 0 35px;
+    padding: 0;
+    clear: none;
+}
+
+/* Sidebar containing avatars and information */
+ul.jive-person-list li {
+    margin: 0;
+    padding: 2px 0 5px;
+}
+
+ul.jive-person-list li img.jive-avatar {
+    float: left;
+}
+
+ul.jive-person-list li p {
+    clear: none;
+    margin: 0 0 0 40px;
+    padding: 0;
+}

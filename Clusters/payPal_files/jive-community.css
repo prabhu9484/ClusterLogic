@@ -1,0 +1,1434 @@
+/*
+jive-community.css - styles for the community landing page.
+*/
+
+
+.jive-blog-post-message h3 {
+	clear: both;
+    float: none;
+    }
+
+/* container for use on the community pages */
+#jive-body-announcements-container {
+    padding: 0 20px;
+    }
+
+
+/* overview page "Under Construction" styles */
+#jive-overview-underconst {
+    background: transparent url(../images/jive-overview-underconst1.gif) repeat-x top left;
+    color: #333;
+    width: 650px;
+    margin: 5px auto 30px auto;
+    }
+#jive-overview-underconst div {
+    background: transparent url(../images/jive-overview-underconst2.gif) no-repeat 20px 0;
+    }
+#jive-overview-underconst div h2 {
+    font-size: 1em;
+    line-height: 1.1111;
+    padding: 30px 20px 2px 90px;
+    margin: 0;
+    }
+#jive-overview-underconst div p {
+    padding: 0 20px 15px 90px;
+    }
+
+
+
+.jive-body-intro-tags {
+	color: #777;
+	}
+.jive-body-intro-tags strong {
+    font-size: .8889em;
+	padding: 0px 3px 0px 0px;
+    float: left;
+    }
+.jive-body-intro-tags em {
+	padding: 0px 3px 0px 0px;
+	font-size: .8889em;
+	font-style: normal;
+    text-decoration: underline;
+    float: left;
+    }
+
+
+
+
+
+#jive-topic-list h3 {
+	float: left;
+	}
+
+#jive-topic-list div {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin-bottom: 35px;
+	}
+.jive-newtopic {
+	}
+.jive-newtopic a {
+	font-size: .8889em;
+	color: #777;
+	}
+#jive-topic-list ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 8px 0px 8px 0px;
+	float: left;
+    }
+#jive-topic-list ul li {
+	float: left;
+	font-size: 1.3333em;
+	line-height: 1em;
+	font-weight: bold;
+	padding: 8px 20px 8px 20px;
+	margin: 0px;
+	width: 260px;
+    height: 44px;
+    overflow: hidden;
+    }
+#jive-topic-list .jive-topic-tags  {
+    font-weight: normal;
+    font-size: 1em;
+    color: #666;
+    padding-left: 20px;
+    display: block;
+    }
+#jive-topic-list .jive-topic-tags .jive-topic-tag {
+    text-decoration: underline;
+    }
+#jive-topic-list ul li a {
+	text-decoration: none;
+	padding-left: 20px;
+	background: transparent url(../images/jive-icon-folder-16x16.gif) no-repeat top left;
+	background-position: 0px -2px;
+	}
+#jive-topic-list ul li a:hover {
+	text-decoration: underline;
+	}
+#jive-topic-list ul li a span {
+	font-weight: normal;
+    font-size: 1.1111em;
+    }
+
+
+
+/* search bar */
+#jive-body-search {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	background: #e9e9e9 url(../images/jive-browseby-bar.png) repeat-x top;
+	border: 1px solid #dcdcdc;
+	}
+#jive-body-search form {
+	margin: 8px;
+	}
+#jive-body-search input {
+	font-size: 1em;
+	}
+#jive-body-search input.jive-body-search-field {
+	width: 170px;
+	margin-right: 3px;
+	}
+#jive-body-search .jive-body-search-select {
+	font-size: 1em;
+	width: 150px;
+	overflow: hidden;
+	}
+#jive-body-search input.jive-body-search-button {
+	background: #f3f3f3 url(../images/jive-content-types-btn.png) repeat-x top;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-left: 12px;
+	color: #333;
+	cursor: pointer;
+	border: 1px solid #bfbfbf;
+	}
+
+
+
+/* community content type block */
+#jive-content-types {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+	background: #e9e9e9 url(../images/jive-browseby-bar.png) repeat-x top;
+	border: 1px solid #dcdcdc;
+	}
+#jive-content-types h4 {
+	float: left;
+	font-size: 1.1111em;
+	font-weight: normal;
+	padding: 0px 6px 0px 12px;
+	color: #505050;
+	}
+#jive-content-types ul {
+	float: left;
+	margin: 0px;
+	padding: 0px 0px 3px 0px;
+	list-style-type: none;
+	white-space: nowrap;
+	}
+#jive-content-types ul li {
+	float: left;
+	margin: 0px;
+	padding: 4px 0px 0px 10px;
+	color: #9a9a9a;
+	white-space: nowrap;
+	}
+#jive-content-types ul li em {
+	float: left;
+	font-style: normal;
+	padding: 4px 10px 0px 4px;
+	}
+#jive-content-types ul li a {
+	float: left;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 3px 12px 3px 12px;
+	background: #f3f3f3 url(../images/jive-content-types-btn.png) repeat-x top;
+	border: 1px solid #dcdcdc;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	cursor: pointer;
+	}
+#jive-content-types ul li a:hover {
+	text-decoration: underline;
+	}
+#jive-content-types ul li a span {
+	float: left;
+	margin-right: 2px;
+	padding-bottom: 1px;
+	}
+#jive-content-types ul li a span.jive-btn-forum {
+	background: transparent url(../images/jive-icon-forum-16x16.gif) no-repeat top left;
+	padding-left: 22px;
+	}
+#jive-content-types ul li a span.jive-btn-blog {
+	background: transparent url(../images/jive-icon-blog-16x16.gif) no-repeat top left;
+	padding-left: 22px;
+	}
+#jive-content-types ul li a span.jive-btn-wiki {
+	background: transparent url(../images/jive-icon-wiki-16x16.gif) no-repeat top left;
+	padding-left: 22px;
+	}
+
+
+
+/* jive content snippets */
+.jive-content-snip {
+	float: left;
+	width: 100%;
+	}
+.jive-content-snip-hdr {
+	padding: 6px 0px 6px 0px;
+	border-bottom: 1px solid #dcdcdc;
+    float: left;
+    }
+.jive-content-snip-hdr h2 {
+	float: left;
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.1111em;
+    }
+.jive-content-snip-hdr h2 a {
+	padding-left: 21px;
+	margin: 0px 18px 0px 8px;
+	text-decoration: none;
+    }
+.jive-content-snip-hdr h2 a:hover {
+	text-decoration: underline;
+	}
+.jive-content-snip-hdr span {
+	color: #666;
+	font-size: .8889em;
+    float: left;
+    padding: 2px 6px 0px 0px;
+    }
+.jive-content-snip-hdr #jive-content-snip-date {
+	float: right;
+    display: block;
+    }
+.jive-content-snip-hdr span a {
+	font-weight: bold;
+	}
+.jive-content-snip-hdr-forum {
+	background-color: #e8f1f8;
+	}
+.jive-content-snip-hdr-wiki,
+.jive-content-snip-hdr-doctype-image,
+.jive-content-snip-hdr-doctype-video,
+.jive-content-snip-hdr-doctype-text,
+.jive-content-snip-hdr-doctype-acrobat,
+.jive-content-snip-hdr-doctype-document,
+.jive-content-snip-hdr-doctype-presentation,
+.jive-content-snip-hdr-doctype-spreadsheet,
+.jive-content-snip-hdr-doctype-compressed,
+.jive-content-snip-hdr-doctype-generic
+{
+	background-color: #f8f4e6;
+	}
+.jive-content-snip-hdr-blog {
+	background-color: #f5faf0;
+	}
+.jive-content-snip-hdr-forum h2 a {
+	background: transparent url(../images/jive-icon-forum-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-wiki h2 a {
+	background: transparent url(../images/jive-icon-wiki-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-image h2 a {
+	background: transparent url(../images/jive-icon-doctype-image-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-video h2 a {
+	background: transparent url(../images/jive-icon-doctype-video-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-text h2 a {
+	background: transparent url(../images/jive-icon-doctype-text-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-acrobat h2 a {
+	background: transparent url(../images/jive-icon-doctype-acrobat-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-document h2 a {
+	background: transparent url(../images/jive-icon-doctype-document-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-presentation h2 a {
+	background: transparent url(../images/jive-icon-doctype-presentation-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-spreadsheet h2 a {
+	background: transparent url(../images/jive-icon-doctype-spreadsheet-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-compressed h2 a {
+	background: transparent url(../images/jive-icon-doctype-compressed-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-doctype-generic h2 a {
+	background: transparent url(../images/jive-icon-wiki-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-hdr-blog h2 a {
+	background: transparent url(../images/jive-icon-blog-16x16.gif) no-repeat left;
+	}
+.jive-content-snip-body p {
+    float: left;
+    margin: 0px;
+	padding: 10px 0px 0px 0px;
+	}
+.jive-content-snip-continued {
+	font-weight: bold;
+	}
+.jive-content-snip-details {
+    float: left;
+    clear: both;
+	margin: 12px 0px 25px 0px;
+	}
+.jive-content-snip-tags,
+.jive-content-snip-comments {
+	padding-left: 16px;
+	font-size: .8889em;
+	color: #666;
+	margin-right: 12px;
+	}
+.jive-content-snip-tags {
+	background: transparent url(../images/jive-icon-tag-12x12.gif) no-repeat left;
+	}
+.jive-content-snip-comments {
+	background: transparent url(../images/jive-icon-comment-12x12.gif) no-repeat left;
+	}
+
+
+
+
+/******************* new stuff *********************/
+
+/* Content Section */
+#jive-content-results {
+    clear: both;
+    width: 100%;
+    padding: 0 0 2px 0;
+    margin-top: 0;
+	}
+
+#jive-content-results #jive-content-tagset {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin-bottom: 8px;
+    min-width: 100%;
+    overflow: hidden;
+    background: transparent url(../images/jive-div-dotted.gif) repeat-x bottom;
+    }
+#jive-content-results #jive-content-tagset-content {
+    display: block;
+    clear: both;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 0 15px 0;
+    }
+
+#jive-content-tagset-content #jive-content-tagset-header {
+    background-color :#f5f5f5;
+    border-bottom: 1px solid #fff;
+    display: block;
+    margin: 0 0 5px;
+    padding: 5px 10px;
+    }
+#jive-content-tagset-content #jive-content-tagset-header .jive-link-newtopic {
+    font-size: .8889em;
+    text-decoration: none;
+    padding-left: 21px;
+    margin-left: 10px;
+    }
+
+#jive-content-results #jive-content-tagset-content h5 {
+    color:#666666;
+    display: inline;
+    padding-right: 5px;
+    }
+#jive-content-results .jive-blog-info-details {
+    float: right;
+    }
+.jive-taggroup {
+    display: block;
+    position: relative;
+    float: left;
+    padding: 8px;
+    margin: 0;
+    border:1px solid #FFF;
+    white-space: nowrap;
+    }
+.jive-taggroup a.jive-icon-taggroup {
+    display: block;
+    background-image: none;
+    padding: 0 0 0 20px;
+    }
+.jive-taggroup a {
+    text-decoration: none;
+    font-size: 1.1111em;
+    }
+.jive-taggroup a strong {
+    font-size: 1.1em;
+    }
+.jive-taggroup a:hover {
+    text-decoration: underline;
+    }
+
+.jive-taggroup span {
+    color: #999;
+    display: block;
+    clear: both;
+    white-space: nowrap;
+    font-size: .8889em;
+    }
+.jive-taggroup span a {
+    color: #999;
+    text-decoration: underline;
+    }
+
+.jive-taggroup-current {
+    background-color: #f9fafc;
+    border: 1px solid #e2e2e2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    }
+
+
+
+
+
+
+/* global overrides */
+.jive-contenttype-stats {
+    float: left;
+    padding: 5px 0px 2px 2px;
+	}
+
+
+
+
+/* Discussion, Document, and Blog Post content containers (for tables) */
+#jive-community-content,
+#jive-discussion-content,
+#jive-document-content,
+#jive-blogpost-content,
+#jive-watch-content,
+#jive-history-content,
+#jive-yourdocs-content {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+	}
+#jive-yourdocs-content {
+    border-top: 1px solid #dcdcdc;
+    margin-top: -1px;
+    }
+#jive-history-content {
+    
+    }
+#jive-history-content ul {
+    margin: 0;
+    padding: 5px;
+    list-style-type: none;
+    }
+#jive-history-content ul li {
+    padding: 0 0 10px;
+    }
+#jive-history-content ul.jive-history-content-people li {
+    padding-bottom: 15px;
+    }
+#jive-history-content ul.jive-history-content-people li img {
+    margin-bottom: -10px;
+    }
+#jive-history-content ul.jive-history-content-people li a.jive-username-link {
+    
+    }
+
+
+/* jive-table - specific to the 'ALL' content view on a community page */
+#jive-community-content .jive-table tr.jive-table-row-odd {
+	background-color: #fff;
+	}
+#jive-community-content .jive-table tr.jive-table-row-even {
+	background-color: #f9f9f9;
+	}
+/* table cell - object type */
+td.jive-table-cell-type {
+    padding-left: 10px;
+    padding-right: 1px;
+    width: 18px;
+    }
+td.jive-table-cell-type span {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    }
+#jive-community-content .jive-table th.jive-table-head-subject,
+#jive-community-content .jive-table th.jive-table-head-tags,
+#jive-community-content .jive-table th.jive-table-head-modified {
+    text-align: left;
+    }
+#jive-community-content .jive-table td.jive-table-cell-subject {
+	}
+#jive-community-content .jive-table td.jive-table-cell-tags {
+    font-size: .8889em;
+	text-align: left;
+    }
+#jive-community-content .jive-table th.jive-table-head-replies,
+#jive-community-content .jive-table td.jive-table-cell-replies {
+	text-align: center;
+	}
+#jive-community-content .jive-table td.jive-table-cell-tags a {
+    text-decoration: inherit;
+    }
+#jive-community-content .jive-table td.jive-table-cell-modified {
+	width: 90px;
+	}
+#jive-community-content .jive-table th.jive-table-head-status,
+#jive-community-content .jive-table td.jive-table-cell-status {
+    text-align: left;
+    }
+
+
+
+/* jive table - specific to discussion lists (see jive-global.css for all jive-table styles) */
+#jive-discussion-content .jive-table tr.jive-table-row-odd {
+	background-color: #fff;
+	}
+#jive-discussion-content .jive-table tr.jive-table-row-even {
+	background-color: #f9fafc;
+	}
+#jive-discussion-content .jive-table td.jive-table-head-readstat,
+#jive-discussion-content .jive-table td.jive-table-cell-readstat {
+    text-align: center;
+    }
+#jive-discussion-content .jive-table th.jive-table-head-replies,
+#jive-discussion-content .jive-table td.jive-table-cell-replies {
+	text-align: center;
+	}
+#jive-discussion-content .jive-table td.jive-table-cell-replies {
+    font-size: .8889em;
+	color: #666;
+    }
+
+
+
+/* jive table - specific to document lists (see jive-global.css for all jive-table styles) */
+#jive-document-content .jive-table tr.jive-table-row-odd {
+	background-color: #fff;
+	}
+#jive-document-content .jive-table tr.jive-table-row-even {
+	background-color: #fefdf8;
+	}
+#jive-document-content .jive-table th.jive-table-head-version,
+#jive-document-content .jive-table td.jive-table-cell-version {
+	text-align: center;
+	}
+#jive-document-content .jive-table th.jive-table-head-rating {
+    text-align: left;
+    }
+#jive-document-content .jive-table td.jive-table-cell-rating div {
+    display: block;
+    width: 85px;
+    white-space: nowrap;
+    }
+
+
+
+/* jive table - specific to blog post lists (see jive-global.css for all jive-table styles) */
+#jive-blogpost-content .jive-table tr.jive-table-row-odd {
+	background-color: #fff;
+	}
+#jive-blogpost-content .jive-table tr.jive-table-row-even {
+	background-color: #f5faf0;
+	}
+#jive-blogpost-content .jive-table td.jive-table-cell-subject {
+	width: 68%;
+	}
+#jive-blogpost-content .jive-table td.jive-table-cell-comments {
+	font-size: .8889em;
+	color: #666;
+    text-align: center;
+    }
+#jive-blogpost-content .jive-table td.jive-table-cell-readstat {
+	text-align: center;
+	}
+
+
+
+/* jive table - specific to watches lists (see jive-global.css for all jive-table styles) */
+#jive-watch-content .jive-table tr.jive-table-row-odd {
+	background-color: #fff;
+	}
+#jive-watch-content .jive-table tr.jive-table-row-even {
+	background-color: #f9f9f9;
+	}
+#jive-watch-content .jive-table td.jive-table-cell-type {
+	white-space: nowrap;
+	}
+#jive-watch-content .jive-table td.jive-table-cell-subject {
+	width: 55%;
+	}
+#jive-watch-content .jive-table td.jive-table-cell-modified {
+	width: 90px;
+	font-size: .8889em;
+    white-space: nowrap;
+    }
+
+
+
+
+#jive-content-overview {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 15px;
+    }
+#jive-content-overview-widecol-container {
+    width: 100%;
+    margin-right: -245px;
+    float: left;
+    }
+html>body #jive-content-overview-widecol-container {
+    margin-right: -245px;
+    }
+#jive-content-overview-widecol {
+    padding: 0 0 0 5px;
+    margin-right: 245px;
+    }
+html>body #jive-content-overview-widecol {
+    margin-right: 245px;
+    }
+#jive-content-overview-thincol-container {
+    float: right;
+    width: 235px;
+    }
+#jive-content-overview-thincol {
+    padding: 0 5px 0 10px;
+    }
+
+.jive-community-overview-header {
+    display: block;
+    background: transparent url(../images/jive-x-bg-overview-hdr.png) repeat-x top;
+    padding: 8px 0 5px 8px;
+    margin: 0 0 10px 0;
+    }
+.jive-community-overview-header h5 {
+    margin: 0;
+    padding-top: 1px;
+    }
+
+.jive-community-overview-blogposts {
+    }
+.jive-community-overview-blogposts .jive-blog-post {
+    border-top: none;
+    display: block;
+    overflow: hidden;
+    background-color: #fff;
+    }
+
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-subject {
+    padding: 10px !important;
+    margin-bottom: 0 !important;
+    width: 95% !important;
+    float: left;
+    margin-right: 0 !important;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-author-avatar-container {
+    width: 52px;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-author-avatar {
+    padding: 0;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-subject-header {
+    margin: 0;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-subject-header h2 {
+    margin: 0;
+    padding: 0 0 3px 0;
+    font-size: 1.7778em;
+    line-height: 1.0625em;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-subject-header-withavatar {
+    margin-right: 0 !important;
+    margin-left: 52px !important;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-subject-header-withavatar div {
+    margin-right: 0 !important;
+    }
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-subject-header em span {
+	padding: 0 6px;
+	}
+.jive-community-overview-blogposts .jive-blog-post .jive-blog-post-body {
+	clear: both;
+	margin: 0;
+	padding: 10px 15px 15px 15px;
+	}
+
+.jive-community-overview-discussions,
+.jive-community-overview-documents {
+    display: block;
+    overflow: hidden;
+    }
+.jive-community-overview-discussions ul,
+.jive-community-overview-documents ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+.jive-community-overview-discussions ul li,
+.jive-community-overview-documents ul li {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 5px;
+    font-size: .8889em;
+    }
+.jive-community-overview-discussions ul,
+.jive-community-overview-discussions p
+{
+    margin-bottom: 20px;
+    }
+
+.jive-community-overview-discussions .jive-avatar {
+    margin-right: 4px;
+    float: left;
+    }
+.jive-community-overview-discussions span {
+    display: block;
+    float: left;
+    width: 180px;
+    padding-top: 6px;
+    margin-bottom: 12px;
+    }
+.jive-community-overview-discussions .jive-username-link {
+    color: #333;
+    text-decoration: none;
+    }
+.jive-community-overview-discussions .jive-username-link:hover {
+    text-decoration: underline;
+    }
+
+.jive-community-overview-documents li {
+    padding-left: 8px;
+    padding-bottom: 5px;
+    background-position: 8px 1px;
+    }
+.jive-community-overview-documents a {
+    display: block;
+    overflow: hidden;
+    padding: 0 6px 0 22px;
+    }
+
+
+/* table rows seen when document is being edited */
+.jive-table tr.jive-table-row-edit-odd {
+	background-color: #fcfbef;
+	}
+.jive-table tr.jive-table-row-edit-even {
+	background-color: #fcfbef;
+	}
+
+
+
+
+
+
+
+
+/* author styles (name, avatar, level, number of posts) */
+.jive-author-avatar {
+	width: 40px;
+	float: left;
+  	color: #777;
+	padding: 0 0 0 15px;
+	margin: 0;
+	}
+
+
+/* jive thread - original post styles */
+.jive-blog-post {
+	clear: both;
+	border-top: 1px solid #dcdcdc;
+	background-color: #f5faf0;
+	padding: 0;
+	margin: 0;
+    }
+.jive-blog-post-alt {
+	background-color: #fff;
+	}
+
+
+/* 3 column layout, containers and columns */
+
+/* main wrapper*/
+.jive-blog-post-subject {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 15px 0 15px 0;
+    }
+
+/* column 1 */
+.jive-author-avatar-container {
+    float: left;
+    width: 65px;
+    }
+.jive-author-avatar {
+    margin: 0;
+    padding: 0 0 0 15px;
+    }
+
+/* column 2 */
+.jive-blog-post-subject-header {
+    margin: 0 75px 0 15px;
+    padding: 0;
+    }
+.jive-blog-post-subject-header div {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    }
+/* column 2 (if column 1) */
+.jive-blog-post-subject-header-withavatar {
+    margin: 0 70px 0 65px !important;
+    }
+.jive-blog-post-subject-header-withavatar div {
+    }
+
+/* column 3 */
+.jive-blog-post-reply-container {
+    display: block;
+    float: right;
+    width: 55px;
+    padding-right: 15px !important;
+    overflow: hidden;
+    }
+.jive-blog-post-reply {
+    float: right;
+    }
+
+
+
+
+.jive-blog-post-subject-header h2 {
+    clear: none;
+    margin: 0;
+	padding: 0;
+	font-size: 2em;
+    line-height: 1.15em;
+    font-weight: normal;
+    }
+.jive-blog-post-subject-header h2 a {
+	color: #333;
+	text-decoration: none;
+	}
+.jive-blog-post-subject-header h2 a:hover {
+	color: #555;
+	text-decoration: underline;
+	}
+.jive-blog-post-subject-header h2 span {
+    font-size: .5882em;
+    color: #666;
+    }
+.jive-blog-post-subject-header h2 span span {
+	font-size: 1em;
+	}
+.jive-blog-post-subject-header h2 span a {
+	color: #666;
+	text-decoration: none;
+	}
+.jive-blog-post-subject-header em {
+	font-size: .8889em;
+	color: #777;
+	font-style: normal;
+    margin: 0;
+    padding: 0;
+    }
+.jive-blog-post-subject-header em span {
+	padding-left: 10px;
+	}
+
+.jive-blog-post-reply {
+	height: 27px;
+	padding: 0;
+	margin: 0;
+	background: url(../images/jive-replybtn-blog-bg-right.gif) right no-repeat;
+	}
+.jive-blog-post-reply a {
+	display: block;
+	float: left;
+	padding: 5px 9px 6px 28px;
+	margin: 0 1px 0 0;
+	font-size: 1.1111em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #505050;
+	background: url(../images/jive-replybtn-blog-bg-left.gif) top left no-repeat;
+	}
+.jive-blog-post-reply a:hover {
+	color: #555;
+	background: url(../images/jive-replybtn-blog-bg-left-over.gif) left no-repeat;
+	}
+
+
+
+
+.jive-blog-post-body {
+	clear: both;
+	margin: 0px;
+	padding: 0px 15px 15px 15px;
+	}
+.jive-blog-post-message {
+	margin: 0;
+	padding: 0 0 15px 0;
+  	}
+
+.jive-emailnotifications-none p {
+    margin: 0;
+    padding: 40px 0 40px 0;
+    font-weight: bold;
+    text-align: center;
+    }
+
+.jive-blog-posts-none {
+    padding: 20px;
+    }
+
+
+.jive-blog-post-message-continued {
+	font-weight: bold;
+	}
+.jive-blog-post-details {
+	border-top: 1px solid #dcdcdc;
+	height: 16px;
+    padding-top: 5px;
+    line-height: 1.3333em;
+    margin: 5px 0 0;
+	}
+.jive-blog-post-details .jive-blog-post-details-item {
+    color: #666;
+    display: block;
+    float: left;
+    font-size: .8889em;
+    margin-right: 12px;
+    }
+.jive-blog-post-details .jive-icon-sml {
+    margin-top: 2px;
+    }
+
+
+
+
+.jive-taggroup-create-table {
+    display: block;
+    float: left;
+    clear: both;
+    width: 100%;
+    background: #f7f7f7 url(../images/jive-formblock-bg.png) repeat-x top;
+	border: 1px solid #dadada;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin: 0 0 40px 0;
+    }
+.jive-taggroup-create-table table {
+    margin: 15px 0;
+    width: 100%;
+	}
+.jive-taggroup-create-table table td {
+    padding: 3px;
+	}
+.jive-taggroup-create-table table td .jive-taggroup-create-name,
+.jive-taggroup-create-table table td .jive-taggroup-create-desc,
+.jive-taggroup-create-table table td .jive-taggroup-create-tags {
+    width: 90%;
+	}
+.jive-taggroup-create-table table td .jive-taggroup-create-desc {
+    height: 65px;
+	}
+.jive-taggroup-create-table table td.jive-table-cell-label {
+    display: block;
+    margin-top: 1px;
+    vertical-align: top;
+    text-align: right;
+    width: 80px;
+    }
+
+
+.jive-taggroup-populartags {
+    display: block;
+    float: left;
+    clear: both;
+    margin: 0 0 30px 0;
+	}
+.jive-taggroup-populartags p {
+    margin: 0 0 10px 0;
+	}
+.jive-taggroup-populartags-key {
+    display: block;
+    float: left;
+    clear: both;
+    padding: 25px 0 10px 0;
+    font-size: .8889em;
+    color: #555;
+	}
+.jive-taggroup-populartags-key div {
+    float: left;
+    padding-right: 15px;
+	}
+.jive-taggroup-populartags-key div .jive-tag-selected {
+    border: 1px solid #BAE19A;
+	}
+
+.jive-taggroup-tag {
+    display: inline;
+    line-height: 2em;
+    margin: 0 4px;
+	}
+.jive-taggroup-tag A{
+    text-decoration: none;
+    outline: none;
+    padding: 2px;
+	}
+.jive-tag-block {
+    display: block;
+    float: left;
+    width: 13px;
+    height: 13px;
+    margin-right: 3px;
+	}
+.jive-tag-unselected {
+
+	}
+.jive-tag-other {
+    border: 1px #fcc solid;
+	}
+.jive-tag-selected {
+    background-color: #BAE19A;
+	}
+
+
+
+
+.jive-tab-description {
+    display: block;
+    clear: both;
+    width: 100%;
+    float: left;
+    background: #fff url(../images/jive-tagset-bar-bg.gif) repeat-x top left;
+    padding-top: 1px;
+    }
+.jive-tab-description p {
+    display: block;
+    clear: both;
+    width: 100%;
+    font-size: .8889em;
+	padding: 13px;
+	margin: 0;
+	color: #666;
+	}
+
+
+/* NICKS CSS - some copied from jive-home.css. Should the main-discussions and main-docs
+ pages be including jive-community for jive-home. seems like jive-home, but they are using
+ jive-community right now because of all the community sidebar styles.
+ */
+
+
+.jive-community-subspaces-colhdrs,
+.jive-community-taggroups-colhdrs,
+.jive-discussions-subspaces-colhdrs,
+.jive-documents-subspaces-colhdrs {
+    float: right;
+    padding-top: 10px;
+    padding-right: 18px;
+    color: #555;
+    font-weight: bold;
+    }
+.jive-community-subspaces-colhdrs-discussions,
+.jive-community-subspaces-colhdrs-documents,
+.jive-community-subspaces-colhdrs-blogposts,
+.jive-community-taggroups-colhdrs-type {
+    display: block;
+    text-align: center;
+    float: left;
+    width: 100px;
+    }
+.jive-discussions-subspaces-colhdrs-discussions,
+.jive-discussions-subspaces-colhdrs-views,
+.jive-discussions-subspaces-colhdrs-lastmod,
+.jive-documents-subspaces-colhdrs-documents,
+.jive-documents-subspaces-colhdrs-views,
+.jive-documents-subspaces-colhdrs-lastmod {
+    display: block;
+    text-align: center;
+    float: left;
+    }
+.jive-discussions-subspaces-colhdrs-discussions,
+.jive-discussions-subspaces-colhdrs-views,
+.jive-documents-subspaces-colhdrs-documents,
+.jive-documents-subspaces-colhdrs-views {
+    width: 100px;
+    }
+.jive-discussions-subspaces-colhdrs-lastmod,
+.jive-documents-subspaces-colhdrs-lastmod {
+    width: 131px;
+    text-align: left;
+    }
+
+
+
+/* community list icons (showing normal, and 'new' or recent activity) */
+.jive-communitylist-med,
+.jive-communitylist-med-new {
+	padding: 4px 0 2px 25px;
+	height: 20px;
+	}
+.jive-communitylist-med {
+	background: transparent url( ../images/jive-icon-community-20x20.gif ) no-repeat left;
+	}
+.jive-communitylist-med-new {
+	background: transparent url( ../images/jive-icon-community-20x20-n.gif ) no-repeat left;
+	}
+.jive-communitylist-sm,
+.jive-communitylist-sm-new {
+	padding: 4px 0 4px 19px;
+	height: 14px;
+	}
+.jive-communitylist-sm {
+	background: transparent url( ../images/jive-icon-community-14x14.gif ) no-repeat left;
+	}
+.jive-communitylist-sm-new {
+	background: transparent url( ../images/jive-icon-community-14x14-n.gif ) no-repeat left;
+	}
+
+
+.jive-communities-listing,
+.jive-taggroups-listing {
+    overflow: hidden;
+    width: 100%;
+    }
+.jive-communities-listing table,
+.jive-taggroups-listing table {
+    padding-bottom: 2px;
+    width: 100%;
+    }
+.jive-communities-listing table tr.jive-communities-listing-border td,
+.jive-taggroups-listing table tr.jive-taggroups-listing-border td {
+    border-bottom: 1px solid #f1f2f5;
+    }
+
+/* communities & sub-communities styles (icons are added elsewhere) */
+.jive-communities-listing table tr td.jive-communitylist-name,
+.jive-taggroups-listing table tr td.jive-taggrouplist-name {
+    font-weight: bold;
+    font-size: 1.1111em;
+    padding: 5px 0;
+    }
+.jive-communities-listing table tr td.jive-communitylist-name-sub {
+    font-size: 1em;
+    padding: 4px 0 4px 22px;
+    }
+.jive-communities-listing table tr td.jive-communitylist-name a,
+.jive-communities-listing table tr td.jive-communitylist-name-sub a,
+.jive-taggroups-listing table tr td.jive-taggrouplist-name a {
+    text-decoration: none;
+    }
+.jive-communities-listing table tr td.jive-communitylist-name a:hover,
+.jive-communities-listing table tr td.jive-communitylist-name-sub a:hover,
+.jive-taggroups-listing table tr td.jive-taggrouplist-name a:hover {
+    text-decoration: underline;
+    }
+
+
+/* communities & sub-communities detail column styles */
+.jive-communities-listing table tr td.jive-communitylist-discussions,
+.jive-communities-listing table tr td.jive-communitylist-documents,
+.jive-communities-listing table tr td.jive-communitylist-blogposts,
+.jive-communities-listing table tr td.jive-communitylist-disc-count,
+.jive-communities-listing table tr td.jive-communitylist-disc-views,
+.jive-communities-listing table tr td.jive-communitylist-disc-latest,
+.jive-communities-listing table tr td.jive-communitylist-docs-count,
+.jive-communities-listing table tr td.jive-communitylist-docs-views,
+.jive-communities-listing table tr td.jive-communitylist-docs-latest,
+.jive-communities-listing table tr td.jive-communitylist-videos,
+.jive-taggroups-listing table tr td.jive-taggrouplist-type {
+    color: #666;
+    font-size: .8889em;
+    }
+.jive-communities-listing table tr td.jive-communitylist-discussions,
+.jive-communities-listing table tr td.jive-communitylist-documents,
+.jive-communities-listing table tr td.jive-communitylist-blogposts,
+.jive-communities-listing table tr td.jive-communitylist-disc-count,
+.jive-communities-listing table tr td.jive-communitylist-disc-views,
+.jive-communities-listing table tr td.jive-communitylist-docs-count,
+.jive-communities-listing table tr td.jive-communitylist-docs-views,
+.jive-communities-listing table tr td.jive-communitylist-videos,
+.jive-taggroups-listing table tr td.jive-taggrouplist-type {
+    width: 100px;
+    text-align: center;
+    }
+.jive-communities-listing table tr td.jive-communitylist-disc-latest,
+.jive-communities-listing table tr td.jive-communitylist-docs-latest {
+    width: 140px;
+    text-align: left;
+    }
+
+.jive-communities-listing table tr td.jive-communitylist-discussions a,
+.jive-communities-listing table tr td.jive-communitylist-documents a,
+.jive-communities-listing table tr td.jive-communitylist-blogposts a,
+.jive-communities-listing table tr td.jive-communitylist-disc-latest a,
+.jive-communities-listing table tr td.jive-communitylist-docs-latest a,
+.jive-communities-listing table tr td.jive-communitylist-videos a,
+.jive-taggroups-listing table tr td.jive-taggrouplist-type a{
+    color: #999;
+    }
+.jive-communitylist-disc-author,
+.jive-communitylist-docs-author {
+    color: #999;
+    display: block;
+    whitespace: nowrap;
+    padding: 0 0 0 5px;
+    margin: 0;
+}
+
+
+.jive-communities-listing table tr td a.jive-communitylist-big,
+.jive-communities-listing table tr td a.jive-communitylist-big-new,
+.jive-communities-listing table tr td a.jive-communitylist-med,
+.jive-communities-listing table tr td a.jive-communitylist-med-new,
+.jive-communities-listing table tr td a.jive-communitylist-sm,
+.jive-communities-listing table tr td a.jive-communitylist-sm-new {
+    margin-left: 5px;
+    }
+
+#jive-community-results .jive-table tr td {
+    border-bottom: 1px solid #ccc;
+    }
+#jive-community-results .jive-table a.jive-communitylist-med {
+    font-size: 1.2222em;
+    font-weight:bold;
+    }
+#jive-community-results .jive-table span {
+    font-size: 1.1111em;
+    color: #999;
+    }
+#jive-community-results .jive-table span.jive-community-browse-desc {
+    display: block;
+    padding: 10px 0 0 20px;
+    font-size: .8889em;
+    color: #999;
+    }
+#jive-community-results .jive-table ul.jive-community-browse-recentactivity {
+    list-style-type:none;
+    padding: 10px 0 10px 20px;
+    }
+#jive-community-results .jive-table ul.jive-community-browse-recentactivity li {
+    }
+
+
+
+/* END NICKS CSS */
+
+
+
+/* overview customize info block (seen by community admins, points to the customize link) */
+#jive-overview-customize-info,
+#jive-overview-customize-details {
+    color: #204158;
+    margin-top: -15px;
+    margin-bottom: 1px;
+    padding: 12px 20px 30px;
+    position: relative;
+    }
+#jive-overview-customize-info div.jive-overview-customize-info-arrow,
+#jive-overview-customize-details div.jive-overview-customize-details-arrow {
+    background: transparent url(../images/jive-customize-info-arrow.gif) no-repeat 100px top;
+    display: block;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    width: 90%;
+    }
+#jive-overview-customize-info div.jive-overview-customize-info-content,
+#jive-overview-customize-details div.jive-overview-customize-details-content {
+    background-color: #E4F2FD;
+    border: 1px solid #91BAD7;
+    padding: 12px 12px 13px 12px;
+    margin-top: -1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    }
+#jive-overview-customize-details div.jive-overview-customize-details-content {
+    padding: 25px;
+    }
+#jive-overview-customize-info p {
+    background: transparent url(../images/jive-icon-info-12x12.gif) no-repeat 0 8px;
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-right: 52px;
+    }
+
+#jive-overview-customize-info strong {
+    color: #427fab;
+    font-size: 1.5556em;
+    }
+#jive-overview-customize-info span {
+    border: 1px solid #91bad7;
+    font-size: .8889em;
+    display: block;
+    position: absolute;
+    right: 38px;
+    top: 27px;
+    }
+#jive-overview-customize-info span a:link,
+#jive-overview-customize-info span a:visited {
+    background: #f1f9ff url(../images/jive-icon-close.gif) no-repeat 5px center;
+    display: block;
+    padding: 2px 4px 2px 17px;
+    }
+#jive-overview-customize-info span a:hover,
+#jive-overview-customize-info span a:active {
+    background-color: #fff;
+    }
+
+
+/* styles for the details information screen, seen on the empty overview tab for community admins */
+#jive-overview-customize-details h2 {
+    color: #427fab;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 1.7778em;
+    }
+#jive-overview-customize-details-btn {
+    background: transparent url(../images/jive-customize-btn.png) repeat-x left top;
+    border: 1px solid #99c1dd;
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 1.5em;
+    margin: 0;
+    overflow: hidden;
+    padding: 8px 28px 8px 28px;
+    position: absolute;
+    text-decoration: none;
+    right: 52px;
+    }
+#jive-overview-customize-details-btn:hover {
+    background-position: left -45px;
+    }
+#jive-overview-customize-details p {
+    padding: 0 100px 13px 0;
+    }
+.jive-overview-customize-introduction {
+    margin-right: 200px;
+    }
+#jive-overview-customize-details p.jive-overview-customize-details-endcopy {
+    padding-bottom: 50px;
+    }
+#jive-overview-customize-details a.jive-icon-text,
+#jive-overview-customize-details a.jive-icon-film {
+    background-position: left;
+    background-repeat: no-repeat;
+    padding: 1px 0 1px 18px;
+    font-weight: bold;
+    }
+#jive-overview-customize-details a.jive-icon-text {
+    background-image: url(../images/jive-icon-doctype-text-16x16.gif);
+    }
+#jive-overview-customize-details a.jive-icon-film {
+    background-image: url(../images/jive-icon-film-16x16.gif);
+    }
+.jive-overview-customize-details-item {
+    position: relative;
+    background: transparent url(../images/jive-customize-details-item-bg.png) repeat-x top;
+    height: 270px;
+    }
+.jive-overview-customize-details-item img {
+    border: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    }
+
+.jive-overview-customize-details-item span {
+    display: block;
+    padding-left: 555px;
+    padding-right: 20px;
+    }
+.jive-overview-customize-details-item h3,
+.jive-overview-customize-details-item p,
+.jive-overview-customize-details-item ul {
+
+    }
+.jive-overview-customize-details-item h3 {
+    font-size: 1.6667em;
+    font-weight: bold;
+    color: #427fab;
+    padding: 30px 0 10px 0;
+    }
+.jive-overview-customize-details-item ul {
+    list-style-image: url(../images/jive-customize-details-bullet.png);
+    }
+.jive-overview-customize-details-item ul li {
+    padding: 0 0 6px 0;
+    }
+.jive-overview-customize-details-item div {
+    background: transparent url(../images/jive-customize-details-item4.png) no-repeat top left;
+    display: block;
+    height: 223px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 553px;
+    padding-left: 35px;
+    }
+.jive-overview-customize-details-item div ul {
+    float: left;
+    padding-top: 75px;
+    padding-right: 20px;
+    }
+

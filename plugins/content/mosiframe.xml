@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<mosinstall type="mambot" group="content" version="1.1">
+         <name>Iframe Content</name>
+          <creationDate>January 8th, 2008</creationDate>
+                <version>1.0.1</version>
+                <author>Nguyen Hoang Viet</author>
+                <copyright>Copyright 2008 luyenkim.net. All rights reserved.</copyright>
+        <license>http://www.gnu.org/copyleft/lgpl.html GNU/LGPL</license>
+          <authorEmail>email2@luyenkim.net</authorEmail>
+                <authorUrl>www.luyenkim.net</authorUrl>
+                  <description>
+                  <![CDATA[
+                <div style="padding:0px 8px 8px 0px;">
+<h1 style="clear:both;font-size:17px;border-bottom:1px dotted #505050;">Use Guidance:</h1>
+<br>
+<p>For setting of height and the URL to be framed, set the "Frame Height" and "URL To show" accordingly.<br/>
+<p>To use simply put {iframe height="400" frameborder="1"}http://luyenkim.net{/iframe} in the content page and you have full width iframe housing the web site or content within it.</p>
+<p>You can override any parameters such src, width, height, scrolling, frameborder, name, align info in the first {iframe ...} statement.</p>
+<br />
+
+                  ]]>
+                  </description>
+         <files>
+                 <filename mambot="mosiframe">mosiframe.php</filename>                        
+         </files>
+         <params>
+        <param name="src" type="text" default="http://www.luyenkim.net" label="URL To Show" description="Type in the full URL like http://www.abc.com. Or relative url help/help.html" />
+         <param name="width" type="text" default="100%" label="Frame Width" description="Type in the width of your frame in pixels or %." />
+         <param name="height" type="text" default="400" label="Frame Height" description="Type in the height of your frame in pixels." />
+	<param name="frameborder" type="radio" default="0" label="Frameborder" description="Specifies whether or not to display a frame border.">
+	<option value="0">No</option>
+	<option value="1">Yes</option>
+	</param>
+	<param name="scrolling" type="radio" default="auto" label="Scroll bar" description="Define scroll bars.">
+	<option value="no">No</option>
+	<option value="yes">Yes</option>
+	<option value="auto">Auto</option>
+	</param>
+        <param name="name" type="text" default="mosiframe" label="Frame Name" description="Specifies a unique name of the iframe (to use in scripts)." />
+        <param name="align" type="radio" default="bottom" label="Align" description="Specifies how to align the iframe according to the surrounding text">
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+	<option value="top">Top</option>
+	<option value="middle">Middle</option>
+	<option value="bottom">Bottom</option>
+	</param>
+        <param name="text" type="text" default="Our XYZ-offers" label="Info about link" description="Extra information - Helpful for Google. See demo for details." />
+        <param name="text2" type="text" default="" label="Text2" description="Extra information - Helpful for Google. See demo for details" />
+	</params>
+</mosinstall>
+

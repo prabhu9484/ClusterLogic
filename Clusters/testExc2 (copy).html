@@ -1,0 +1,894 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+	
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.1  (Linux)">
+	<META NAME="AUTHOR" CONTENT="prabhu ">
+	<META NAME="CREATED" CONTENT="20100706;14390700">
+	<META NAME="CHANGED" CONTENT="0;0">
+	
+	<STYLE>
+		<!-- 
+		BODY,DIV,TABLE,THEAD,TBODY,TFOOT,TR,TH,TD,P { font-family:"Liberation Sans"; font-size:x-small }
+		 -->
+	</STYLE>
+	
+<link rel="stylesheet" type="text/css" href="mouseovertabs.css" />
+<script src="mouseovertabs.js" type="text/javascript">
+
+/***********************************************
+* Mouseover Tabs Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<style type="text/css">
+
+#popitmenu{
+position: absolute;
+background-color: white;
+border:1px solid black;
+font: normal 12px Verdana;
+line-height: 18px;
+z-index: 100;
+visibility: hidden;
+}
+
+#popitmenu a{
+text-decoration: none;
+padding-left: 6px;
+color: black;
+display: block;
+}
+
+#popitmenu a:hover{ /*hover background color*/
+background-color: #CCFF9D;
+}
+
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Pop-it menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var defaultMenuWidth="150px" //set default menu width.
+
+var linkset=new Array()
+//SPECIFY MENU SETS AND THEIR LINKS. FOLLOW SYNTAX LAID OUT
+
+linkset[0]='<a href="http://dynamicdrive.com">Dynamic Drive</a>'
+linkset[0]+='<hr>' //Optional Separator
+linkset[0]+='<a href="http://www.javascriptkit.com">JavaScript Kit</a>'
+linkset[0]+='<a href="http://www.codingforums.com">Coding Forums</a>'
+linkset[0]+='<a href="http://www.cssdrive.com">CSS Drive</a>'
+linkset[0]+='<a href="http://freewarejava.com">Freewarejava</a>'
+
+linkset[1]='<a href="http://msnbc.com">MSNBC</a>'
+linkset[1]+='<a href="http://cnn.com">CNN</a>'
+linkset[1]+='<a href="http://news.bbc.co.uk">BBC News</a>'
+linkset[1]+='<a href="http://www.washingtonpost.com">Washington Post</a>'
+
+////No need to edit beyond here
+
+var ie5=document.all && !window.opera
+var ns6=document.getElementById
+
+if (ie5||ns6)
+document.write('<div id="popitmenu" onMouseover="clearhidemenu();" onMouseout="dynamichide(event)"></div>')
+
+function iecompattest(){
+return (document.compatMode && document.compatMode.indexOf("CSS")!=-1)? document.documentElement : document.body
+}
+
+function showmenu(e, which, optWidth){
+if (!document.all&&!document.getElementById)
+return
+clearhidemenu()
+menuobj=ie5? document.all.popitmenu : document.getElementById("popitmenu")
+menuobj.innerHTML=which
+menuobj.style.width=(typeof optWidth!="undefined")? optWidth : defaultMenuWidth
+menuobj.contentwidth=menuobj.offsetWidth
+menuobj.contentheight=menuobj.offsetHeight
+eventX=ie5? event.clientX : e.clientX
+eventY=ie5? event.clientY : e.clientY
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie5? iecompattest().clientWidth-eventX : window.innerWidth-eventX
+var bottomedge=ie5? iecompattest().clientHeight-eventY : window.innerHeight-eventY
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<menuobj.contentwidth)
+//move the horizontal position of the menu to the left by it's width
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX-menuobj.contentwidth+"px" : window.pageXOffset+eventX-menuobj.contentwidth+"px"
+else
+//position the horizontal position of the menu where the mouse was clicked
+menuobj.style.left=ie5? iecompattest().scrollLeft+eventX+"px" : window.pageXOffset+eventX+"px"
+//same concept with the vertical position
+if (bottomedge<menuobj.contentheight)
+menuobj.style.top=ie5? iecompattest().scrollTop+eventY-menuobj.contentheight+"px" : window.pageYOffset+eventY-menuobj.contentheight+"px"
+else
+menuobj.style.top=ie5? iecompattest().scrollTop+event.clientY+"px" : window.pageYOffset+eventY+"px"
+menuobj.style.visibility="visible"
+return false
+}
+
+function contains_ns6(a, b) {
+//Determines if 1 element in contained in another- by Brainjar.com
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function hidemenu(){
+if (window.menuobj)
+menuobj.style.visibility="hidden"
+}
+
+function dynamichide(e){
+if (ie5&&!menuobj.contains(e.toElement))
+hidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+hidemenu()
+}
+
+function delayhidemenu(){
+delayhide=setTimeout("hidemenu()",500)
+}
+
+function clearhidemenu(){
+if (window.delayhide)
+clearTimeout(delayhide)
+}
+
+if (ie5||ns6)
+document.onclick=hidemenu
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="jqcontextmenu.css" />
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="jqcontextmenu.js">
+
+/***********************************************
+* jQuery Context Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+//Usage: $(elementselector).addcontextmenu('id_of_context_menu_on_page')
+//To apply context menu to entire document, use: $(document).addcontextmenu('id_of_context_menu_on_page')
+
+jQuery(document).ready(function($){
+	$('a.mylinks').addcontextmenu('contextmenu1') //apply context menu to links with class="mylinks"
+})
+
+
+jQuery(document).ready(function($){
+	$('img').addcontextmenu('contextmenu2') //apply context menu to all images on the page
+})
+
+</script>
+
+
+<script type="text/javascript">
+
+/***********************************************
+* Contractible Headers script- © Dynamic Drive (www.dynamicdrive.com)
+* This notice must stay intact for legal use. Last updated Mar 23rd, 2004.
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
+
+if (document.getElementById){
+document.write('<style type="text/css">')
+document.write('.switchcontent{display:none;}')
+document.write('</style>')
+}
+
+function getElementbyClass(classname){
+ccollect=new Array()
+var inc=0
+var alltags=document.all? document.all : document.getElementsByTagName("*")
+for (i=0; i<alltags.length; i++){
+if (alltags[i].className==classname)
+ccollect[inc++]=alltags[i]
+}
+}
+
+function contractcontent(omit){
+var inc=0
+while (ccollect[inc]){
+if (ccollect[inc].id!=omit)
+ccollect[inc].style.display="none"
+inc++
+}
+}
+
+function expandcontent(cid){
+if (typeof ccollect!="undefined"){
+if (collapseprevious=="yes")
+contractcontent(cid)
+document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+}
+}
+
+function revivecontent(){
+contractcontent("omitnothing")
+selectedItem=getselectedItem()
+selectedComponents=selectedItem.split("|")
+for (i=0; i<selectedComponents.length-1; i++)
+document.getElementById(selectedComponents[i]).style.display="block"
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function getselectedItem(){
+if (get_cookie(window.location.pathname) != ""){
+selectedItem=get_cookie(window.location.pathname)
+return selectedItem
+}
+else
+return ""
+}
+
+function saveswitchstate(){
+var inc=0, selectedItem=""
+while (ccollect[inc]){
+if (ccollect[inc].style.display=="block")
+selectedItem+=ccollect[inc].id+"|"
+inc++
+}
+
+document.cookie=window.location.pathname+"="+selectedItem
+}
+
+function do_onload(){
+uniqueidn=window.location.pathname+"firsttimeload"
+getElementbyClass("switchcontent")
+if (enablepersist=="on" && typeof ccollect!="undefined"){
+document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+if (!firsttimeload)
+revivecontent()
+}
+}
+
+
+if (window.addEventListener)
+window.addEventListener("load", do_onload, false)
+else if (window.attachEvent)
+window.attachEvent("onload", do_onload)
+else if (document.getElementById)
+window.onload=do_onload
+
+if (enablepersist=="on" && document.getElementById)
+window.onunload=saveswitchstate
+
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="balloontip.css" />
+
+<script type="text/javascript" src="balloontip.js">
+
+/***********************************************
+* Rich HTML Balloon Tooltip- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<style type="text/css">
+.menutitle{
+cursor:pointer;
+margin-bottom: 5px;
+background-color:#ECECFF;
+color:#000000;
+width:140px;
+padding:2px;
+text-align:center;
+font-weight:bold;
+/*/*/border:1px solid #000000;/* */
+}
+
+.submenu{
+margin-bottom: 0.5em;
+}
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* Switch Menu script- by Martial B of http://getElementById.com/
+* Modified by Dynamic Drive for format & NS4/IE4 compatibility
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var persistmenu="yes" //"yes" or "no". Make sure each SPAN content contains an incrementing ID starting at 1 (id="sub1", id="sub2", etc)
+var persisttype="sitewide" //enter "sitewide" for menu to persist across site, "local" for this page only
+
+if (document.getElementById){ //DynamicDrive.com change
+document.write('<style type="text/css">\n')
+document.write('.submenu{display: none;}\n')
+document.write('</style>\n')
+}
+
+function SwitchMenu(obj){
+	if(document.getElementById){
+	var el = document.getElementById(obj);
+	var ar = document.getElementById("masterdiv").getElementsByTagName("span"); //DynamicDrive.com change
+		if(el.style.display != "block"){ //DynamicDrive.com change
+			for (var i=0; i<ar.length; i++){
+				if (ar[i].className=="submenu") //DynamicDrive.com change
+				ar[i].style.display = "none";
+			}
+			el.style.display = "block";
+		}else{
+			el.style.display = "none";
+		}
+	}
+}
+
+function get_cookie(Name) { 
+var search = Name + "="
+var returnvalue = "";
+if (document.cookie.length > 0) {
+offset = document.cookie.indexOf(search)
+if (offset != -1) { 
+offset += search.length
+end = document.cookie.indexOf(";", offset);
+if (end == -1) end = document.cookie.length;
+returnvalue=unescape(document.cookie.substring(offset, end))
+}
+}
+return returnvalue;
+}
+
+function onloadfunction(){
+if (persistmenu=="yes"){
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=get_cookie(cookiename)
+if (cookievalue!="")
+document.getElementById(cookievalue).style.display="block"
+}
+}
+
+function savemenustate(){
+var inc=1, blockid=""
+while (document.getElementById("sub"+inc)){
+if (document.getElementById("sub"+inc).style.display=="block"){
+blockid="sub"+inc
+break
+}
+inc++
+}
+var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+document.cookie=cookiename+"="+cookievalue
+}
+
+if (window.addEventListener)
+window.addEventListener("load", onloadfunction, false)
+else if (window.attachEvent)
+window.attachEvent("onload", onloadfunction)
+else if (document.getElementById)
+window.onload=onloadfunction
+
+if (persistmenu=="yes" && document.getElementById)
+window.onunload=savemenustate
+
+</script>
+	
+
+<style type="text/css">
+.matrix { font-family:Lucida Console, Courier, Monotype; font-size:10pt; text-align:center; width:10px; padding:0px; margin:0px;}
+</style>
+
+<script type="text/javascript" language="JavaScript">
+
+<!--
+var rows=11; // must be an odd number
+var speed=5; // lower is faster
+var reveal=2; // between 0 and 2 only. The higher, the faster the word appears
+var effectalign="default" //enter "center" to center it.
+
+/***********************************************
+* The Matrix Text Effect- by Richard Womersley (http://www.mf2fm.co.uk/rv)
+* This notice must stay intact for use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var w3c=document.getElementById && !window.opera;;
+var ie45=document.all && !window.opera;
+var ma_tab, matemp, ma_bod, ma_row, x, y, columns, ma_txt, ma_cho;
+var m_coch=new Array();
+var m_copo=new Array();
+window.onload=function() {
+	if (!w3c && !ie45) return
+  var matrix=(w3c)?document.getElementById("matrix"):document.all["matrix"];
+  ma_txt=(w3c)?matrix.firstChild.nodeValue:matrix.innerHTML;
+  ma_txt=" "+ma_txt+" ";
+  columns=ma_txt.length;
+  if (w3c) {
+    while (matrix.childNodes.length) matrix.removeChild(matrix.childNodes[0]);
+    ma_tab=document.createElement("table");
+    ma_tab.setAttribute("border", 0);
+    ma_tab.setAttribute("align", effectalign);
+    ma_tab.style.backgroundColor="#000000";
+    ma_bod=document.createElement("tbody");
+    for (x=0; x<rows; x++) {
+      ma_row=document.createElement("tr");
+      for (y=0; y<columns; y++) {
+        matemp=document.createElement("td");
+        matemp.setAttribute("id", "Mx"+x+"y"+y);
+        matemp.className="matrix";
+        matemp.appendChild(document.createTextNode(String.fromCharCode(160)));
+        ma_row.appendChild(matemp);
+      }
+      ma_bod.appendChild(ma_row);
+    }
+    ma_tab.appendChild(ma_bod);
+    matrix.appendChild(ma_tab);
+  } else {
+    ma_tab='<ta'+'ble align="'+effectalign+'" border="0" style="background-color:#000000">';
+    for (var x=0; x<rows; x++) {
+      ma_tab+='<t'+'r>';
+      for (var y=0; y<columns; y++) {
+        ma_tab+='<t'+'d class="matrix" id="Mx'+x+'y'+y+'">&nbsp;</'+'td>';
+      }
+      ma_tab+='</'+'tr>';
+    }
+    ma_tab+='</'+'table>';
+    matrix.innerHTML=ma_tab;
+  }
+  ma_cho=ma_txt;
+  for (x=0; x<columns; x++) {
+    ma_cho+=String.fromCharCode(32+Math.floor(Math.random()*94));
+    m_copo[x]=0;
+  }
+  ma_bod=setInterval("mytricks()", speed);
+}
+
+function mytricks() {
+  x=0;
+  for (y=0; y<columns; y++) {
+    x=x+(m_copo[y]==100);
+    ma_row=m_copo[y]%100;
+    if (ma_row && m_copo[y]<100) {
+      if (ma_row<rows+1) {
+        if (w3c) {
+          matemp=document.getElementById("Mx"+(ma_row-1)+"y"+y);
+          matemp.firstChild.nodeValue=m_coch[y];
+        }
+        else {
+          matemp=document.all["Mx"+(ma_row-1)+"y"+y];
+          matemp.innerHTML=m_coch[y];
+        }
+        matemp.style.color="#33ff66";
+        matemp.style.fontWeight="bold";
+      }
+      if (ma_row>1 && ma_row<rows+2) {
+        matemp=(w3c)?document.getElementById("Mx"+(ma_row-2)+"y"+y):document.all["Mx"+(ma_row-2)+"y"+y];
+        matemp.style.fontWeight="normal";
+        matemp.style.color="#00ff00";
+      }
+      if (ma_row>2) {
+          matemp=(w3c)?document.getElementById("Mx"+(ma_row-3)+"y"+y):document.all["Mx"+(ma_row-3)+"y"+y];
+        matemp.style.color="#009900";
+      }
+      if (ma_row<Math.floor(rows/2)+1) m_copo[y]++;
+      else if (ma_row==Math.floor(rows/2)+1 && m_coch[y]==ma_txt.charAt(y)) zoomer(y);
+      else if (ma_row<rows+2) m_copo[y]++;
+      else if (m_copo[y]<100) m_copo[y]=0;
+    }
+    else if (Math.random()>0.9 && m_copo[y]<100) {
+      m_coch[y]=ma_cho.charAt(Math.floor(Math.random()*ma_cho.length));
+      m_copo[y]++;
+    }
+  }
+  if (x==columns) clearInterval(ma_bod);
+}
+
+function zoomer(ycol) {
+  var mtmp, mtem, ytmp;
+  if (m_copo[ycol]==Math.floor(rows/2)+1) {
+    for (ytmp=0; ytmp<rows; ytmp++) {
+      if (w3c) {
+        mtmp=document.getElementById("Mx"+ytmp+"y"+ycol);
+        mtmp.firstChild.nodeValue=m_coch[ycol];
+      }
+      else {
+        mtmp=document.all["Mx"+ytmp+"y"+ycol];
+        mtmp.innerHTML=m_coch[ycol];
+      }
+      mtmp.style.color="#33ff66";
+      mtmp.style.fontWeight="bold";
+    }
+    if (Math.random()<reveal) {
+      mtmp=ma_cho.indexOf(ma_txt.charAt(ycol));
+      ma_cho=ma_cho.substring(0, mtmp)+ma_cho.substring(mtmp+1, ma_cho.length);
+    }
+    if (Math.random()<reveal-1) ma_cho=ma_cho.substring(0, ma_cho.length-1);
+    m_copo[ycol]+=199;
+    setTimeout("zoomer("+ycol+")", speed);
+  }
+  else if (m_copo[ycol]>200) {
+    if (w3c) {
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-201)+"y"+ycol);
+      mtem=document.getElementById("Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol);
+    }
+    else {
+      mtmp=document.all["Mx"+(m_copo[ycol]-201)+"y"+ycol];
+      mtem=document.all["Mx"+(200+rows-m_copo[ycol]--)+"y"+ycol];
+    }
+    mtmp.style.fontWeight="normal";
+    mtem.style.fontWeight="normal";
+    setTimeout("zoomer("+ycol+")", speed);
+  }
+  else if (m_copo[ycol]==200) m_copo[ycol]=100+Math.floor(rows/2);
+  if (m_copo[ycol]>100 && m_copo[ycol]<200) {
+    if (w3c) {
+      mtmp=document.getElementById("Mx"+(m_copo[ycol]-101)+"y"+ycol);
+      mtmp.firstChild.nodeValue=String.fromCharCode(160);
+      mtem=document.getElementById("Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol);
+      mtem.firstChild.nodeValue=String.fromCharCode(160);
+    }
+    else {
+      mtmp=document.all["Mx"+(m_copo[ycol]-101)+"y"+ycol];
+      mtmp.innerHTML=String.fromCharCode(160);
+      mtem=document.all["Mx"+(100+rows-m_copo[ycol]--)+"y"+ycol];
+      mtem.innerHTML=String.fromCharCode(160);
+    }
+    setTimeout("zoomer("+ycol+")", speed);
+  }
+}
+// -->
+</script>
+
+<style type="text/css">
+.dropcontent{
+width: 300px;
+height: 140px;
+border: 1px solid black;
+background-color: #FFECC6;
+display:block;
+}
+</style>
+
+
+
+</HEAD>
+
+<BODY TEXT="#000000">
+<TABLE FRAME=VOID CELLSPACING=0 COLS=3 RULES=NONE BORDER=0>
+	<!--COLGROUP><COL WIDTH=86><COL WIDTH=86><COL WIDTH=86></COLGROUP-->
+	<TBODY>
+		
+		<TR>
+			
+			<TD STYLE="border-right: 3px solid #000000" HEIGHT=800 WIDTH=300 BGCOLOR="#ffffff" ><FONT FACE="Liberation Serif"></FONT></TD>
+			<TD HEIGHT=800 WIDTH=850 ALIGN=LEFT VALIGN=TOP><FONT FACE="Liberation Serif">
+			<TABLE BORDER="3">
+			
+			<!--TR>
+			<TD WIDTH=800 HEIGHT=50 BGCOLOR="#c6f6f2" ALIGN="LEFT" VALIGN="TOP">
+			This is Banner 1
+			</TD>
+			</TR-->
+
+			<TR>
+			<TD WIDTH=800 HEIGHT=100 BGCOLOR="#e1ea82" ALIGN="LEFT" VALIGN="TOP">
+			<!--This is Banner 2-->
+						
+			<div id="matrix">MostlyLinux - Making Open Source Work</div>
+
+			</TD>
+			</TR>
+
+			<TR>
+			<TD WIDTH=800 HEIGHT=50 BGCOLOR="#c6f6f2" ALIGN="LEFT" VALIGN="TOP">
+			<!--This is Banner 3-->
+			
+			
+			<div id="mytabsmenu" class="tabsmenuclass">
+<ul>
+<li><a href="http://www.javascriptkit.com" rel="gotsubmenu[selected]">JavaScript Kit</a></li>
+<li><a href="http://www.cssdrive.com" rel="gotsubmenu">CSS Drive</a></li>
+<!--li><a href="http://www.codingforums.com">No Sub Menu</a></li-->
+</ul>
+</div>
+
+<div id="mysubmenuarea" class="tabsmenucontentclass">
+
+<!--1st link within submenu container should point to the external submenu contents file-->
+<a href="submenucontents.htm" style="visibility:hidden">Sub Menu contents</a>
+
+</div>
+
+
+<script type="text/javascript">
+//mouseovertabsmenu.init("tabs_container_id", "submenu_container_id", "bool_hidecontentsmouseout")
+mouseovertabsmenu.init("mytabsmenu", "mysubmenuarea", true)
+
+</script>
+
+
+
+<!--Contents of submenucontents.htm-->
+
+<div class="tabsmenucontent">
+<ul>
+<li><a href="http://www.javascriptkit.com">Home</a></li>
+<li><a href="http://www.javascriptkit.com/cutpastejava.shtml">Free JavaScripts</a></li>
+<li><a href="http://www.javascriptkit.com/javatutors/">JS Tutorials</a></li>
+</ul>
+</div>
+
+<div class="tabsmenucontent">
+<ul>
+<li><a href="http://www.cssdrive.com">Gallery</a></li>
+<li><a href="http://www.cssdrive.com/index.php/menudesigns/">Menu Designs</a></li>
+<li><a href="http://www.cssdrive.com/index.php/news/">News</a></li>
+</ul>
+</div>
+
+
+
+			
+			</TD>
+			</TR>
+			
+
+			<TABLE BORDER="0">
+			<TR>
+			<TD STYLE="border-right: 2px solid #000000" HEIGHT=300 WIDTH=150 BGCOLOR="#c6d6f6" VALIGN="TOP" >
+			<!--This is Module 1-->
+
+			<div id="masterdiv">
+
+	<div class="menutitle" onclick="SwitchMenu('sub1')">Site Menu</div>
+	<span class="submenu" id="sub1">
+		- <a href="new.htm">What's New</a><br>
+		- <a href="hot.htm">What's hot</a><br>
+		- <a href="revised.htm">Revised Scripts</a><br>
+		- <a href="morezone/">More Zone</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub2')">FAQ/Help</div>
+	<span class="submenu" id="sub2">
+		- <a href="notice.htm">Usage Terms</a><br>
+		- <a href="faqs.htm">DHTML FAQs</a><br>
+		- <a href="help.htm">Scripts FAQs</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub3')">Help Forum</div>
+	<span class="submenu" id="sub3">
+		- <a href="http://www.codingforums.com">Coding Forums</a><br>
+	</span>
+	
+	<div class="menutitle" onclick="SwitchMenu('sub4')">Cool Links</div>
+	<span class="submenu" id="sub4">
+		- <a href="http://www.javascriptkit.com">JavaScript Kit</a><br>
+		- <a href="http://www.freewarejava.com">Freewarejava</a><br>
+		- <a href="http://www.cooltext.com">Cool Text</a><br>
+		- <a href="http://www.google.com">Google.com</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub5')">Site Menu</div>
+	<span class="submenu" id="sub5">
+		- <a href="new.htm">What's New</a><br>
+		- <a href="hot.htm">What's hot</a><br>
+		- <a href="revised.htm">Revised Scripts</a><br>
+		- <a href="morezone/">More Zone</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub6')">FAQ/Help</div>
+	<span class="submenu" id="sub6">
+		- <a href="notice.htm">Usage Terms</a><br>
+		- <a href="faqs.htm">DHTML FAQs</a><br>
+		- <a href="help.htm">Scripts FAQs</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub7')">Help Forum</div>
+	<span class="submenu" id="sub7">
+		- <a href="http://www.codingforums.com">Coding Forums</a><br>
+	</span>
+	
+	<div class="menutitle" onclick="SwitchMenu('sub8')">Cool Links</div>
+	<span class="submenu" id="sub8">
+		- <a href="http://www.javascriptkit.com">JavaScript Kit</a><br>
+		- <a href="http://www.freewarejava.com">Freewarejava</a><br>
+		- <a href="http://www.cooltext.com">Cool Text</a><br>
+		- <a href="http://www.google.com">Google.com</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub9')">Site Menu</div>
+		<span class="submenu" id="sub9">
+		- <a href="new.htm">What's New</a><br>
+		- <a href="hot.htm">What's hot</a><br>
+		- <a href="revised.htm">Revised Scripts</a><br>
+		- <a href="morezone/">More Zone</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub10')">FAQ/Help</div>
+	<span class="submenu" id="sub10">
+		- <a href="notice.htm">Usage Terms</a><br>
+		- <a href="faqs.htm">DHTML FAQs</a><br>
+		- <a href="help.htm">Scripts FAQs</a>
+	</span>
+
+	<div class="menutitle" onclick="SwitchMenu('sub11')">Help Forum</div>
+	<span class="submenu" id="sub11">
+		- <a href="http://www.codingforums.com">Coding Forums</a><br>
+	</span>
+	
+	<div class="menutitle" onclick="SwitchMenu('sub12')">Cool Links</div>
+	<span class="submenu" id="sub12">
+		- <a href="http://www.javascriptkit.com">JavaScript Kit</a><br>
+		- <a href="http://www.freewarejava.com">Freewarejava</a><br>
+		- <a href="http://www.cooltext.com">Cool Text</a><br>
+		- <a href="http://www.google.com">Google.com</a>
+	</span>
+
+
+
+	<!--img src="arrowdown.gif" onclick="SwitchMenu('sub5')"
+	<span class="submenu" id="sub5">
+		- <a href="http://www.dynamicdrive.com/link.htm">Link to DD</a><br>
+		- <a href="http://www.dynamicdrive.com/recommendit/">Recommend Us</a><br>
+		- <a href="http://www.dynamicdrive.com/contact.htm">Email Us</a><br>
+	</span-->
+
+</div>
+
+			
+			</TD>
+			<TD HEIGHT=300 WIDTH=500 BGCOLOR="#fafbfd" ALIGN="CENTER" VALIGN="TOP">
+			<br/><br/><br/>
+			<h3 onClick="expandcontent('sc1')" style="cursor:hand; cursor:pointer">What is JavaScript?</h3>
+<div id="sc1" class="switchcontent">
+JavaScript is a scripting language originally developed by Netscape to add interactivity and power to web documents. It is purely client side, and runs completely on the client's browser and computer.
+</div>
+
+<h3 onClick="expandcontent('sc2')" style="cursor:hand; cursor:pointer">Difference betwen Java & JavaScript?</h3>
+<div id="sc2" class="switchcontent">
+Java is completely different from JavaScript- the former is a compiled language while the later is a scripting language.
+</div>
+
+<h3 onClick="expandcontent('sc3')" style="cursor:hand; cursor:pointer">What is DHTML?</h3>
+<div id="sc3" class="switchcontent">
+DHTML is the embodiment of a combination of technologies- JavaScript, CSS, and HTML. Through them a new level of interactivity is possible for the end user experience.
+</div>
+
+			</TD>
+			<TD STYLE=" border-left: 2px solid #000000 " HEIGHT=300 WIDTH=150 BGCOLOR="#c6d6f6" VALIGN="TOP" ALIGN="CENTER">
+			<!--This is Module 2-->
+
+			<!--Sample links-->
+
+<br/><br/>
+<a href="http://www.dynamicdrive.com/style/" rel="balloon1">Dynamic Drive CSS Library</a><br /><br />
+<a href="http://www.javascriptkit.com" rel="balloon2">JavaScript Kit</a><br/><br/> 
+
+
+<a href="#" onMouseover="showmenu(event,linkset[0])" onMouseout="delayhidemenu()">Webmaster Links</a><br/><br/>
+<a href="#" onMouseover="showmenu(event,linkset[1], '180px')" onMouseout="delayhidemenu()">News sites</a><br/><br/>
+
+
+<!--HTML for Context Menu 1-->
+<ul id="contextmenu1" class="jqcontextmenu">
+<li><a href="#">Item 1a</a></li>
+<li><a href="#">Item 2a</a></li>
+<li><a href="#">Item Folder 3a</a>
+	<ul>
+	<li><a href="#">Sub Item 3.1a</a></li>
+	<li><a href="#">Sub Item 3.2a</a></li>
+	<li><a href="#">Sub Item 3.3a</a></li>
+	<li><a href="#">Sub Item 3.4a</a></li>
+	</ul>
+</li>
+<li><a href="#">Item 4a</a></li>
+<li><a href="#">Item Folder 5a</a>
+	<ul>
+	<li><a href="#">Sub Item 5.1a</a></li>
+	<li><a href="#">Item Folder 5.2a</a>
+		<ul>
+		<li><a href="#">Sub Item 5.2.1a</a></li>
+		<li><a href="#">Sub Item 5.2.2a</a></li>
+		<li><a href="#">Sub Item 5.2.3a</a></li>
+		<li><a href="#">Sub Item 5.2.4a</a></li>
+		</ul>
+	</li>
+	</ul>
+</li>
+<li><a href="#">Item 6a</a></li>
+</ul>
+
+
+<!--HTML for Context Menu 2-->
+<ul id="contextmenu2" class="jqcontextmenu">
+<li><a href="#">Item 1a</a></li>
+<li><a href="#">Item 2a</a></li>
+<li><a href="#">Item 1a</a></li>
+<li><a href="#">Item 2a</a></li>
+</ul>
+
+
+
+<!--Sample corresponding tooltips-->
+
+<div id="balloon1" class="balloonstyle">
+<img src="shadetabs.gif" style="float: right; margin-left: 5px; border:1px solid black" />Original, practical CSS codes and examples such as CSS menus to give your site a visual boast!
+</div>
+
+<div id="balloon2" class="balloonstyle" style="width: 350px; background-color: lightyellow">
+Award winning JavaScript tutorials and over 400+ free scripts.
+</div>
+
+
+			</TD>
+			</TR>
+			</TABLE>
+
+			<TABLE BORDER="0">
+			<TR>
+			<TD STYLE="border-right: 3px solid #000000" HEIGHT=300 WIDTH=150 BGCOLOR="#c6d6f6" >
+			This is Module 3
+			</TD>
+			<TD HEIGHT=300 WIDTH=500 BGCOLOR="#fafbfd">
+			</TD>
+			<TD STYLE="border-left: 3px solid #000000" HEIGHT=300 WIDTH=150 BGCOLOR="#c6d6f6" >
+			This is Module 4
+			</TD>
+			</TR>
+			</TABLE>
+		
+
+			</FONT></TD>
+			<TD STYLE="border-left: 3px solid #000000" HEIGHT=800 WIDTH=300 BGCOLOR="#ffffff"><FONT FACE="Liberation Serif" SIZE=3></FONT></TD>
+		</TR>
+
+
+
+	</TBODY>
+</TABLE>
+
+
+
+
+
+<!-- ************************************************************************** -->
+</BODY>
+
+</HTML>

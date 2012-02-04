@@ -1,0 +1,194 @@
+.clearvote-container {
+    padding: 0;
+    overflow: hidden;
+    display: block;
+    float: right;
+}
+
+.clearvote-container .clearvote-table {
+	border:0;
+	border-collapse:collapse;
+	float:none;
+	margin:0;
+	padding:0;
+	width: 60px;
+}
+
+.clearvote-table {
+    width: 60px;
+    min-height: 37px;
+}
+
+.clearvote-table tr td {
+	border:0;
+	border-collapse:collapse;
+	margin:0;
+	padding:0;
+}
+
+.clearvote-bg-top {
+    height: 17px;
+    background: url(../images/background_top.png) no-repeat top left;
+    text-align: center;
+    font-weight: bold;
+}
+
+.clearvote-bg-bottom {
+    height: 14px;
+    line-height: 8px;
+    background: url(../images/background_bottom.png) no-repeat top left;
+    text-align: center;
+    vertical-align: top;
+    font-size: 8pt;
+}
+
+.clearvote-up-button-container {
+    padding-top: 2px;
+}
+
+.clearvote-down-button-container {
+    padding-top: 2px;
+}
+
+.jive-widget-container-small .jive-widget-body ul.clearvote-widget-sidebar {
+    padding: 7px 4px;
+}
+
+.jive-widget-body ul.clearvote-widget-sidebar li.clearvote-widget-sidebar-icon-thread {
+    background: url(../images/clearvote_thread_icon.png) no-repeat;
+    margin-top: 5px;
+    min-height: 21px;
+    height: auto !important;
+    height: 21px;
+    padding-left: 44px;
+}
+
+.jive-widget-body ul.clearvote-widget-sidebar li.clearvote-widget-sidebar-icon-document {
+    background: url(../images/clearvote_document_icon.png) no-repeat;
+    margin-top: 5px;
+    min-height: 21px;
+    height: auto !important;
+    height: 21px;
+    padding-left: 44px;
+}
+
+.jive-widget-body ul.clearvote-widget-sidebar li.clearvote-widget-sidebar-icon-blogpost {
+    background: url(../images/clearvote_blogpost_icon.png) no-repeat;
+    margin-top: 5px;
+    min-height: 21px;
+    height: auto !important;
+    height: 21px;
+    padding-left: 44px;
+}
+
+.clearvote-widget-icon-votecount {
+    padding-top: 7px;
+    font-weight: bold;
+    float: left;
+    line-height: 1;
+    font-family: arial,helvetica,sans-serif;
+    width: 35px;
+    text-align: center;
+    margin-left: -41px;
+    position: relative;
+    letter-spacing: -1px;
+    font-size: 10.2pt;
+}
+
+.jive-table-clearvote {
+}
+
+.jive-table-clearvote table thead th.jive-table-head-author {
+    text-align: right;
+}
+
+.jive-table-clearvote table tbody td.jive-table-cell-type {
+    padding-left: 5px;
+    padding-right: 0;
+}
+
+.jive-table-clearvote table tbody td.jive-table-cell-type span {
+    display:block;
+    height:30px;
+    margin:0;
+    padding:0;
+    width:40px;
+}
+
+.jive-table-clearvote table tbody td.jive-table-cell-type span.clearvote-widget-large-votecount {
+    text-align: center;
+    font-family: arial,helvetica,sans-serif;
+    font-size: 10.2pt;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    padding-top: 7px;
+    position: relative;
+}
+
+.jive-table-clearvote table tbody td.jive-table-cell-author {
+    padding: 0 8px 0 0;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.jive-table-clearvote table tbody td.jive-table-cell-avatar {
+    padding: 0 5px 0 0;
+    vertical-align: middle;
+    width: 30px;
+}
+
+.jive-table-clearvote table tbody td.jive-table-cell-title span.jive-currently-editing {
+    font-size: .9em;
+    color: #666;
+}
+
+.clearvote-widget-icon-thread {
+    background: transparent url(../images/clearvote_thread_icon.png) no-repeat 0 0;
+    padding: 2px 0 2px 20px;
+}
+
+.clearvote-widget-icon-document {
+    background: transparent url(../images/clearvote_document_icon.png) no-repeat 0 0;
+    padding: 2px 0 2px 20px;
+}
+
+.clearvote-widget-icon-blogpost {
+    background: transparent url(../images/clearvote_blogpost_icon.png) no-repeat 0 0;
+    padding: 2px 0 2px 20px;
+}
+
+.jive-widget-empty-clearvote div {
+    background: transparent no-repeat top left;
+    padding-left: 22px;
+}
+
+.jive-widget-empty-clearvote div {
+	background-image: url( ../images/clearvote_icon_small.png);
+}
+
+#jive-widget-large-empty-clearvote {
+	background: transparent url( ../images/clearvote_icon.png ) no-repeat left center;
+	padding: 21px 0 21px 0;
+}
+
+#jive-widget-large-clearvote a {
+	padding: 0;
+}
+
+#jive-clearvote-more-results {
+    display: block;
+    clear: both;
+    border-top: 1px solid #e9e9e9;
+    padding: 5px;
+    text-align: right;
+    font-size: 8pt;
+}
+
+* html #jive-clearvote-more-results {
+    height: 1%;
+}
+
+.jive-body-popularclearvotes #jive-body-intro {
+	display: none;
+}

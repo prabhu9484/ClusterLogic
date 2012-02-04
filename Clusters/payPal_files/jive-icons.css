@@ -1,0 +1,546 @@
+/* Things that might be sprited */
+.jive-icon-plus,
+.jive-icon-minus { 
+	/* edit widget layouts, leave before standard sprites */
+	background-repeat: no-repeat;
+	background-position: 0;
+	padding: 2px 0 2px 20px;
+	}
+
+/* ===========
+icons are spaced evenly, so x & y position numbers should almost always be the following: 
+ 16px  80px   144px  208px  272px  336px  400px  464px  528px  592px  656px  720px  
+784px  848px  912px  976px 1040px 1104px 1168px 1232px 1296px 1360px 1424px
+============== */
+
+/* START of standard sprite grouping */
+
+.jive-icon-sml,
+.jive-icon-med,
+.jive-icon-big {
+	background-color: transparent;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+    padding: 0;
+    }
+.jive-icon-sml {
+	background-image: url( ../images/jive-icon-sprites-sml.png );
+	height: 12px;
+	width: 12px;
+	margin: -1px 3px 0 0;
+	}
+.jive-icon-med {
+	background-image: url( ../images/jive-icon-sprites-med.png );
+	height: 16px;
+	width: 17px;
+	margin: -1px 4px 0 0;
+	}
+.jive-icon-big {
+	background-image: url(../images/jive-icon-sprites-big.png);
+	height: 25px;
+	width: 25px;
+    margin: 0 6px 0 0;
+    }
+
+/* images for inline sprites */
+img.jive-icon-sml,
+img.jive-icon-med,
+img.jive-icon-big {
+	border: 0 none;
+	float: none;
+	display: inline;
+	vertical-align: middle;
+	margin-right: 0;
+	}
+img.jive-icon-sml {
+	}
+img.jive-icon-med {
+	width: 16px; 
+	}
+img.jive-icon-big {
+	}
+
+/* rules for content ratings */
+#jive-content-avgrating-score .jive-icon-med,
+#jive-content-userrating .jive-icon-med,
+#jive-content-avgrating .jive-icon-med {
+	width: 16px;
+	margin: 0;
+	}
+
+/* individual sprite positions */
+.jive-icon-add { background-position: -976px -80px; }
+.jive-icon-addressbook { background-position: -720px -848px; }
+.jive-icon-admin { background-position: -80px -1040px; }
+.jive-icon-admin-theming { background-position: -144px -1040px; }
+.jive-icon-announcement { background-position: -16px -272px; }
+.jive-icon-approvals { background-position: -464px -528px; }
+.jive-icon-arrow-generic-down { background-position: -272px -1104px; }
+.jive-icon-arrow-generic-up { background-position: -208px -1104px; }
+.jive-icon-arrow-select { background-position: -64px -1104px; }
+.jive-icon-arrow-top { background-position: -336px -1104px; }
+.jive-icon-blog { background-position: -16px -144px; }
+.jive-icon-blog-bookmark { background-position: -336px -144px; }
+.jive-icon-blog-comment { background-position: -272px -144px; }
+.jive-icon-blog-draft { background-position: -464px -144px; }
+.jive-icon-blog-manage { background-position: -400px -144px; }
+.jive-icon-blog-manage-posts { background-position: -528px -144px; }
+.jive-icon-blog-trackbacks { background-position: -592px -144px; }
+.jive-icon-bookmark { background-position: -16px -784px }
+.jive-icon-bookmark-private { background-position: -592px -784px; } 
+.jive-icon-bookmark-ribbon { background-position: -144px -784px }
+.jive-icon-bookmark-ribbon-grey { background-position: -208px -784px }
+.jive-icon-bookmark-ribbonaction { background-position: -272px -784px }
+.jive-icon-bookmark-ribbonaction-grey { background-position: -336px -784px }
+.jive-icon-calendar { background-position: -912px -656px; }
+.jive-icon-chat { background-position: -16px -336px; }
+.jive-icon-check { background-position: -80px -592px;}
+.jive-icon-checkpoint { background-position: -80px -400px; }
+.jive-icon-checkpoint-past { background-position: -144px -400px; }
+.jive-icon-clock { background-position: -784px -656px; }
+.jive-icon-comment { background-position: -80px -144px; }
+.jive-icon-comment-add { background-position: -144px -143px; }
+.jive-icon-comment-grey { background-position: -208px -144px; }
+.jive-icon-computer { background-position: -1040px -656px; }
+.jive-icon-data-export { background-position: -720px -657px; }
+.jive-icon-delete { background-position: -272px -592px; }
+.jive-icon-discussion { background-position: -16px -16px; }
+.jive-icon-discussion-bookmark { background-position: -272px -16px; }
+.jive-icon-discussion-branch { background-position: -336px -16px; }
+.jive-icon-discussion-correct { background-position: -208px -16px; }
+.jive-icon-discussion-helpful { background-position: -144px -16px; }
+.jive-icon-discussion-lock { background-position: -208px -656px; } /* same as group-private */
+.jive-icon-discussion-question { background-position: -80px -16px; }
+.jive-icon-discussion-unlock { background-position: -336px -656px; } /* same as group-open */
+.jive-icon-document { background-position: -16px -80px; }
+.jive-icon-document-bookmark { background-position: -1168px -80px; }
+.jive-icon-document-collaboration { background-position: -784px -80px; }
+.jive-icon-document-comment { background-position: -1104px -80px; }
+.jive-icon-document-draft { background-position: -1232px -80px; }
+.jive-icon-document-info { background-position: -656px -80px; }
+.jive-icon-document-manage { background-position: -848px -80px; }
+.jive-icon-document-upload { background-position: -1040px -80px; }
+.jive-icon-doctype-acrobat { background-position: -80px -80px; }
+.jive-icon-doctype-compressed { background-position: -144px -80px; }
+.jive-icon-doctype-document { background-position: -208px -80px; }
+.jive-icon-doctype-generic { background-position: -272px -80px; }
+.jive-icon-doctype-image { background-position: -336px -80px; }
+.jive-icon-doctype-presentation { background-position: -400px -80px; }
+.jive-icon-doctype-spreadsheet { background-position: -464px -80px; }
+.jive-icon-doctype-text { background-position: -528px -80px; }
+.jive-icon-doctype-video { background-position: -592px -80px; }
+.jive-icon-edit { background-position: -720px -80px; }
+.jive-icon-external-site { background-position: -400px -784px; }
+.jive-icon-external-site-bookmark { background-position: -528px -784px }
+.jive-icon-external-site-comment { background-position: -464px -784px }
+.jive-icon-site-go { background-position: -16px -1104px; }
+.jive-icon-eye { background-position: -464px -656px; }
+.jive-icon-flickr { background-position: -144px -720px; }
+.jive-icon-folder { background-position: -848px -848px; }
+.jive-icon-folder-edit { background-position: -1040px -848px; }
+.jive-icon-folder-delete { background-position: -1104px -848px; }
+.jive-icon-folder-sent { background-position: -912px -848px; }
+.jive-icon-folder-stack { background-position: -1168px -848px; }
+.jive-icon-folder-up { background-position: -976px -848px; }
+.jive-icon-follow-stop { background-position: -720px -592px; }
+.jive-icon-forbidden { background-position: -400px -592px; }
+.jive-icon-formatted-text { background-position: -272px -720px; }
+.jive-icon-friend { background-position: -528px -528px; }
+.jive-icon-friend-add { background-position: -720px -528px; }
+.jive-icon-friend-followers { background-position: -592px -528px; }
+.jive-icon-friend-following { background-position: -656px -528px; }
+.jive-icon-gear { background-position: -976px -656px; }
+.jive-icon-group { background-position: -208px -912px; }
+.jive-icon-group-bookmark { background-position: -720px -912px; }
+.jive-icon-group-edit { background-position: -272px -912px; }
+.jive-icon-group-members { background-position: -272px -656px; }
+.jive-icon-group-open { background-position: -336px -656px; }
+.jive-icon-group-private { background-position: -208px -656px; }
+.jive-icon-group-secret { background-position: -400px -656px; }
+.jive-icon-group-secret2 { background-position: -336px -912px; }
+.jive-icon-history { background-position: -656px -656px; }
+.jive-icon-help { background-position: -656px -592px; }
+.jive-icon-home { background-position: -16px -912px; }
+.jive-icon-html { background-position: -336px -720px; }
+.jive-icon-inbox { background-position: -144px -848px; }
+.jive-icon-inbox-new { background-position: -208px -848px; }
+.jive-icon-info { background-position: -592px -592px; }
+.jive-icon-invite { background-position: -400px -912px; }
+.jive-icon-label-frame { background-position: -16px -1168px; }
+.jive-icon-link { background-position: -400px -720px; }
+.jive-icon-magnifyingglass { background-position: -848px -656px; }
+.jive-icon-members { background-position: -464px -912px; }
+.jive-icon-members-manage { background-position: -528px -912px; }
+.jive-icon-message { background-position: -16px -848px; }
+.jive-icon-message-add { background-position: -592px -848px; }
+.jive-icon-message-delete { background-position: -336px -849px; }
+.jive-icon-message-edit { background-position: -400px -849px; }
+.jive-icon-message-forward { background-position: -464px -849px; }
+.jive-icon-message-link { background-position: -272px -849px; }
+.jive-icon-message-new { background-position: -80px -849px; }
+.jive-icon-message-open { background-position: -656px -849px; }
+.jive-icon-message-private { background-position: -784px -848px; }
+.jive-icon-message-reply { background-position: -528px -849px; }
+.jive-icon-minus { background-position: -208px -592px;}
+.jive-icon-moderation { background-position: -16px -1040px;}
+.jive-icon-move { background-position: -1296px -80px; }
+.jive-icon-new { background-position: -912px -80px; }
+.jive-icon-note { background-position: -208px -1040px; }
+.jive-icon-note-add { background-position: -272px -1040px; }
+.jive-icon-note-delete { background-position: -336px -1040px; }
+.jive-icon-note-edit { background-position: -400px -1040px; }
+.jive-icon-notify { background-position: -656px -849px; } /* same as message-open above */
+.jive-icon-notify-stop { background-position: -656px -849px; } /* same as message-open above */
+.jive-icon-orgchart { background-position: -400px -528px; }
+.jive-icon-orgchart-add { background-position: -848px -528px; }
+.jive-icon-password { background-position: -400px -656px; } /* same as group-secret above */
+.jive-icon-people { background-position: -16px -528px; }
+.jive-icon-photo { background-position: -16px -720px; }
+.jive-icon-plus { background-position: -144px -592px;}
+.jive-icon-poll { background-position: -16px -208px; }
+.jive-icon-poll-add { background-position: -80px -208px; }
+.jive-icon-poll-bookmark { background-position: -336px -208px; }
+.jive-icon-poll-comment { background-position: -208px -208px; }
+.jive-icon-poll-edit { background-position: -144px -208px; }
+.jive-icon-poll-vote { background-position: -272px -208px; }
+.jive-icon-preferences { background-position: -336px -528px; }
+.jive-icon-print-preview { background-position: -16px -656px; }
+.jive-icon-printer { background-position: -80px -656px; }
+.jive-icon-profile { background-position: -208px -528px; }
+.jive-icon-profile-bookmark { background-position: -912px -528px; }
+.jive-icon-project { background-position: -144px -912px; }
+.jive-icon-project-bookmark { background-position: -656px -912px; }
+.jive-icon-question { background-position: -528px -592px; }
+.jive-icon-quote { background-position: -208px -720px; }
+.jive-icon-rate-avg-on { background-position: -208px -1232px; }
+.jive-icon-rate-avg-half { background-position: -144px -1232px; }
+.jive-icon-rate-avg-off { background-position: -80px -1232px; }
+.jive-icon-rate-usr-on { background-position: -16px -1232px; }
+.jive-icon-rate-usr-off { background-position: -80px -1232px; }
+.jive-icon-redalert { background-position: -336px -592px; }
+.jive-icon-rss { background-position: -16px -592px;}
+.jive-icon-search { background-position: -848px -656px; }
+.jive-icon-space { background-position: -80px -912px; }
+.jive-icon-space-bookmark { background-position: -592px -912px; }
+.jive-icon-status { background-position: -272px -528px; }
+.jive-icon-tag { background-position: -16px -464px; }
+.jive-icon-taggroup { background-position: -80px -464px; }
+.jive-icon-task { background-position: -16px -400px; }
+.jive-icon-trackback { background-position: -592px -144px; }
+.jive-icon-trash { background-position: -1232px -848px; }
+.jive-icon-twitter { background-position: -80px -720px; }
+.jive-icon-userbar-new { background-position: -912px -80px; }
+.jive-icon-userbar-nav { background-position: -80px -912px; }
+.jive-icon-yourstuff { background-position: -80px -528px; }
+.jive-icon-yourstuff-new { background-position: -144px -528px; }
+.jive-icon-vcard-add { background-position: -784px -528px; }
+.jive-icon-video { background-position: -16px -976px; }
+.jive-icon-video-bookmark { background-position: -208px -976px; }
+.jive-icon-video-collaboration { background-position: -784px -80px; } /* same as document-collaboration */
+.jive-icon-video-comment { background-position: -144px -976px; }
+.jive-icon-video-featured { background-position: -80px -976px; }
+.jive-icon-warn { background-position: -464px -592px; }
+.jive-icon-web { background-position: -208px -720px; }
+
+/* END of standard sprite grouping */
+
+/* Other sprites */
+.jive-icon { /* used w/ proj-status */
+	background-repeat: no-repeat;
+	background-position: 0;
+	padding: 2px 0 2px 20px;
+	}
+body .proj-status {
+	background-image: url(../images/jive-icon-sprites-project-status.png);
+	display: block;
+	}
+.proj-status-high {
+	background-position: 0 -800px;
+	}
+.proj-status-med {
+	background-position: 0 -700px;
+	}
+.proj-status-low {
+	background-position: 0 -600px;
+	}
+span.proj-status-low {
+	color: #900;
+	}
+span.proj-status-med {
+	color: #960;
+	}
+span.proj-status-high {
+	color: #060;
+	}
+#jive-project-results .proj-status {
+	white-space: nowrap;
+	}
+#jive-project-results td {
+	text-align: left;
+	}
+
+/* END other sprites */
+
+/* Things that might be sprited */
+.jive-link-widgetsmall { /* used on widget layout pages */
+	background-repeat: no-repeat;
+	background-position: 0;
+	padding: 2px 0 2px 16px;
+	background: transparent url(../images/jive-icon-widget-12x12.gif) no-repeat left;
+	}
+.jive-link-tinygroup {
+	background: transparent url(../images/jive-icon-group-tiny.gif) no-repeat left 2px ;
+	padding: 0 0 0 12px;
+	}
+
+.jive-status-offline-big,
+.jive-status-available-big,
+.jive-status-away-big,
+.jive-status-xa-big,
+.jive-status-dnd-big,
+.jive-status-forbidden-big {
+	padding: 1px 0 1px 22px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: left;
+	}
+.jive-status-offline-big {
+	background-image: url(../images/presence/offline.gif);
+	}
+.jive-status-available-big {
+	background-image: url(../images/presence/available.gif);
+	}
+.jive-status-chat-big {
+	background-image: url(../images/presence/chat.gif);
+	}
+.jive-status-away-big {
+	background-image: url(../images/presence/away.gif);
+	}
+.jive-status-xa-big {
+	background-image: url(../images/presence/xa.gif);
+	}
+.jive-status-dnd-big {
+	background-image: url(../images/presence/dnd.gif);
+	}
+.jive-status-forbidden-big {
+	background: transparent url(../images/presence/forbidden.gif) no-repeat left;
+	}
+.jive-status-offline,
+.jive-status-available,
+.jive-status-chat,
+.jive-status-away,
+.jive-status-xa,
+.jive-status-dnd,
+.jive-status-forbidden {
+	padding: 0 0 0 10px !important;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: left;
+	}
+.jive-status-offline {
+	background-image: url(../images/presence/offline-7x7.gif);
+	}
+.jive-status-available {
+	background-image: url(../images/presence/available-7x7.gif);
+	}
+.jive-status-chat {
+	background-image: url(../images/presence/chat-7x7.gif);
+	}
+.jive-status-away {
+	background-image: url(../images/presence/away-7x7.gif);
+	}
+.jive-status-xa {
+	background-image: url(../images/presence/xa-7x7.gif);
+	}
+.jive-status-dnd {
+	background-image: url(../images/presence/dnd-7x7.gif);
+	}
+.jive-status-forbidden {
+	background-image: url(../images/presence/forbidden-7x7.gif);
+	}
+
+/* Things that won't be sprited */
+.jive-icon-link-forward {
+	background: transparent url(../images/jive-icon-arrow-right-small.gif) no-repeat right;
+	padding: 1px 8px 1px 0;
+	}
+.jive-icon-link-back {
+	background: transparent url(../images/jive-icon-arrow-left-small.gif) no-repeat left;
+	padding: 1px 0 1px 8px;
+	}
+#jive-community-empty-types p {
+	padding-left:35px;
+	}
+.jive-content-block-empty-discussions a {
+	background: transparent url(../images/jive-icon-arrow-right-bl.gif) no-repeat right;
+	}
+.jive-content-block-empty-documents a {
+	background: transparent url(../images/jive-icon-arrow-right-or.gif) no-repeat right;
+	}
+.jive-content-block-empty-blogposts a {
+	background: transparent url(../images/jive-icon-arrow-right-gr.gif) no-repeat right;
+	}
+.jive-content-block-empty-video a {
+	background: transparent url(../images/jive-icon-arrow-right-tl.gif) no-repeat right;
+	color: #048fa1;
+	}
+.jive-content-block-empty-pm p {
+	padding-left: 0;
+	}
+
+
+#jive-acct-success-whereto ul li.jive-path-blog,
+#jive-invite-success-whereto ul li.jive-path-blog {
+	background: #f4f8fb url(../images/jive-icon-blog-48x48.gif) no-repeat 15px 15px;
+	}
+#jive-acct-success-whereto ul li.jive-path-discussion,
+#jive-invite-success-whereto ul li.jive-path-discussion {
+	background: #f4f8fb url(../images/jive-icon-forum-48x48.gif) no-repeat 15px 15px;
+	}
+#jive-acct-success-whereto ul li.jive-path-document,
+#jive-invite-success-whereto ul li.jive-path-document {
+	background: #f4f8fb url(../images/jive-icon-wiki-48x48.gif) no-repeat 15px 15px;
+	}
+#jive-acct-success-whereto ul li.jive-path-group,
+#jive-invite-success-whereto ul li.jive-path-group {
+	background: #f4f8fb url(../images/jive-icon-groups-48x48.gif) no-repeat 15px 15px;
+	}
+#jive-acct-success-whereto ul li.jive-path-people,
+#jive-invite-success-whereto ul li.jive-path-people {
+	background: #f4f8fb url(../images/jive-icon-avatar-48x48.gif) no-repeat 15px 15px;
+	}
+#jive-acct-success-whereto ul li.jive-path-project,
+#jive-invite-success-whereto ul li.jive-path-project {
+	background: #f4f8fb url(../images/jive-icon-project-24x24.gif) no-repeat 20px 20px;
+	padding: 15px 15px 15px 60px;
+	}
+#jive-acct-success-whereto ul li.jive-path-space,
+#jive-invite-success-whereto ul li.jive-path-space {
+	background: #f4f8fb url(../images/jive-icon-community-30x30.gif) no-repeat 20px 20px;
+	padding: 15px 15px 15px 60px;
+	}
+#jive-acct-success-whereto ul li.jive-path-other,
+#jive-invite-success-whereto ul li.jive-path-other {
+	background: #f4f8fb url(../images/jive-icon-afterreg-other-65x48.gif) no-repeat 10px 15px;
+	}
+#jive-acct-success-whereto ul li.jive-acct-success-community,
+#jive-invite-success-whereto ul li.jive-acct-success-community {
+	background: transparent url(../images/acct-success-explore.gif) no-repeat top left;
+	}
+#jive-acct-success-whereto ul li.jive-acct-success-profile,
+#jive-invite-success-whereto ul li.jive-acct-success-profile {
+	background: transparent url(../images/acct-success-profile.gif) no-repeat top left;
+	}
+#jive-acct-success-whereto ul li.jive-acct-success-invite,
+#jive-invite-success-whereto ul li.jive-acct-success-invite {
+	background: transparent url(../images/acct-success-invite.gif) no-repeat top left;
+	}
+#jive-acct-success-whereto ul li.jive-acct-success-tour,
+#jive-invite-success-whereto ul li.jive-acct-success-tour {
+	background: transparent url(../images/acct-success-tour.gif) no-repeat top left;
+	}
+	
+	
+.jive-error-box div {
+	background: transparent url(../images/error-16x16.gif) no-repeat 6px 6px;
+	}
+.jive-info-box div {
+	background: transparent url(../images/info-16x16.gif) no-repeat 6px 6px;
+	}
+.jive-success-box div {
+	background: transparent url(../images/success-16x16.gif) no-repeat 6px 6px;
+	}
+.jive-warn-box div {
+	background: transparent url(../images/warn-16x16.gif) no-repeat 6px 6px;
+	}
+.jive-tooltip2-loading {
+	background: transparent url(../images/jive-icon-working-16x16.gif) no-repeat center top;
+	color: #666;
+	display: block;
+	padding: 25px 10px 82px;
+	text-align: center;
+	}
+.jive-customize-info p {
+	background: transparent url(../images/jive-icon-info-12x12.gif) no-repeat 0 8px;
+	padding-left: 20px;
+	}
+
+#jive-body-intro a.jive-link-more {
+	font-size: 1em;
+	background: transparent url(../images/jive-icon-arrow-up-small.gif) no-repeat left;
+	padding: 1px 0 1px 10px;
+	}
+.jive-alert-announcement-label {
+	background: transparent url(../images/jive-icon-announcemnt-16x16.gif) no-repeat left;
+	color: #988f42;
+	}
+#jive-body-announcements-hdr span.jive-body-announcements-label {
+	background: transparent url(../images/jive-icon-announcemnt-16x16.gif) no-repeat left;
+	padding-left: 22px;
+	}
+
+.jive-link-external-site-small,
+.jive-link-blog-small,
+.jive-link-bookmark-small,
+.jive-link-community-small,
+.jive-link-email-small,
+.jive-link-profile-small,
+.jive-link-project-small,
+.jive-link-socialgroup-small,
+.jive-link-thread-small,
+.jive-link-message-small,
+.jive-link-video-small,
+.jive-link-wiki-small {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 1px 0 1px 17px;
+    zoom:1; /* fix "background-break:bounding-box" rendering for the IEs */
+}
+/* Support for RTE - should upgrade in future */
+.jive-link-blog-small {
+	background-image: url(../images/jive-icon-blog-12x12.gif);
+	}
+.jive-link-community-small {
+	background-image: url(../images/jive-icon-community-12x12.gif);
+	}
+.jive-link-email-small {
+	background-image: url(../images/jive-icon-email-12x12.gif);
+	}
+.jive-link-bookmark-small {
+	background-image: url( ../images/jive-icon-bookmark-12x12.gif );
+	}
+.jive-link-profile-small {
+	background-image: url(../images/jive-icon-profile-12x12.gif);
+	}
+.jive-link-project-small {
+	background-image: url(../images/jive-icon-project-12x12.gif);
+	}
+.jive-link-socialgroup-small {
+	background-image: url(../images/jive-icon-groups-12x12.gif);
+	}
+.jive-link-thread-small {
+	background-image: url(../images/jive-icon-forum-12x12.gif);
+	}
+.jive-link-message-small {
+    background-image: url(../images/jive-icon-forum-12x12.gif);
+}
+.jive-link-video-small {
+	background-image: url(../images/jive-icon-video-12x12.gif);
+	}
+.jive-link-wiki-small {
+	background-image: url(../images/jive-icon-wiki-12x12.gif);
+	}
+.jive-link-external-site-small {
+	background-image: url(../images/jive-icon-link-external-12x12.gif);
+	}
+/* END Support for RTE - should upgrade in future */
+
+/*
+Some icons in the default Jive SBS icon set are from or
+have been adapted from the Silk icon set from Fam Fam Fam
+and are used under the Creative Commons Attribution 3.0 license.
+http://www.famfamfam.com/lab/icons/silk/
+*/

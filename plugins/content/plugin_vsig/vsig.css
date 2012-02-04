@@ -1,0 +1,24 @@
+/* ---Very Simple Image Gallery--- */
+.vsig {border:0px solid transparent;padding:0px 5px;}
+.vsig_clr {clear:both;}
+.vsig_cont {margin:0;padding:0;float:left;}
+.vsig_top {position:relative;padding:0px;padding-right:5px;margin-bottom:10px}
+.vsig_top img {background:#FFF;border:1px solid #ccc;margin:0px 0px 0px 0px;padding:4px;z-index:1;}
+.vsig_top a {font-size:0px;line-height:0px;}
+.vsig_ruler {float:left;}
+.vsig_thumb {float:left;margin:0px -5px 0px 0px;padding:0px;background:url(shadowAlpha.png) no-repeat bottom right !important;background:url(shadow.gif) no-repeat bottom right;}
+.vsig_thumb img {display:block;position:relative;background:#FFF;border:1px solid #ccc;margin:-5px 5px 5px -5px;padding:4px;}
+.vsig_top div.inside {line-height:0;font-size:0;filter:alpha(opacity=60);opacity:0.60;z-index:2;position:absolute;left:0px;bottom:5px;display:block;margin-left:5px;margin-right:5px;background:#fff;padding:0px;border:none;}
+.vsig_top div.outside {z-index:2;position:relative;display:block;margin:0px 5px 0px 5px;}
+.vsig span a, .vsig span a:link, .vsig span a:visited, .vsig span a:focus, .vsig span a:hover, .vsig span a:active {text-decoration:none;line-height:12px;font-size:12px;font-weight:bold;color:#000;background:transparent;}
+.vsig span + span a, .vsig span + span a:link, .vsig span + span a:visited, .vsig span + span a:focus, .vsig span + span a:hover, .vsig span + span a:active {text-decoration:none;line-height:12px;font-size:12px;font-weight:normal;color:#000;background:transparent;}
+.vsig_top div span {line-height:12px;font-size:12px;margin:3px;display:block;font-weight:bold;color:#000;}
+.vsig_top div span + span {font-weight:normal;margin-bottom:5px;}
+.vsig_ctrls {float:left;}
+.vsig_ctrls div {display:block;margin:-5px -6px 5px 0px;}
+.vsig_ctrl_left a, .vsig_ctrl_right a {}
+.vsig_ctrl_left {float:left;margin:0;padding:0;height:22px;width:9%;}
+.vsig_ctrl_right {float:right;margin:0;padding:0;height:22px;width:90%;}
+.vsig_ctrl_left img, .vsig_ctrl_right img {margin:0;margin-bottom:-6px;padding:0;border:none;}
+.vsig_counter {font-size:12px;font-weight:bold;color:#666;background:transparent;}
+/* --- END --- */

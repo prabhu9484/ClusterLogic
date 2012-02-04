@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" id="minwidth" >
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Help - ARI Docs Viewer</title>
+	<style type="text/css">
+		H2 {border-bottom: 1px solid gray; display: block; width: 100%;}
+	</style>
+</head>
+<body>
+	<a href="http://www.ari-soft.com/Joomla-Components/ARI-Docs-Viewer/Detailed-product-flyer.html" target="_blank">ARI Docs Viewer</a> system plugin helps to embed files in the following formats into any Joomla! content:
+	
+	<ul>
+		<li>doc / docx - Microsoft Word Document</li>
+		<li>xls / xlsx - Microsoft Excel Spreadsheet</li>
+		<li>ppt / pptx - Microsoft PowerPoint</li>
+		<li>pps - PowerPoint Slideshow</li>
+		<li>odt - OpenDocument Text</li>
+		<li>ods - OpenDocument Spreadsheet</li>
+		<li>odp - OpenDocument Presentation</li>
+		<li>sxw - OpenOffice.org Writer Document</li>
+		<li>sxc - OpenOffice.org Calc Spreadsheet</li>
+		<li>sxi - OpenOffice.org Impress Presentation</li>
+		<li>wpd - Corel Word Perfect Document</li>
+		<li>pdf - Adobe Portable Document Format</li>
+		<li>rtf - Rich Text Format</li>
+		<li>html - Hyper Text Markup Language</li>
+		<li>txt - Plain Text Document</li>
+		<li>csv - Comma Separated Values</li>
+		<li>tsv - Tab Separated Values</li>
+		<li>pages - Apple Pages</li>
+		<li>ai - Adobe Illustrator</li>
+		<li>psd - Adobe Photoshop</li>
+		<li>dxf - Autodesk AutoCad</li>
+		<li>svg - Scalable Vector Graphics</li>
+		<li>eps / ps - PostScript</li>
+		<li>ttf - TrueType</li>
+		<li>xps - XML Paper Specification</li>
+	</ul>
+	
+	One note, the extension uses <a href="http://docs.google.com/viewer" title="Google Docs Viewer service" target="_blank">Google Docs Viewer</a> and <a href="http://viewer.zoho.com" title="Zoho Viewer service" target="_blank">Zoho Viewer</a> services for inserting documents into content so it requires internet connection. It means that this feature might not work on local network sites if they does not have access to the Internet. 
+	<br/><br/>
+	The add-on can also embed external pages and Joomla! articles into Joomla! content.
+	<br/><br/>
+	<h2>Examples</h2>
+	<b>How to embed document with supported format into content?</b>
+	<br/><br/>
+	Use the following code:
+	<br/><br/>
+	<code>{aridoc engine="zoho" width="600" height="300"}PATH_TO_DOCUMENT{/aridoc}</code>
+	<br/><br/>
+	If you want to embed remote PDF file which is located by url http://www.domain.com/docs/doc1.pdf, use the next code:
+	<br/><br/>
+	<code>{aridoc engine="zoho" width="600" height="300"}http://www.domain.com/docs/doc1.pdf{/aridoc}</code>
+	<br/><br/>
+	If neccesary to load my_doc.doc Microsoft Word document which is stored on your site in [joomla_directory]/documents/ folder, use thh following code:
+	<br/><br/>
+	<code>{aridoc engine="google" width="550" height="450"}documents/my_doc.doc{/aridoc}</code>
+	<br/><br/>
+	Currently the extension supports two services for rendering documents: "Google Docs Viewer" and "Zoho Viewer". Use <code>engine</code> parameter of <code>{aridoc}</code> tag that choose which one do you want to use. If want to use "Zoho Viewer" type <code>engine="zoho"</code>. For "Google Docs Viewer" use <code>engine="google"</code>. 
+	<br/><br/><br/>
+	<b>How to embed external page?</b>
+	<br/><br/>
+	Type the next code:
+	<br/><br/>
+	<code>{aridoc engine="iframe" width="500" height="400"}LINK_TO_PAGE{/aridoc}</code>
+	<br/><br/>
+	For example if you want to insert "ARI Soft" home page into an article, add the following code to necessary article:
+	<br/><br/>
+	<code>{aridoc engine="iframe" width="100%" height="400"}http://www.ari-soft.com{/aridoc}</code>
+	<br/><br/><br/>
+	<b>How to insert specific article into content?</b>
+	<br/><br/>
+	Type the following code:
+	<br/><br/>
+	<code>{aridoc engine="article" width="500" height="400" id="ARTICLE_ID"}{/aridoc}</code>
+	<br/><br/>
+	If needed to embed article with ID equals to "45", use the next code:
+	<br/><br/>
+	<code>{aridoc engine="article" width="500" height="400" id="45"}{/aridoc}</code>
+	<br/><br/>
+	<h2>Parameters</h2>
+	<code>{aridoc}</code> tag supports the following parameters:
+	<ul>
+		<li>engine - indicates what engine will be used for showing document. Values: iframe, article, zoho, google;</li>
+		<li>width - width of window where document is loaded. Values: number or number in percent;</li>
+		<li>height - height of window where document is loaded. Values: number or number in percent;</li>
+		<li>class - CSS class of container element. Can be used that add custom styles to container and document window. Values: class(es) name;</li>
+		<li>loadingPane - indicated show or not loading icon and message while document is loading. Values: 1 or 0;</li>
+		<li>loadingMessage - loading message. Values: string.</li>
+	</ul>
+	<b>Note:</b> it is not necessary to specify all parameters in <code>{aridoc}</code> tag, omitted parameters will be loaded from plugin settings.
+	<br/><br/>
+	<h2>Limitations and Restrictions</h2>
+	Embedding documents should have public access because online services are used that insert documents into Joomla! content and they should have access to loading documents.
+</body>
+</html>

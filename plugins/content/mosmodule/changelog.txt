@@ -1,0 +1,82 @@
+version 2.1.9
+  * add support for MosPrayer
+
+Version 2.0.5-2.1.8
+  * Add a "nostate" switch to bypass "state" in articleid
+  * add | as delimiter to support "," in parameter
+  * add introtext to readmore instead of number
+  * Change MM back to mosmodule which cause lot of confusion for people
+  * add alias support to predefine mosmodule command to override the default value via mosmodule.ini
+  * add reference to article ID or URL
+  * add support for itemid in readmore command
+  * add support for escape comma in parameter like \,
+  * add support space between comma in parameter
+  * add parameter support for alias file name
+  * add multiple parameters support in alias definition
+  * minor fix on correctly handle comma when use | as command separator without needing to escape comma
+  * null out any left over %s in alias
+  * minor change on SEF to deal with J15
+
+Version 2.0.1-2.0.4
+  * refresh to sync up with version and compatible with MosCom 2.0.1+ for adding MosModule support in MosCom
+
+Version 1.5.0, 1.5.1
+	* Thanks to andras contribution the joomfish integration is now only show the selected language rather than show the original and the translated text side by side.  It makes more sense this way and more flexibility.  In the case where it is use in a module via MosModuleMod like the way andras use at his site.
+	* {mosimage} is supported in translated text
+	* This feature also support in "readmore" command
+	* Fix bug in Nok Kaew integration and should work the same for nok kaew.
+
+Version 1.3.8, 1.3.9
+	* Quick fix for Joomla 1.5.4 that change the location of the directory where it run the plugin
+	* Add MosCom support to have flexibility on comment link placement.
+
+Version 1.3.1-1.3.7
+	* Add support for MosQ and depreciated MosQBot
+	* Add support for GigCalendar
+	* Add support for Nokaew and Joomfish
+	* Add option to show ReadMore link when introtext is used with articleid command
+	* Add RSS feed support
+	* Add inc, a more generic name, to show it can be used for javascript, php, html, etc
+	* Add readmore command to show number of words with ReadMore link
+	* Quick fix for Joomla 1.5.4 that change the location of the directory where it run the plugin
+
+Version 1.2.6
+	* Add support for mod_mosmodule that call mosmodule in module and check to prevent possible loop
+	* Minor bug fix on snippet
+
+Version 1.2.3, 1.2.5
+	* Enhance GrabPage to only keep the content of the body
+	* Add Wrapper to wrap any site into your site 
+
+Version 1.2.2,a
+	* Add support for Nok Kaew and JoomFish in load articleid
+	* Update readme_advance.txt info on how to run mosModule in category/section description and Mambo 4.6.3
+
+Version 1.2.0a,b,c,d
+. Enhance to run in J1.5rc3 with legacy enable
+. Add GrabPage to grab content from any url
+. Strip out html code just keep the body only
+. Minor bug fix on flash
+. Minor bug fix detect J-plugin call
+
+Version 1.15d,e,f,g,h,i,j,k,l,m
+. Default to loadmodule to style -1 (raw))
+. Fix "pass it by reference" warning
+. Fix loadcode in the wrong class
+. Fix extra slash and path issue
+. Enhance to make integrate with YANC possible
+. Fix for Joomla compatibility
+. Fix missing slash
+
+Version 1.13b,c,d,e,f,g,1.15,a,b,c,d
+. Add feature to self parse mosmodule bot
+. Add support for mosimage in load article and author
+. Add more optional parameter for finer control
+. Lot of clean up and code refactor
+
+Version 1.13a
+. Add flash with mediaplayer via swfobject
+. Add width and height param for flash, video and videoegg
+
+Version 1.12,a,b,c
+. Add author param, with pagination and mosmodule.css can be use for blog by author

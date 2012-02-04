@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" position="status" method="upgrade">
+	<name>Art LinkedIn Profile</name>
+	<author>artetics.com</author>
+	<creationDate>November 2009</creationDate>
+	<copyright>Copyright (C) 2009 artetics.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@artetics.com</authorEmail>
+	<authorUrl>www.artetics.com</authorUrl>
+	<version>1.1.0</version>
+	<description><![CDATA[Art LinkedIn Profile displays LinkedIn profile in popup as as inline widget. <br /><br />&copy;&nbsp;<a href="http://www.artetics.com">Artetics.com</a> - Start Point For Your Website.]]></description>
+	<files>
+		<filename module="mod_artlinkedinprofile">mod_artlinkedinprofile.php</filename>
+	</files>
+	<params>
+		<param name="type" type="radio" default="popup" label="Widget type" description="Widget type" >
+			<option value="popup">popup</option>
+			<option value="inline">inline</option>
+		</param>
+		<param name="linkText" type="text" default="" label="Link text" description="Link text" />
+		<param name="profile" type="text" default="" label="Profile" description="Profile" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="type" type="radio" default="popup" label="Widget type" description="Widget type" >
+					<option value="popup">popup</option>
+					<option value="inline">inline</option>
+				</field>
+				<field name="linkText" type="text" default="" label="Link text" description="Link text" />
+				<field name="profile" type="text" default="" label="Profile" description="Profile" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

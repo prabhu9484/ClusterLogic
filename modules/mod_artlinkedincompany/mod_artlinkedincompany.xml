@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0" position="status" method="upgrade">
+	<name>Art LinkedIn Company</name>
+	<author>artetics.com</author>
+	<creationDate>November 2009</creationDate>
+	<copyright>Copyright (C) 2009 artetics.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@artetics.com</authorEmail>
+	<authorUrl>www.artetics.com</authorUrl>
+	<version>1.1.0</version>
+	<description><![CDATA[Art LinkedIn Company displays LinkedIn company information in popup as as inline widget. <br /><br />&copy;&nbsp;<a href="http://www.artetics.com">Artetics.com</a> - Start Point For Your Website.]]></description>
+	<files>
+		<filename module="mod_artlinkedincompany">mod_artlinkedincompany.php</filename>
+	</files>
+	<params>
+		<param name="type" type="radio" default="popup" label="Widget type" description="Widget type" >
+			<option value="popup">popup</option>
+			<option value="inline">inline</option>
+		</param>
+		<param name="border" type="radio" default="no" label="Border" description="Border" >
+			<option value="no">no</option>
+			<option value="yes">yes</option>
+		</param>
+		<param name="linkText" type="text" default="" label="Link text" description="Link text" />
+		<param name="company" type="text" default="" label="Company name" description="Company name" />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="type" type="radio" default="popup" label="Widget type" description="Widget type" >
+					<option value="popup">popup</option>
+					<option value="inline">inline</option>
+				</field>
+				<field name="border" type="radio" default="no" label="Border" description="Border" >
+					<option value="no">no</option>
+					<option value="yes">yes</option>
+				</field>
+				<field name="linkText" type="text" default="" label="Link text" description="Link text" />
+				<field name="company" type="text" default="" label="Company name" description="Company name" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

@@ -1,0 +1,15 @@
+Name|Credit to their contribution
+--------------------------------
+swfobject|from http://blog.deconcept.com/swfobject/
+Media player|from http://www.jeroenwijering.com/
+Daryl Coulthart|Contribute to multi-module parameter
+denis69|for idea to load intro or fulltext instead of the entire article
+Rastarr|for idea to make title optional for random section
+Imperialdata|for suggestion to improve readme file
+Ron Severdia|for inspiration on textsizer
+Andrew J. Mudrak|for call mosimage bot (cause exhaust memory for site)
+Ryan Snowden|For insight on joomfish
+Andrés Felipe Vargas Valencia|for insight on Nok Kaew
+Andrés Felipe Vargas Valencia|for initial mod_mosmodule
+andras|for code and idea contribution with joomfish
+Dave Ascher|for alias idea and contribution

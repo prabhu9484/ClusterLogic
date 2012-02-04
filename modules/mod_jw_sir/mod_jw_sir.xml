@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+  <name>Simple Image Rotator</name>
+  <author>JoomlaWorks</author>
+  <creationDate>20/05/2008</creationDate>
+  <copyright>This extension in released under the GNU/GPL License - http://www.gnu.org/copyleft/gpl.html</copyright>
+  <authorEmail>contact@joomlaworks.gr</authorEmail>
+  <authorUrl>www.joomlaworks.gr</authorUrl>
+  <version>1.2</version>
+  <description>JWSIR_DESCRIPTION</description>
+  <params>
+    <param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable). This allows individual module styling." />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="imagefolder" type="text" default="images/stories/headers" label="Image Folder path" description="Set here the path to the folder containing the images to be displayed. The module will scan this folder and display images automatically!" />
+    <param name="display" type="list" default="random" label="Display order" description="Should the images display in sequence or randomly?">
+      <option value="random">Random</option>
+      <option value="sequence">Sequence</option>
+    </param>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="transition" type="text" default="40" label="Rotation speed" description="Set here the rotation speed (in 1/100th seconds) between images. 100 means 1 second." />
+    <param name="delay" type="text" default="5000" label="Rotation timeout" description="Set here the rotation timeout (in miliseconds) for every image. 1000 means 1 second." />
+    <param name="width" type="text" default="600" label="Image (header) width" description="Set here the target width of all images in pixels." />
+    <param name="height" type="text" default="200" label="Image (header) height" description="Set here the target width of all images in pixels." />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="forceresize" type="list" default="0" label="Force image resize (if wider)" description="Should we force all images exceeding the given width above to resize, using CSS?.">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="enablelink" type="list" default="1" label="Enable link to images?" description="Should the images have a universal link pointing to a single URL? If you choose no, then the next parameter is disabled, obviously!">
+      <option value="0">No</option>
+      <option value="1">Yes</option>
+    </param>
+    <param name="link" type="text" default="http://www.joomlaworks.gr" label="Link to URL" description="Insert here a link to a URL that users will be redirected to when they click on the 'Simple Image Rotator'. Enter '#' (without the quotes) for same page." />
+    <param name="target" type="list" default="0" label="Where should the above link open?" description="Choose whether the 'master' link will open in a new or in the same window.">
+      <option value="0">Same window</option>
+      <option value="1">New window</option>
+    </param>
+    <param name="linktitle" type="text" default="JoomlaWorks Simple Image Rotator" label="Link title" description="Insert here the link title which will be shown to the visitor when they hover their mouse ver the images. Do not use single or double quotes or the HTML will break." />
+    <param name="darkbg" type="list" default="0" label="Display 'loading icon' for..." description="Display different loading icon per template color scheme, white or dark.">
+      <option value="0">Light colored template</option>
+      <option value="1">Dark colored template</option>
+    </param>
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+    <param name="useforbanners" type="list" default="0" label="Should the Rotator be used to display banners from the Banner Component?" description="This option will retrieve all published banners and display them.">
+      <option value="0">No</option>
+      <option value="1">Yes (bypasses all options above)</option>
+    </param>
+    <param name="bannerfolder" type="text" default="images/banners/" label="Banner folder" description="Leave as is if you haven't changed the default banners location." />
+    <param name="@spacer" type="spacer" default="" label="" description="" />
+  </params>
+  <files>
+    <filename module="mod_jw_sir">mod_jw_sir.php</filename>
+    <filename module="mod_jw_sir">mod_jw_sir/mod_jw_sir.css</filename>
+    <filename module="mod_jw_sir">mod_jw_sir/mod_jw_sir.js</filename>
+    <filename module="mod_jw_sir">mod_jw_sir/loading.gif</filename>
+    <filename module="mod_jw_sir">mod_jw_sir/loading_black.gif</filename>
+    <filename module="mod_jw_sir">mod_jw_sir/logo.png</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.mod_jw_sir.ini</language>
+  </languages>
+</install>

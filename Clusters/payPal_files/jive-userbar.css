@@ -1,0 +1,1026 @@
+/*
+jive-userbar.css - v0.2 - October 13, 2006
+styles for all pages throughout Jive SBS (where the userbar is used, so not popups).
+*/
+/* user bar */
+#jive-userbar {
+    background: #f9f9f9 url(../images/jive-userbar-bg.png) repeat-x;
+    clear: both;
+    height: 43px;
+    position: relative;
+    width: 100%;
+}
+
+* html #jive-userbar {
+    z-index: 10;
+}
+
+/*ie6*/
+*+html #jive-userbar {
+    z-index: 10;
+}
+
+/*ie7*/
+.jive-userbar-login-welcome {
+    display: block;
+    padding-top: 14px;
+}
+
+/* user login */
+#jive-userbar-login {
+    padding: 0 0 0 26px;
+    white-space: nowrap;
+    float: left;
+}
+
+.jive-userbar-login-form {
+    float: left;
+    padding: 5px 5px 4px;
+    margin-top: 5px;
+    border: 1px solid #d0d0d0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.jive-userbar-login-guest {
+    font-size: .8889em;
+    color: #333;
+    margin: 2px 13px 0 0;
+    padding: 0 13px 0 0;
+    background: transparent url(../images/jive-userbar-user-div.gif) no-repeat right;
+    float: left;
+}
+
+.jive-userbar-login-username,
+    .jive-userbar-login-password,
+    .jive-userbar-login-auto {
+    font-size: .8889em;
+    line-height: 1;
+}
+
+.jive-userbar-login-username,
+    .jive-userbar-login-password {
+    font-weight: bold;
+}
+
+.jive-userbar-login-password a {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: .875em;
+    float: left;
+    padding: 3px 0 0 2px;
+}
+
+.jive-userbar-login-username input,
+    .jive-userbar-login-password input {
+    font-size: 1em;
+    margin: 0 10px 0 4px;
+    float: left;
+    width: 80px;
+}
+
+.jive-userbar-login-username label,
+    .jive-userbar-login-password label {
+    float: left;
+    padding-top: 4px;
+}
+
+.jive-userbar-login-auto {
+    margin: 0 10px 0 0;
+    float: left;
+}
+
+.jive-userbar-login-auto label,
+    .jive-userbar-login-auto input {
+    float: left;
+}
+
+.jive-userbar-login-auto label {
+    padding-top: 5px;
+}
+
+.jive-userbar-login-auto input {
+    margin: 3px 3px 0 0;
+}
+
+* html .jive-userbar-login-auto input {
+    margin: 0;
+}
+
+*+html .jive-userbar-login-auto input {
+    margin: 0;
+}
+
+.jive-userbar-login-submit input,
+    .jive-cancel-button {
+    border: 1px solid #bcbcbc;
+    font-size: 1em;
+    background: transparent url(../images/jive-formbtn-bg.gif) repeat-x;
+    color: #333;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.jive-cancel-button {
+    margin-left: 5px;
+}
+
+.jive-userbar-login-new,
+    .jive-userbar-login-loginlink {
+    font-size: .8889em;
+    margin: 2px 10px 0 0;
+    float: left;
+}
+
+.jive-userbar-login-loginlink {
+    margin-right: 15px;
+}
+
+/* current user & avatar */
+#jive-userbar-user {
+    float: left;
+    margin: 0;
+    padding: 0 18px 0 23px;
+}
+
+#jive-userbar-user span {
+    float: left;
+    padding-top: 15px;
+    padding-left: 1px;
+    display: inline;
+    font-size: .8889em;
+    color: #777;
+}
+
+#jive-userbar-user span a:link,
+    #jive-userbar-user span a:visited {
+    color: #333;
+    text-decoration: none;
+}
+
+#jive-userbar-user span a:hover,
+    #jive-userbar-user span a:active {
+    color: #555;
+    text-decoration: underline;
+}
+
+#jive-userbar-user-avatar {
+    float: left;
+    margin: 4px 4px 0 0;
+}
+
+#jive-userbar-user-avatar a {
+    display: block;
+    overflow: hidden;
+}
+
+#jive-userbar-logout {
+    padding-left: 10px !important;
+}
+
+#jive-userbar-logout a {
+    text-decoration: none;
+    color: #355491 !important;
+}
+
+#jive-userbar-logout a:hover {
+    text-decoration: underline;
+    color: #4262a1 !important;
+}
+
+/* sidebar - right-hand side */
+#jive-userbar-right {
+    position: absolute;
+    right: 0;
+    float: right;
+    font-size: .8889em;
+    margin: 0;
+    padding: 11px 22px 0 0;
+}
+
+/* search */
+#jive-userbar-search {
+    float: left;
+}
+
+#jive-userbar-search input,
+    #jive-userbar-search button {
+    border: 1px solid #9f9f9f;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+#jive-userbar-search .jive-userbar-search-field {
+    background: #fff url(../images/jive-userbar-search-bg.png) repeat-x top;
+    color: #333;
+    padding: 2px;
+    width: 143px;
+}
+
+#jive-userbar-search .jive-userbar-search-button {
+    background: transparent url(../images/jive-userbar-search-btn.png) no-repeat 0 0;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    height: 21px;
+    margin-left: 2px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -1000em;
+    width: 23px;
+}
+
+#jive-userbar-search .jive-userbar-search-button:hover {
+    background-position: 0 -21px;
+}
+
+/* begin user links */
+#jive-userbar-droplink {
+    float: left;
+    padding-top: 12px;
+}
+
+#jive-userbar-droplink ul,
+    #jive-userbar-droplink li {
+    list-style: none;
+}
+
+#jive-userbar-droplink li {
+    float: left;
+}
+
+/* begin IE bug-fixes for user links */
+* html #jive-userbar-droplink li {
+    position: relative;
+}
+
+/* IE6 only */
+*+html #jive-userbar-droplink li {
+/* IE7 only */
+    position: relative;
+    margin: 0 -200px 0 0;
+    padding: 0 200px 0 0;
+}
+
+/* end IE bug-fixes for user links */
+#jive-userbar-droplink li div {
+    clear: both;
+}
+
+#jive-userbar-droplink ul li ul li {
+    float: none;
+}
+
+#jive-userbar-droplink a.jive-userbar-droplink {
+    background: transparent url(../images/jive-userbar-arrowdown.gif) no-repeat right;
+    color: #666;
+    float: left;
+    font-size: .8889em;
+    font-weight: bold;
+    margin: 0 5px 0 13px;
+    outline: none;
+    overflow: visible;
+    padding: 3px 10px 3px 0;
+    text-decoration: none;
+}
+
+#jive-userbar-droplink a.jive-userbar-droplink:hover {
+    background: transparent url(../images/jive-userbar-arrowdown-b.gif) no-repeat right;
+    color: #000;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#jive-userbar-droplink a.jive-userbar-droplink-on {
+    background: transparent url(../images/jive-userbar-arrowdown-b.gif) no-repeat right;
+    color: #000;
+}
+
+#jive-userbar-droplink a.jive-userbar-droplink-new {
+    color: #da6e16;
+}
+
+/* begin menu panels */
+.jive-userbar-menu {
+    background: #f0f0f0 url(../images/jive-userbar-user-menubg.gif) repeat-x top;
+    border: 1px solid #d2d2d2;
+    border-top: none;
+    clear: both;
+    display: block;
+    font-size: .8889em;
+    margin: 0 0 0 12px;
+    overflow: hidden;
+    padding: 7px 5px 5px;
+    position: absolute;
+    top: 41px;
+    z-index: 900;
+}
+
+.jive-userbar-menu-hidden {
+    display: none;
+}
+
+#jive-userbar-droplink .jive-userbar-menu a {
+    float: none;
+}
+
+/* begin IE bug-fixes for menu panels */
+* html .jive-userbar-menu {
+/* IE6 */
+    top: 30px;
+    left: 0;
+    height: 1%;
+    overflow: hidden; /* child iframe hides overlayed selects */
+}
+
+* html .jive-userbar-menu ul {
+/* IE6 */
+    width: 100px;
+}
+
+* html .jive-userbar-menu * {
+/* IE6 */
+    white-space: nowrap !important;
+}
+
+*+html .jive-userbar-menu {
+/* IE7 */
+    top: 30px;
+    left: 0;
+    min-height: 0;
+    overflow: visible;
+}
+
+/* fix IE6 white-space node bug */
+* html #jive-userbar-droplink .jive-userbar-menu li,
+    * html #jive-userbar-droplink .jive-userbar-menu a {
+    height: 1%;
+    float: left;
+    clear: both;
+}
+
+* html #jive-userbar-droplink h3 {
+    clear: both;
+}
+
+/* end IE bug-fixes for menu panels */
+
+.jive-userbar-menu h3 {
+    border-bottom: 1px solid #ccc;
+    color: #333;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin: 6px 0 4px;
+    padding: 0 0 3px 2px;
+}
+
+.jive-userbar-menu h3.jive-userbar-menu-extrapadding {
+    padding-top: 5px;
+}
+
+.jive-userbar-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jive-userbar-menu ul li {
+    clear: both;
+}
+
+/* separator used in menus */
+.jive-userbar-menu ul.jive-userbar-menu-divider {
+    border-top: dashed 1px #d3d3d3;
+    margin-top: 4px;
+    padding-top: 4px;
+}
+
+.jive-userbar-menu ul li a {
+    color: #333;
+    display: block;
+    padding: 5px 15px 5px 25px;
+    position: relative;
+    text-decoration: none;
+}
+
+* html .jive-userbar-menu ul li a {
+    zoom: 1;
+}
+
+.jive-userbar-menu ul li a span {
+    display: block;
+    height: 16px;
+    left: 4px;
+    padding: 0;
+    position: absolute;
+    top: 4px;
+    width: 16px;
+}
+
+/* exists so that we can programmatically set hover / unhover stats */
+.jive-userbar-menu-hover a {
+    background-color: #f9f9f9;
+    text-decoration: underline;
+}
+
+.jive-userbar-menu-nohover a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.jive-userbar-menu a:hover {
+    background-color: #f9f9f9;
+    text-decoration: underline;
+}
+
+* html .jive-userbar-menu a:hover {
+    background-color: transparent;
+}
+
+.jive-userbar-menu a:hover span {
+    cursor: pointer;
+}
+
+.jive-userbar-menu a em {
+    color: #666;
+    font-style: normal;
+}
+
+.jive-userbar-menu a em strong {
+    color: #f06b00;
+}
+
+.jive-userbar-menu a.jive-userbar-menu-viewall:link,
+    .jive-userbar-menu a.jive-userbar-menu-viewall:visited {
+    color: #666;
+    font-weight: bold;
+    margin: 8px 0 6px;
+    padding: 2px 4px;
+}
+
+.jive-userbar-menu a.jive-userbar-menu-viewall:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* history menu */
+.jive-userbar-menu-history ul li {
+    width: 300px;
+}
+
+.jive-userbar-menu-history ul li a em {
+    color: #999;
+}
+
+/* begin slide-down menu panels */
+.jive-userbar-slidedown {
+    float: left;
+    font-size: .8889em;
+    left: 0;
+    margin: 42px 0 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 801;
+}
+
+.jive-userber-slidedown-container {
+    margin: 0 auto;
+    position: relative;
+}
+
+.jive-userber-slidedown-container .jive-userbar-slidedown-task,
+    .jive-userber-slidedown-container .jive-userbar-slidedown-content,
+    .jive-userber-slidedown-container .jive-userbar-slidedown-bookmark {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.jive-userber-slidedown-container .jive-userbar-slidedown-task {
+    background: transparent url(../images/jive-task-quick-bg.png) no-repeat bottom left;
+    width: 869px;
+}
+
+.jive-userber-slidedown-container .jive-userbar-slidedown-content {
+    background: transparent url(../images/jive-container-quick-bg.png) no-repeat bottom left;
+    width: 600px;
+}
+
+.jive-userber-slidedown-container .jive-userbar-slidedown-bookmark {
+    background: transparent url(../images/jive-bookmark-quick-bg.png) no-repeat bottom left;
+    width: 608px;
+}
+
+* html .jive-userber-slidedown-container .jive-userbar-slidedown-task,
+    * html .jive-userber-slidedown-container .jive-userbar-slidedown-content,
+    * html .jive-userber-slidedown-container .jive-userbar-slidedown-bookmark {
+    background: #f0f0f0 url(../images/jive-userbar-user-menubg.gif) repeat-x top;
+    border: 1px solid #d2d2d2;
+    border-top: none;
+}
+
+* html .jive-userber-slidedown-container .jive-userbar-slidedown-task {
+    width: 850px;
+}
+
+* html .jive-userber-slidedown-container .jive-userbar-slidedown-content {
+    width: 600px;
+}
+
+* html .jive-userber-slidedown-container .jive-userbar-slidedown-bookmark {
+    width: 608px;
+}
+
+/* quick container picker form styles */
+#jive-choose-content-type,
+    #jive-choose-container,
+    .jive-choose-containers,
+    #jive-choose-form-links {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+}
+
+#jive-choose-container,
+    .jive-choose-containers {
+    float: left;
+    padding: 10px;
+    width: 530px;
+}
+
+#jive-choose-container-quick li,
+    #jive-choose-container-quick li.jive-choose-current {
+    float: left;
+    width: 100%;
+}
+
+#jive-choose-container-quick li.jive-choose-current {
+    background: #ffd;
+}
+
+#jive-choose-container-quick li.jive-choose-current span.jive-current-indicator {
+    color: #DA6E16;
+    padding: 3px 3px 3px 13px;
+    margin: 0 5px 0 10px;
+    font-weight: bold;
+    float: right;
+    display: block;
+    background: transparent url(../images/arrow-left-orange-9x8.gif) no-repeat left center;
+}
+
+.jive-choose-containers ul {
+    padding: 0;
+    float: left;
+    width: 100%;
+}
+
+.jive-choose-containers ul li,
+    #jive-choose-container-block ul li {
+    clear: both;
+    display: block;
+    list-style-type: none;
+    padding: 3px 0;
+}
+
+#jive-choose-container a,
+    .jive-choose-containers ul li a.jive-choose-containers-container {
+    display: block;
+    float: left;
+    font-size: 1em;
+    padding: 2px 3px 2px 20px;
+    text-decoration: none;
+    color: #000;
+    background-position: 4px;
+    position: relative;
+}
+
+#jive-choose-container a:hover,
+    .jive-choose-containers ul li a.jive-choose-containers-container:hover {
+    background-color: #eaf0f7;
+    color: #355491;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.jive-choose-containers ul li a.jive-choose-containers-container .jive-icon-sml {
+    left: 4px;
+    position: absolute;
+    top: 5px;
+}
+
+.jive-choose-containers .jive-choose-container-meta {
+    display: block;
+    float: left;
+    padding: 3px 0 0 2px;
+}
+
+.jive-choose-containers .jive-choose-container-meta a:hover {
+    text-decoration: underline;
+}
+
+#jive-choose-container span,
+    .jive-choose-containers ul li span,
+    #jive-choose-container span a,
+    .jive-choose-containers ul li span a {
+    color: #777;
+    font-size: .8889em;
+    text-decoration: none;
+    padding: 0;
+}
+
+#jive-choose-content-type {
+    font-size: 1.1111em;
+    padding-top: 10px;
+}
+
+#jive-choose-content-type #jive-content-type-write,
+    #jive-choose-content-type #jive-content-type-upload {
+    font-size: 1.1111em;
+    margin: 0 8px 0 0;
+    font-weight: bold;
+}
+
+#jive-choose-form-links {
+    clear: both;
+    padding-left: 5px;
+    padding-bottom: 20px;
+}
+
+* html #jive-choose-form-links {
+    padding-bottom: 0;
+}
+
+#jive-choose-form-links a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* quick task create form styles */
+#jive-quicktaskcreate-form {
+    margin: 0;
+    padding: 0;
+    font-family: Lucida Grande, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #333;
+    z-index: 1;
+}
+
+#jive-quicktaskcreate-form .jive-form-task {
+    padding: 15px 20px 20px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task label {
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: 2px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task label em {
+    color: #999;
+    font-style: normal;
+    font-size: .8889em;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-desc input,
+    #jive-quicktaskcreate-form .jive-form-task-project input,
+    #jive-quicktaskcreate-form .jive-form-task-assignee input,
+    #jive-quicktaskcreate-form .jive-form-task-duedate input,
+    #jive-quicktaskcreate-form .jive-form-task-tags input {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-desc,
+    #jive-quicktaskcreate-form .jive-form-task-project,
+    #jive-quicktaskcreate-form .jive-form-task-assignee,
+    #jive-quicktaskcreate-form .jive-form-task-duedate {
+    float: left;
+    padding-right: 10px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-desc label,
+    #jive-quicktaskcreate-form .jive-form-task-project label,
+    #jive-quicktaskcreate-form .jive-form-task-assignee label,
+    #jive-quicktaskcreate-form .jive-form-task-duedate label {
+    display: block;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-assignee {
+    width: 160px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-desc input {
+    width: 300px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-project input {
+    width: 200px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-project select {
+    width: 175px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-assignee input {
+    width: 150px;
+}
+
+.jive-autocomplete-item {
+    width: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: block;
+    padding: 3px;
+}
+
+.jive-autocomplete-item a {
+    color: #333; /*display: block;*/
+    background: transparent url(../images/jive-icon-close.gif) no-repeat right 4px;
+    padding-right: 15px;
+    text-decoration: none;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-assignee li.jive-contact div span.informal {
+    float: none;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-duedate {
+    padding-right: 0;
+    width: 150px;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-duedate input {
+    width: 100px;
+    float: left;
+}
+
+#jive-quicktaskcreate-form .jive-form-task-duedate img {
+    float: left;
+    margin-top: -1px;
+    margin-left: 2px;
+}
+
+#jive-quicktaskcreate-form .jive-form-buttons {
+    display: block;
+    clear: both;
+    padding-top: 10px;
+}
+
+#jive-quicktaskcreate-form .jive-form-buttons a {
+    color: #666;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+#jive-quicktaskcreate-form .jive-form-buttons a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+#jive-quicktaskcreate-form .jive-error-message {
+    display: block;
+    color: #900;
+    font-weight: bold;
+}
+
+#jive-quicktaskcreate-form #jive-error-box {
+    display: none !important;
+}
+
+#jive-quicktaskcreate-form .jive-task-create-success {
+    text-align: center;
+    padding: 30px 0 40px;
+}
+
+#jive-quicktaskcreate-form .jive-authentication-required {
+    display: block;
+    text-align: center;
+    padding: 30px 0 40px;
+}
+
+#jive-quicktaskcreate-form .jive-task-create-success strong {
+    background: transparent url(../images/jive-icon-accept-16x16.gif) no-repeat left;
+    padding: 1px 0 1px 21px;
+    color: #090;
+    font-size: 1.2222em;
+    font-weight: bold;
+}
+
+#jive-quickbookmarkcreate-form_1 {
+    padding: 12px 20px 20px;
+}
+
+#jive-quickbookmarkcreate-form input.jive-form-element-text,
+    #jive-quickbookmarkcreate-form textarea.jive-form-element-textarea {
+    width: 558px;
+}
+
+#jive-quickbookmarkcreate-form {
+    padding: 12px 20px 20px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-form {
+    font-size: 1.1em;
+    padding: 0;
+}
+
+#jive-quickbookmarkcreate-form .jive-form-label p {
+    font-size: .9em;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-form .jive-form-taglist p {
+    padding-top: 4px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-form .jive-form-label {
+    font-size: 1em;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-form .jive-form-element {
+    margin-bottom: 8px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-form .jive-form-buttons {
+    padding-top: 10px;
+    position: relative;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-form .jive-form-buttons a {
+    padding: 0 5px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-working {
+    background: transparent url(../images/jive-icon-working-16x16.gif) no-repeat left;
+    color: #999;
+    padding: 0 0 0 20px;
+    margin-left: 5px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-success-details h6,
+    #jive-quickbookmarkcreate-form .jive-bookmark-success-details p {
+    margin-bottom: 12px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-success-details {
+    margin: 0 0 30px;
+    overflow: hidden;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-success-link {
+    margin: 20px 5px;
+    padding: 0 0 0 25px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-success-link a {
+    font-size: 1.2em;
+    line-height: 1em;
+    padding-bottom: 2px;
+}
+
+#jive-quickbookmarkcreate-form .jive-bookmark-success-link .jive-icon-med {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+/* styles to fix */
+#jive-spotlight-search {
+    background: #f0f0f0 url(../images/jive-userbar-user-menubg.gif) repeat-x top;
+    border: 1px solid #d2d2d2;
+    border-top: none;
+    clear: both;
+    display: block;
+    left: -195px;
+    margin: 0 0 0 12px;
+    overflow: hidden;
+    padding: 10px 10px 8px;
+    position: absolute;
+    top: 42px;
+    width: 340px;
+    z-index: 800;
+}
+
+#jive-spotlight-search .jive-spotlight-search-context {
+    color: #888;
+    font-size: .95em;
+    padding: 5px 0 6px;
+}
+
+#jive-spotlight-search .jive-spotlight-search-context strong {
+    color: #333;
+    padding: 0 1px;
+}
+
+#jive-spotlight-search .jive-spotlight-search-context a {
+    padding: 0 2px;
+}
+
+#jive-spotlight-search .jive-spotlight-search-context a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#jive-spotlight-search h3 {
+    border-bottom: 1px solid #bebebe;
+    color: #333;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin: 5px 0 4px;
+    padding: 0 18px 3px 0;
+}
+
+#jive-spotlight-search ul {
+    font-weight: normal;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 8px;
+}
+
+#jive-spotlight-search ul li {
+    display: block;
+    position: relative;
+}
+
+#jive-spotlight-search ul li a {
+    color: #333;
+    display: block;
+    padding: 3px 5px 3px 26px;
+    position: relative;
+    text-decoration: none;
+}
+
+/* exists so that we can programmatically set hover / unhover stats */
+#jive-spotlight-search ul li.hover a {
+    text-decoration: underline;
+    background-color: #f9f9f9;
+}
+
+html>body #jive-spotlight-search ul li a {
+    float: none;
+    text-decoration: none;
+}
+
+#jive-spotlight-search ul li a em {
+    color: #999;
+    font-style: normal;
+}
+
+* html #jive-spotlight-search ul li a {
+    zoom: 1;
+}
+
+#jive-spotlight-search ul li a:hover {
+    background-color: #f9f9f9;
+    text-decoration: underline;
+}
+
+* html #jive-spotlight-search ul li a:hover {
+/* no background for IE6, it flickers in a bad way */
+    background-color: transparent;
+}
+
+/* icons & avatars */
+#jive-spotlight-search .jive-icon-med,
+    #jive-spotlight-search .jive-avatar {
+    left: 3px;
+    position: absolute;
+    top: 3px;
+}
+
+#jive-spotlight-search a span.jive-icon-med {
+    clear: both;
+    cursor: pointer; /* for IE */
+    padding: 0;
+    top: 5px;
+}
+
+#jive-spotlight-search a span.jive-spotlight-result-content {
+    padding: 2px 0 1px 0;
+    display: block;
+    white-space: normal;
+}
+
+#jive-spotlight-search ul li.jive-spotlight-result-user a {
+    padding: 10px 5px 10px 36px;
+}
+
+#jive-spotlight-search div#jive-spotlight-viewall-block {
+    padding: 10px 0;
+}
+
+#jive-spotlight-search div#jive-spotlight-viewall-block a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* ie6 usebar menus & spotlight search over selects */
+* html .jive-userbar-menu,
+    * html #jive-spotlight-search {
+    overflow: hidden;
+}

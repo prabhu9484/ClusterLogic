@@ -1,0 +1,59 @@
+/* Magical boderless widget */
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless .jive-widget-header {
+    display: none;
+}
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless .jive-widget-body {
+    background: none;
+}
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless #jive-community-empty-types {
+    background: none;
+}
+
+#jive-widget-content .jive-widget-container .jive-widget-borderless {
+    border: 0 none;
+    padding: 0;
+}
+
+.jive-widget-body .application-gallery-section .application-gallery-item table {
+    padding-right:20px;
+}
+
+.application-gallery-details-big .application-gallery-item {
+    padding-bottom:0px;
+    padding: 0px;
+}
+
+.jive-widget-body .application-gallery-details-big h2 {
+    border-top: none;
+}
+
+.hompage-interest-box p {
+    margin: 8px 0 0;
+}
+
+.jive-widget-container-large .jive-widget-body .interest-content ul li {
+    max-width:200px;
+    padding: 2px 0 0 5px    
+}
+
+.blog-author img {
+    padding: 0px;
+}
+
+.blog-author img.jive-avatar {
+    float: left;
+    border: solid 1px #ccc;
+}
+
+ul.blog-author-profile {
+    float: left;
+    padding: 0;
+    width: 220px !important;
+}
+
+.jive-widget-body .application-gallery-section .discussion-content {
+    width: 450px;
+}

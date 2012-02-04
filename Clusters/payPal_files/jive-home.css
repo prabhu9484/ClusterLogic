@@ -1,0 +1,149 @@
+
+/*
+jive-home.css
+styles for the root community 'overview' page.
+*/
+
+.jive-body-intro-home {
+    position: relative;
+    }
+* html .jive-body-intro-home {
+    zoom: 1;
+    }
+.jive-body-intro-home #jive-body-intro-content {
+    padding-top: 10px;
+    position: relative;
+    }
+
+#jive-body-tabbar-links {
+    bottom: 4px;
+    font-size: .8889em;
+    padding: 0;
+    position: absolute;
+    right: 22px;
+    line-height: 1.625em;
+    }
+#jive-body-tabbar-links li {
+    background: transparent url(../images/jive-div-vert-dotted-grey.gif) no-repeat right;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 1px;
+    position: relative;
+    text-align: right;
+    }
+#jive-body-tabbar-links li.jive-body-tabbar-links-last {
+    background-image: none;
+    }
+#jive-body-tabbar-links li.jive-body-tabbar-links-title {
+    background: none;
+    color: #adadad;
+    padding: 3px 0 0 0;
+    }
+#jive-body-tabbar-links a {
+    display: block;
+    float: left;
+    outline: none;
+    padding: 5px 8px;
+    position: relative;
+    text-decoration: none;
+    }
+#jive-body-tabbar-links a:hover,
+#jive-body-tabbar-links a:focus {
+    background: transparent url(../images/jive-home-intro-tabbar-link-bg.gif) repeat-x top;
+    }
+#jive-body-tabbar-links a span {
+    height: 14px;
+    margin-right: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 12px;
+    }
+#jive-body-tabbar-links a:link em,
+#jive-body-tabbar-links a:visited em{
+	background-color: transparent;
+    color: #333;
+    display: none;
+    font-style: normal;
+    font-weight: bold;
+    padding: 0 5px;
+    position: absolute;
+    text-decoration: none;
+    top: -17px;
+    left: 0;
+    white-space: nowrap;
+    -moz-border-radius: 3px 3px 3px 0;
+	-webkit-border-radius: 3px;
+	-webkit-border-bottom-left-radius: 0;
+    }
+#jive-body-tabbar-links li.jive-body-tabbar-links-last a:link em,
+#jive-body-tabbar-links li.jive-body-tabbar-links-last a:visited em {
+    left: auto;
+    right: 0 !important;
+    -moz-border-radius: 3px 3px 0 3px;
+	-webkit-border-bottom-right-radius: 0;
+	-webkit-border-bottom-left-radius: 3px;
+    }
+#jive-body-tabbar-links a:hover em,
+#jive-body-tabbar-links a:focus em{
+    background-color: #e5f0f7;
+    display: block;
+    }
+.jive-body-whatsnew #jive-body-intro {
+	background: transparent;
+    border: none;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    }
+.jive-body-whatsnew #jive-body-intro #jive-body-intro-content {
+    display: none;
+    }
+
+
+#jive-new-announcement {
+	display: block;
+	clear: both;
+	margin-bottom: 20px;
+	padding: 5px 0 5px 6px;
+	background-color: #fdfdef;
+	border: 1px solid #eae9e1;
+    font-size: .8889em;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+    }
+.jive-content-block-container a.jive-link-announcement {
+	font-weight: normal;
+	font-size: .8889em;
+	}
+#jive-another-announcement {
+    font-size: .8889em;
+    margin: -16px 0 16px;
+    }
+#jive-another-announcement a.jive-link-announcement {
+    background: none;
+    color: #999;
+    padding: 0 0 0 5px;
+    }
+#jive-body-announcements {
+	margin: 0 0 20px;
+	width: auto;
+	overflow: hidden;
+	}
+#jive-body-announcements-hdr {
+	width: auto;
+	overflow: hidden;
+	}
+#jive-body-announcements h3,
+#jive-body-announcements p {
+	clear: both;
+	}
+#jive-body-announcements .jive-link-announcement {
+    background: none;
+    display: block;
+    font-weight: bold;
+    padding: 8px 0 5px 10px;
+    text-decoration: none;
+    }
+
+
